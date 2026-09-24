@@ -1,6 +1,6 @@
 number = 3
 slug = "course-arrays"
-status = "pending"
+status = "in-progress"
 description = "Phase 1 step 3 of docs/plan.md: COURSE lessons 2 to 6 -- Numbers; Vectors; Co..."
 role = "production"
 context_files = []

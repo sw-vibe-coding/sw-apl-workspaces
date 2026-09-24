@@ -132,20 +132,31 @@ which are written.
 | `NEXT` | The lesson after the last one read (`LAST`, a global that `)SAVE` keeps) |
 | `QUIZ N` | Questions on lesson N, each answer read with `⎕` and marked; a score at the end |
 
-A pause prints `(RETURN TO GO ON, OR STOP)` and reads a line with
-`⍞`: an empty line goes on, `STOP` leaves the lesson. A quiz question
-prints its text and then the `⎕:` prompt; the answer is APL, so `4`,
-`2+2` and `,4` are all read, and the last is remarked on as a vector
-where a scalar was wanted. `STOP` at a question leaves the quiz. A
-wrong answer shows the right one.
+A section ends with `(TRY IT. TYPE GO TO GO ON, OR STOP TO LEAVE.)`
+and a `⎕:` prompt. Anything typed there is evaluated and printed, so
+the reader tries what the section showed where they read it; an
+assignment made there is a global, and outlasts the lesson. `GO`
+goes on and `STOP` leaves the lesson. An error in what is typed
+stops the lesson with the report; a bare `→` clears it and `LESSON N`
+reads the lesson again. A quiz question prints its text and then
+the `⎕:` prompt; the answer is APL, so `4`, `2+2` and `,4` are all
+read, and the last is remarked on as a vector where a scalar was
+wanted. `STOP` at a question leaves the quiz. A wrong answer shows
+the right one.
 
-The machinery: `∆PAUSE`, `∆STOPPED` (was the answer the word STOP;
-the variable `STOP` holds `'STOP'` so that typing it at a `⎕` prompt
-works), `∆ASK` (print a question, read with `⎕`), `∆CHECK` (wanted
-on the left, given on the right; same count, same values, same rank,
-with a remark for a scalar against a one-element vector), and `∆L1`,
-`∆Q1` and so on, one per lesson and quiz. A lesson not yet written
-says so.
+The machinery: `∆TRY` (the pause line), `∆PAUSE` (the loop that
+reads, tests for GO and STOP, and prints), `∆READ` (a quiz answer),
+`∆IS` (was the answer the word on the left; the variables `GO` and
+`STOP` hold their own names, which is what makes typing them at a
+`⎕` prompt work), `∆CHECK` (wanted on the left, given on the right;
+same count, same values, same rank, with a remark for a scalar
+against a one-element vector), and `∆L1`, `∆Q1` and so on, one per
+lesson and quiz. Every local on the way to a pause is a delta name,
+so what the reader types there sees their own names. A lesson not
+yet written says so.
 
-Samples: `course-1.apl` in (A) and `course-1-75.apl` in (B) walk
-lesson 1 and its quiz.
+Lessons written: 1 Where you are, 2 Numbers, 3 Vectors, 4 Comparison
+and logic, 5 Reduction and scan, 6 Selection.
+
+Samples: `course-1.apl` and `course-2-6.apl` in (A), and their `-75`
+twins in (B).

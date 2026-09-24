@@ -18,3 +18,9 @@ QUIZ, with a pause between sections read by quote-quad and answers
 read by quad, STOP recognised at either kind of prompt without
 execute, so that the same file runs in (A) and (B). Lesson 1 and its
 quiz are the model the other lessons follow.
+
+Lessons 2 to 6 (step 3) changed the pause: quote-quad could not
+evaluate what a reader tried, so the pause reads with quad and
+prints whatever is typed until GO or STOP, and every local on the
+way to it became a delta name so the reader's own names are not
+shadowed. Two interpreter findings went to plan.md.

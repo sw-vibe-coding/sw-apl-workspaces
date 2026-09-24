@@ -5,12 +5,15 @@
 )LOAD 1 COURSE
 DESCRIBE
 CONTENTS
-⍝ Lesson 1, every pause answered with an empty line.
+⍝ Lesson 1. At the first pause two expressions are tried and printed;
+⍝ GO goes on from every pause.
 START
-
-
-
-
+2+2
+3×4
+GO
+GO
+GO
+GO
 ⍝ The quiz: a right answer, a wrong one, an expression that makes the
 ⍝ right one, and STOP, which leaves without a score.
 QUIZ 1
@@ -24,12 +27,18 @@ QUIZ 1
 0
 2
 ,16
-⍝ NEXT goes on from the last lesson read; lesson 2 is not written.
+⍝ NEXT goes on from the last lesson read; lesson 7 is not written.
+LESSON 6
+STOP
 NEXT
-⍝ STOP at a pause leaves a lesson.
+⍝ An error at a pause stops the lesson with its report; a bare branch
+⍝ clears it, and the lesson can be read again.
+LESSON 1
+1 2 3+4 5
+→
 LESSON 1
 STOP
 ⍝ A quiz for a lesson not yet written, and a lesson that is not one.
-QUIZ 3
+QUIZ 9
 LESSON 17
 )OFF

@@ -21,10 +21,16 @@ what came back.
 The paragraphs below say what each sample shows.
 
 `course-1.apl` and `course-1-75.apl`, one per mode, load COURSE,
-print DESCRIBE and CONTENTS, read lesson 1 with every pause answered
-by an empty line, and take quiz 1 twice: once with a right answer, a
-wrong one, an expression that makes the right one, and STOP; once
-through to the score, with a one-element vector where a scalar was
-wanted. Then NEXT reaches a lesson not yet written, STOP at a pause
-leaves a lesson, and a quiz and a lesson number out of range are
-refused.
+print DESCRIBE and CONTENTS, read lesson 1 trying two expressions at
+the first pause and GO at the rest, and take quiz 1 twice: once with
+a right answer, a wrong one, an expression that makes the right one,
+and STOP; once through to the score, with a one-element vector where
+a scalar was wanted. Then NEXT reaches a lesson not yet written, an
+error typed at a pause stops the lesson and a bare branch clears it,
+STOP at a pause leaves, and a quiz and a lesson number out of range
+are refused.
+
+`course-2-6.apl` and `course-2-6-75.apl` read lessons 2 to 6, trying
+at the pauses what each section showed, including an assignment that
+outlasts its lesson, and take each quiz with one wrong answer among
+the right ones, one answer given as an expression.

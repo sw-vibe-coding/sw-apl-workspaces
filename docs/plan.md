@@ -478,3 +478,26 @@ have landed, and is re-planned then against what they built.
   plan with the sample that shows them, not worked around silently.
   The sample stays here as a record until sw-apl fixes it, marked in
   `samples/README.md`.
+
+## Findings for sw-apl
+
+Found while writing the workspaces; reported to the owner, recorded
+here until sw-apl's plan takes them up. None is worked around in a
+way that makes a workspace not-APL.
+
+- **An error in the reply to `⎕` suspends the caller** (2026-09-24,
+  COURSE step 2). A LENGTH ERROR typed at a `⎕` prompt inside
+  `∆PAUSE` prints its report against `∆PAUSE[1]`, but `)SI` then
+  shows the *calling* function suspended (`TEST[3]*`), and `→1`
+  restarts that caller rather than the line that read. The two
+  displays disagree; one of them is wrong. Whether the manuals have
+  the input request re-issued after an error, rather than the
+  function suspended, is worth checking at the same time. COURSE
+  tells the reader to type `→` and read the lesson again, which is
+  right whichever way this is settled.
+- **A system command at a `⎕` prompt is a SYNTAX ERROR** (same
+  day). `)SI` typed in reply to `⎕` is reported as a syntax error
+  in the line that read. APL\360 accepted system commands in reply
+  to quad input. Lesson 1 therefore asks the reader to try
+  `)DIALECT`, `)WSID`, `)LIBS` and `)HELP` after the lesson, not at
+  its pauses.
