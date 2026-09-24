@@ -1,0 +1,1 @@
+COURSE's shape and lesson 1: ws/COURSE.apl.ws (both modes) with DESCRIBE, CONTENTS, START, LESSON, NEXT, QUIZ, the pause and STOP idioms without execute, ∆ASK/∆CHECK; lesson 1 and quiz 1 in full; samples course-1 (A) and course-1-75 (B) pinned with reg-rs; docs/workspaces.md COURSE section.
