@@ -1,0 +1,1 @@
+COURSE lessons 2 to 6 with quizzes; the pause redesigned to read with quad and print what is tried until GO or STOP; delta-named locals; samples course-2-6 (A and B) new and course-1 rebased for the pause; two sw-apl findings recorded in docs/plan.md.
