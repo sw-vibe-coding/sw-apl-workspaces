@@ -14,6 +14,7 @@ gates:
     sw-markdown-checker -f README.md
     sw-markdown-checker -f "samples/*.md"
     ./scripts/check-provenance.sh
+    ./scripts/gen-index.sh --check
 
 # Every workspace, in every mode it claims, loads without an error
 # report, and every line it prints fits 64 columns.
@@ -42,6 +43,11 @@ reg:
 # library 1, until sw-apl has a --lib 2= of its own.
 shim:
     @./scripts/lib-shim.sh
+
+# Regenerate ws/library.json, the index a browser reads to find
+# this library; tracked, and gated to be current.
+index:
+    ./scripts/gen-index.sh
 
 # Regenerate CHANGES.md from git log.
 changes:

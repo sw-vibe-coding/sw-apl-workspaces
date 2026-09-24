@@ -60,9 +60,9 @@ for f in $tracked; do
 done
 # An untracked workspace under ws/ is the mistake this guards against
 # one step earlier: it is on its way to being added.
-untracked="$(git ls-files --others --exclude-standard 'ws/')"
+untracked="$(git ls-files --others --exclude-standard 'ws/**/*.apl.ws' 'ws/*.apl.ws')"
 if [ -n "$untracked" ]; then
-    echo "  FAIL untracked files under ws/ (material from elsewhere belongs in work/):"
+    echo "  FAIL untracked workspaces under ws/ (material from elsewhere belongs in work/):"
     echo "$untracked" | sed 's/^/    /'
     status=1
 fi
