@@ -3,7 +3,8 @@
 # print the transcripts. Usage: scripts/run-samples.sh [pattern]
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
-shim="$(./scripts/lib-shim.sh)"
+./scripts/lib-shim.sh >/dev/null
+shim=target/shim
 pattern="${1:-}"
 # A sample whose first line is `⍝!MODES (B)` runs in (B) '75.
 mode_of() { head -1 "$1" | grep -q '^⍝!MODES (B)$' && echo "--mode 75" || true; }

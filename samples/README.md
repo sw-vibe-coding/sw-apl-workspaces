@@ -19,3 +19,12 @@ sample reads as a session: what was typed, indented six spaces, and
 what came back.
 
 The paragraphs below say what each sample shows.
+
+`course-1.apl` and `course-1-75.apl`, one per mode, load COURSE,
+print DESCRIBE and CONTENTS, read lesson 1 with every pause answered
+by an empty line, and take quiz 1 twice: once with a right answer, a
+wrong one, an expression that makes the right one, and STOP; once
+through to the score, with a one-element vector where a scalar was
+wanted. Then NEXT reaches a lesson not yet written, STOP at a pause
+leaves a lesson, and a quiz and a lesson number out of range are
+refused.

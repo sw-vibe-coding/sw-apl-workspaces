@@ -1,2 +1,4 @@
 {"name": "EXTENDED",
- "workspaces": []}
+ "workspaces": [
+  {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"}
+ ]}

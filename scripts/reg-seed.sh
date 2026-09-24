@@ -15,7 +15,8 @@ set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 export REG_RS_DATA_DIR="$PWD/tests/reg-rs"
 mkdir -p "$REG_RS_DATA_DIR"
-shim="$(./scripts/lib-shim.sh)"
+./scripts/lib-shim.sh >/dev/null
+shim=target/shim
 pattern="${1:-}"
 recreate=""
 [ "$pattern" = "--all" ] && { recreate="yes"; pattern=""; }
@@ -28,7 +29,9 @@ for f in samples/*.apl; do
     name="ws-sample-$base"
     if [ -f "$REG_RS_DATA_DIR/$name.rgt" ]; then
         [ -z "$recreate" ] && { echo "  skip $name"; continue; }
-        reg-rs remove -p "$name" >/dev/null
+        # The pattern is a substring of the file name; the dot keeps
+        # course-1 from also removing course-1-75.
+        reg-rs remove -p "$name." >/dev/null
     fi
     echo "  create $name"
     reg-rs create -t "$name" \

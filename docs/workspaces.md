@@ -117,6 +117,35 @@ never sets `⎕LX`, which would make it (B) only.
 
 ## The workspaces
 
-None is written yet; `docs/plan.md` says which comes first. Each
-gains a section here when its step lands, saying what its public
-functions are and what its sample shows.
+### COURSE
+
+Both modes, `ws/COURSE.apl.ws`. APL, lesson by lesson, with a quiz
+after each; the lessons are listed by `CONTENTS`, and `plan.md` says
+which are written.
+
+| Function | What it does |
+|---|---|
+| `DESCRIBE` | What COURSE is and what to type |
+| `CONTENTS` | The sixteen lessons, by number and title |
+| `START` | Lesson 1 |
+| `LESSON N` | Reads lesson N, in sections, with a pause after each |
+| `NEXT` | The lesson after the last one read (`LAST`, a global that `)SAVE` keeps) |
+| `QUIZ N` | Questions on lesson N, each answer read with `⎕` and marked; a score at the end |
+
+A pause prints `(RETURN TO GO ON, OR STOP)` and reads a line with
+`⍞`: an empty line goes on, `STOP` leaves the lesson. A quiz question
+prints its text and then the `⎕:` prompt; the answer is APL, so `4`,
+`2+2` and `,4` are all read, and the last is remarked on as a vector
+where a scalar was wanted. `STOP` at a question leaves the quiz. A
+wrong answer shows the right one.
+
+The machinery: `∆PAUSE`, `∆STOPPED` (was the answer the word STOP;
+the variable `STOP` holds `'STOP'` so that typing it at a `⎕` prompt
+works), `∆ASK` (print a question, read with `⎕`), `∆CHECK` (wanted
+on the left, given on the right; same count, same values, same rank,
+with a remark for a scalar against a one-element vector), and `∆L1`,
+`∆Q1` and so on, one per lesson and quiz. A lesson not yet written
+says so.
+
+Samples: `course-1.apl` in (A) and `course-1-75.apl` in (B) walk
+lesson 1 and its quiz.
