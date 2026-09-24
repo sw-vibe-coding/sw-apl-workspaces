@@ -1,0 +1,36 @@
+# Build and scratch output: the library shim, transcripts printed
+# for eyeballing, anything a script writes.
+/target/
+
+# Claude Code local state: per-machine settings + runtime locks.
+# EXCEPTION: .claude/commands/ holds shared slash commands (e.g.
+# /mw-cp) that must travel with the repo.
+.claude/*
+!.claude/commands/
+
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
+# agentrail raw session transcripts: huge append-only event logs.
+# NOT part of the durable saga handoff (steps/, trajectories/,
+# plan.md, saga.toml stay tracked). Kept locally, never committed.
+.agentrail/sessions/
+.agentrail-archive/*/sessions/
+
+# Workspaces are tracked or not by who wrote them, not by what they
+# are:
+#
+#   ws/    tracked -- the workspaces this repository ships, each
+#          carrying a provenance line and a DESCRIBE function.
+#   work/  ignored -- library 0 when sw-apl runs from here, and
+#          where anything converted from elsewhere belongs.
+#
+# Material we do not own goes in work/ and nowhere else, so that it
+# cannot be redistributed by accident.
+/work/
+
+# reg-rs keeps the .rgt spec and .out baseline under version control;
+# the SQLite run database and its lock are per-machine state.
+tests/reg-rs/*.tdb
+tests/reg-rs/*.tdb.lock

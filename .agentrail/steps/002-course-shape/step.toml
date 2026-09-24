@@ -1,0 +1,11 @@
+number = 2
+slug = "course-shape"
+status = "pending"
+description = """
+Phase 1 step 2 of docs/plan.md: COURSE's shape, and lesson 1 in full.
+
+ws/COU..."""
+role = "production"
+context_files = []
+created_at = "2026-09-24T13:51:18"
+commits = []

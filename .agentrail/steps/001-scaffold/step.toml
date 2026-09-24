@@ -1,0 +1,8 @@
+number = 1
+slug = "scaffold"
+status = "pending"
+description = "Phase 0 of docs/plan.md, the rest of the scaffold. Already in place at setup:..."
+role = "production"
+context_files = []
+created_at = "2026-09-24T13:51:18"
+commits = []
