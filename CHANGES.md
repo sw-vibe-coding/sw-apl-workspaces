@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-24
 
+- course: the shape of the course, and lesson 1
+- saga: complete 001-scaffold
+- docs(changes): refresh CHANGES.md to HEAD
 - scaffold: the index, the Pages workflow, and the documents the README names
 - chore: bootstrap agentrail saga, plan, process and gates
 - 1st
