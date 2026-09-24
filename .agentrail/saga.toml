@@ -1,6 +1,6 @@
 name = "course"
 status = "active"
-current_step = 1
+current_step = 2
 created_at = "2026-09-24T13:49:24"
 plan_file = ".agentrail/plan.md"
 retroactive = false

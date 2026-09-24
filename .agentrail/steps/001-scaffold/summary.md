@@ -1,0 +1,1 @@
+Phase 0 scaffold: scripts/gen-index.sh and ws/library.json with a staleness gate, the Pages workflow publishing ws/, docs/workspaces.md, testing.md, library.md, citations.md, saga.md, work/README.md, tests/reg-rs/. All gates pass on the empty library; index checked idempotent.
