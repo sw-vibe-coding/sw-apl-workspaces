@@ -1,0 +1,5 @@
+command = "scripts/run-sample.sh drill-drill"
+timeout = 120
+preprocess = "bash scripts/normalize-apl-output.sh"
+exit_code = 0
+desc = "Transcript of samples/drill-drill.apl"

@@ -174,28 +174,52 @@ course through with every quiz answered.
 ### DRILL
 
 Both modes, `ws/DRILL.apl.ws`. Exercises in APL made at random and
-marked. `plan.md` says how far it is built.
+marked, in the spirit of APLCOURSE's TEACH and EASYDRILL and written
+fresh. `plan.md` says which topics are built.
 
 | Function | What it does |
 |---|---|
 | `DESCRIBE` | What DRILL is and what to type |
+| `HOWDRILL` | The topics, the numbers, the marking |
+| `EASY` | One function on single numbers |
+| `DRILL` | One function on vectors, or two |
+| `HARD` | Two functions: a chain, in parentheses, or under a reduction |
 | `SHOW N` | Prints N exercises, each followed by its answer |
 
-An exercise is one function from the tables `MON` (the one-argument
-glyphs) and `DYA` (the two-argument glyphs) on small whole numbers,
-scalars or vectors of two to five, chosen so that the answer is
-whole where the function allows: a multiple for division, a small
-power, a divisor of 1 to 5 for residue, 1 and 0 for and and or, and
-two vectors always the same length.
+Each level first asks the topic, read with `⍞`: ARITHMETIC (`+ - × ÷
+| *`, and `- × |` on one argument), COMPARE (`< ≤ = ≥ > ≠ ∧ ∨`),
+MAXMIN (`⌈ ⌊`), REDUCE (`+/ ×/ ⌈/ ⌊/`, over vectors and over `+ - ×`),
+or ALL; an empty line is ALL, a word that is none of these is asked
+again, and STOP leaves. Then it prints an exercise and the `⎕:`
+prompt, reads the answer as APL, and marks it as COURSE's quizzes do:
+value, count and rank, with a remark for a scalar against a
+one-element vector; a wrong answer shows the right one; three wrong
+in a row show the exercise worked out, the inner step first when
+there is one, and a line on each function. STOP prints the score.
 
-The machinery: `∆NEW` chooses an exercise and sets the caller's `∆E`
-(its characters) and `∆V` (its value); `∆MON` and `∆DYA` are branch
-tables that apply the glyph, since (A) has no execute, `∆DYA` reading
-the operands `∆X` and `∆Y` from its caller as sw-apl's BIRDS reads
-`FN`; `∆CHARS` writes a whole number or vector as APL prints it,
-without format, by encode; `∆SMALL` draws the operands. The random
-link is the file's, so `SHOW` gives the same exercises on every load.
+The numbers are small and whole, chosen so that the answer is whole
+where the function allows: a multiple for division, a small power, a
+divisor of 1 to 5 for residue, 1 and 0 for and and or; two vectors
+are the same length, and the operand outside a composed exercise
+conforms to the inner value. A comparison or a residue may be the
+inner function but not the outer, where the inner value may be
+anything. The random link is the file's, so a level and a topic give
+the same exercises on every load.
 
-Samples: `drill-show.apl` in (A); `drill-show-75.apl` in (B), which
-also defines VERIFY with execute and counts how many of a hundred
-displays evaluate to the value the tables gave.
+The machinery: `∆RUN` is the loop; `∆MENU` sets the topic's tables
+(`∆M` one-argument, `∆D` two-argument, `∆R` reductions, `∆C` allowed
+inside a composed exercise, `∆O` allowed outside one); `∆KIND` picks
+the shape by level and tables; `∆NEW` makes the exercise and sets the
+caller's `∆E`, `∆V`, the inner step `∆E1` and `∆V1`, and the glyphs
+for the hints; `∆PAIR` and `∆OUTER` draw operands; `∆MON`, `∆DYA` and
+`∆REDUCE` are branch tables that apply a glyph, since (A) has no
+execute, `∆DYA` reading `∆X` and `∆Y` from its caller as sw-apl's
+BIRDS reads `FN`; `∆CHARS` writes a number or vector as APL prints
+it, without format, by encode; `∆CHECK`, `∆IS`, `∆WORK` and `∆HINT`
+mark and explain.
+
+Samples: `drill-easy.apl`, `drill-drill.apl` and `drill-hard.apl`,
+one level each with scripted answers, and `drill-show.apl`; each has
+a `-75` twin, and the (B) `drill-show-75.apl` also defines VERIFY
+with execute and counts how many of a hundred HARD exercises evaluate
+to the value the tables gave.

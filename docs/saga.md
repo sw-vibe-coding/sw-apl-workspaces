@@ -59,3 +59,10 @@ in (B) the sample evaluates each exercise's characters with execute
 and compares with what the branch tables computed, and a hundred of
 a hundred agree. (A) gets the same exercises, since the sequence is
 the random link's.
+
+Step 2 built the drill: the topic menu, the three levels, the
+marking from COURSE, the worked-out answer after three wrong, and a
+line of explanation per glyph. Composed exercises brought two rules
+the singles did not need: the outer operand conforms to the inner
+value, and a residue, a division, a power or a logical function may
+be inner but not outer, where the inner value may be anything.

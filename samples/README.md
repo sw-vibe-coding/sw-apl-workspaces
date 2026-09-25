@@ -77,3 +77,12 @@ defines VERIFY, with execute, in the sample rather than the
 workspace: it makes a hundred more exercises, evaluates the
 characters of each, and counts how many agree with the value the
 tables gave. A hundred do.
+
+`drill-easy.apl`, `drill-drill.apl` and `drill-hard.apl`, with their
+(B) twins, sit the drill at each level: EASY on ARITHMETIC, with a
+topic that is refused, right and wrong answers, an answer typed as
+an expression, three wrong in a row worked out, a one-element vector
+where a scalar was wanted, and a second EASY stopped at the topic
+prompt; DRILL on ALL, with vector answers; HARD on REDUCE, where
+three wrong in a row show the inner step and then the reduction.
+Every one ends with STOP and the score.

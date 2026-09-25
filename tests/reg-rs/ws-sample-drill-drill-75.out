@@ -1,0 +1,73 @@
+      ⍝!MODES (B)
+      ⍝ DRILL at the DRILL level, every topic: one function on vectors, or
+      ⍝ two, with reductions and comparisons among them. Right answers as
+      ⍝ vectors, one wrong, and STOP with the score.
+      )LOAD 2 DRILL
+SAVED 13.00.00 09/25/26
+      DRILL
+WHICH FUNCTIONS? ARITHMETIC, COMPARE, MAXMIN, REDUCE OR ALL.
+TOPIC: ALL
+×/2 0 6
+⎕:
+      0
+RIGHT.
+⌈/1|5
+⎕:
+      0
+RIGHT.
+×4 6
+⎕:
+      0 0 0 0 0
+NO. THE ANSWER IS:
+1 1
+⌈/4≠9 7 2 0
+⎕:
+      14 16 9 3
+NO. THE ANSWER IS:
+1
+2 9 7=6 0 6
+⎕:
+      288
+NO. THE ANSWER IS:
+0 0 0
+THREE WRONG IN A ROW. WORKED OUT:
+   2 9 7=6 0 6 IS
+   0 0 0
+   = IS 1 WHERE THE TWO ARE EQUAL, 0 ELSEWHERE.
+3 4|1
+⎕:
+      9
+NO. THE ANSWER IS:
+1 1
+⌊/9 5
+⎕:
+      5 3
+NO. THE ANSWER IS:
+5
+1 0∨1
+⎕:
+      9
+NO. THE ANSWER IS:
+1 1
+THREE WRONG IN A ROW. WORKED OUT:
+   1 0∨1 IS
+   1 1
+   ∨ IS 1 WHERE EITHER IS 1.
+|4 9 0 7
+⎕:
+      59 59 75 68
+NO. THE ANSWER IS:
+4 9 0 7
+(7 7 9 8×3 3 5 5)+4 8 2 4
+⎕:
+      0 1 0
+NO. THE ANSWER IS:
+25 29 47 44
+×/1 5
+⎕:
+      STOP
+STOPPED. 2 RIGHT OF 10.
+      )OFF
+14.48.05 09/25/26
+CONNECTED 0.00.00
+CPU TIME 0.00.00
