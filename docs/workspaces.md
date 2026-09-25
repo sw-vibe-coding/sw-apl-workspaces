@@ -156,7 +156,8 @@ so what the reader types there sees their own names. A lesson not
 yet written says so.
 
 Lessons written: 1 Where you are, 2 Numbers, 3 Vectors, 4 Comparison
-and logic, 5 Reduction and scan, 6 Selection.
+and logic, 5 Reduction and scan, 6 Selection, 7 Matrices, 8 Products,
+9 Order and counting, 10 Characters.
 
-Samples: `course-1.apl` and `course-2-6.apl` in (A), and their `-75`
-twins in (B).
+Samples: `course-1.apl`, `course-2-6.apl` and `course-7-10.apl` in
+(A), and their `-75` twins in (B).

@@ -1,0 +1,5 @@
+command = "scripts/sw-apl.sh --lib 2=ws,EXTENDED -f samples/course-7-10.apl"
+timeout = 120
+preprocess = "bash scripts/normalize-apl-output.sh"
+exit_code = 0
+desc = "Transcript of samples/course-7-10.apl"

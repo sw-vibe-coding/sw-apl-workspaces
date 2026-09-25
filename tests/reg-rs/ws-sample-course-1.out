@@ -2,7 +2,7 @@
       ⍝ library 2, EXTENDED, given to sw-apl with --lib 2=ws,EXTENDED.
       ⍝ DESCRIBE is the greeting, CONTENTS the list, START the first lesson.
       )LOAD 2 COURSE
-SAVED 20.10.00 09/24/26
+SAVED 20.30.00 09/24/26
       DESCRIBE
 COURSE -- APL, LESSON BY LESSON, WITH QUIZZES.
 
@@ -170,27 +170,25 @@ HOW MANY LESSONS ARE THERE?
       ,16
 RIGHT VALUE, THOUGH ONE IS A SCALAR AND ONE A VECTOR.
 YOU GOT 4 OF 4.
-      ⍝ NEXT goes on from the last lesson read; lesson 7 is not written.
-      LESSON 6
-LESSON 6: SELECTION
+      ⍝ NEXT goes on from the last lesson read; lesson 11 is not written.
+      LESSON 10
+LESSON 10: CHARACTERS
 
-BRACKETS AFTER A VECTOR PICK ELEMENTS BY POSITION, COUNTING
-FROM 1. THE INDEX MAY BE A VECTOR TOO. TRY:
+CHARACTERS GO IN QUOTES, AND A ROW OF THEM IS A VECTOR LIKE
+ANY OTHER. A QUOTE INSIDE IS DOUBLED. TRY:
 
-      V←10 20 30 40
-      V[3]
-      V[1 3]
-      V[4 3 2 1]
+      'HELLO'
+      ⍴'HELLO'
+      'IT''S'
+      'ABC','DEF'
 
-THE ARROW, ←, GIVES V ITS VALUE, AND V KEEPS IT UNTIL YOU
-CHANGE IT. A LINE THAT ONLY ASSIGNS PRINTS NOTHING. AN
-INDEXED NAME ON THE LEFT OF THE ARROW CHANGES ONE ELEMENT:
-V[2]←25, AND THEN V.
+'A' IS A SINGLE CHARACTER, A SCALAR, AND ⍴'A' IS EMPTY AS
+⍴7 WAS; ,'A' IS A VECTOR OF ONE.
 (TRY IT. TYPE GO TO GO ON, OR STOP TO LEAVE.)
 ⎕:
       STOP
       NEXT
-LESSON 7 IS NOT YET WRITTEN.
+LESSON 11 IS NOT YET WRITTEN.
       ⍝ An error at a pause is reported and the prompt comes back; STOP
       ⍝ leaves the lesson.
       LESSON 1
@@ -213,11 +211,11 @@ LENGTH ERROR
 ⎕:
       STOP
       ⍝ A quiz for a lesson not yet written, and a lesson that is not one.
-      QUIZ 9
-QUIZ 9 IS NOT YET WRITTEN.
+      QUIZ 16
+QUIZ 16 IS NOT YET WRITTEN.
       LESSON 17
 THERE ARE 16 LESSONS. TYPE CONTENTS TO SEE THEM.
       )OFF
-20.14.36 09/24/26
+20.20.34 09/24/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

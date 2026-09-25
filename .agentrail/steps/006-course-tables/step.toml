@@ -1,6 +1,6 @@
 number = 6
 slug = "course-tables"
-status = "pending"
+status = "in-progress"
 description = "Phase 1 step 4 of docs/plan.md: COURSE lessons 7 to 10 -- Matrices; Products;..."
 role = "production"
 context_files = []

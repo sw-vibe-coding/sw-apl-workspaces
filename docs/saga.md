@@ -30,3 +30,8 @@ quad-input replies (a8294dd). Two Phase 5 steps moved into this saga
 on the strength of it: the shim went, every sample loads from
 library 2, and lesson 1 now has the reader try the system commands
 at the pause itself.
+
+Lessons 7 to 10 (step 6): matrices, the two products, grade, roll
+and deal, encode and decode, and characters. The roll and the deal
+appear in a pinned transcript because `)LOAD` restores the file's
+random link, which is the reason the gate holds it at 16807.

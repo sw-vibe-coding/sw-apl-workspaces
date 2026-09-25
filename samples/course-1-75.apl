@@ -33,8 +33,8 @@ QUIZ 1
 0
 2
 ,16
-⍝ NEXT goes on from the last lesson read; lesson 7 is not written.
-LESSON 6
+⍝ NEXT goes on from the last lesson read; lesson 11 is not written.
+LESSON 10
 STOP
 NEXT
 ⍝ An error at a pause is reported and the prompt comes back; STOP
@@ -43,6 +43,6 @@ LESSON 1
 1 2 3+4 5
 STOP
 ⍝ A quiz for a lesson not yet written, and a lesson that is not one.
-QUIZ 9
+QUIZ 16
 LESSON 17
 )OFF

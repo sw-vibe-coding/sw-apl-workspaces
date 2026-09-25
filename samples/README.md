@@ -36,3 +36,12 @@ and `)HELP` answer for the mode.
 at the pauses what each section showed, including an assignment that
 outlasts its lesson, and take each quiz with one wrong answer among
 the right ones, one answer given as an expression.
+
+`course-7-10.apl` and `course-7-10-75.apl` read lessons 7 to 10 the
+same way: a matrix indexed and summed down its columns, the
+multiplication table and a matrix product, a sort by grade, a roll
+and a deal that come back the same because a loaded workspace starts
+its random sequence where the file says, seconds into hours, minutes
+and seconds, a histogram drawn from an outer product, and characters
+compared, compressed and printed beside numbers. Each quiz has one
+wrong answer, and quiz 10 is answered partly in quotes.
