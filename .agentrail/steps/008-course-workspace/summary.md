@@ -1,0 +1,1 @@
+COURSE lessons 15 and 16 with quizzes; the whole course read through in each mode (course-all, pinned): Milestone 1. Every test runs scripts/run-sample.sh with a fresh library 0 of its own, so samples that save are reproducible and independent.
