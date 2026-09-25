@@ -12,8 +12,14 @@ counts, deferred follow-ups), see
 narratives, see [`docs/saga.md`](docs/saga.md).
 
 
+## 2026-09-25
+
+- course: lessons 15 and 16, and the whole course read through
+
 ## 2026-09-24
 
+- saga: complete 007-course-programs
+- docs(changes): refresh CHANGES.md to HEAD
 - course: lessons 11 to 14, section starts, and the example functions
 - plan: this repository publishes nothing of its own
 - saga: complete 006-course-tables
