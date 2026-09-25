@@ -1,0 +1,1 @@
+Library 2: the shim removed, every script and sample uses --lib 2=ws,EXTENDED and )LOAD 2; README, library.md, testing.md, CLAUDE.md, samples/README.md, plan.md updated; four baselines rebased.
