@@ -61,6 +61,4 @@ QUIZ 10
 +/'BANANA'='A'
 'LPA'
 1 0 1
-⍝ Lesson 11 is not written yet.
-NEXT
 )OFF

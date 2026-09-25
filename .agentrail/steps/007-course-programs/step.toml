@@ -1,6 +1,6 @@
 number = 7
 slug = "course-programs"
-status = "pending"
+status = "in-progress"
 description = "Phase 1 step 5 of docs/plan.md: COURSE lessons 11 to 14 -- Defining functions..."
 role = "production"
 context_files = []

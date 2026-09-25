@@ -45,3 +45,14 @@ its random sequence where the file says, seconds into hours, minutes
 and seconds, a histogram drawn from an outer product, and characters
 compared, compressed and printed beside numbers. Each quiz has one
 wrong answer, and quiz 10 is answered partly in quotes.
+
+`course-11-14.apl` and `course-11-14-75.apl` read lessons 11 to 14.
+Lesson 11 sends the reader to the prompt to define CUBE, and
+`LESSON 11 2` brings them back to its second section; MEAN is
+displayed and edited at the prompt after the lesson. The example
+functions are called at the pauses: COUNT, FACT and SUMLOOP, ASK
+answered inside the pause's own quad, GREET, and GUESS won on the
+second try because the workspace's random link is fixed. Lesson 14's
+errors are tried at a pause, OOPS is abandoned there and then left
+suspended at the prompt and resumed with a branch. Each quiz has one
+wrong answer.

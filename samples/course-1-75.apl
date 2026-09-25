@@ -33,8 +33,8 @@ QUIZ 1
 0
 2
 ,16
-⍝ NEXT goes on from the last lesson read; lesson 11 is not written.
-LESSON 10
+⍝ NEXT goes on from the last lesson read; lesson 15 is not written.
+LESSON 14
 STOP
 NEXT
 ⍝ An error at a pause is reported and the prompt comes back; STOP

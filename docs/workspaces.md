@@ -128,9 +128,10 @@ which are written.
 | `DESCRIBE` | What COURSE is and what to type |
 | `CONTENTS` | The sixteen lessons, by number and title |
 | `START` | Lesson 1 |
-| `LESSON N` | Reads lesson N, in sections, with a pause after each |
+| `LESSON N` | Reads lesson N, in sections, with a pause after each; `LESSON N S` starts at section S |
 | `NEXT` | The lesson after the last one read (`LAST`, a global that `)SAVE` keeps) |
 | `QUIZ N` | Questions on lesson N, each answer read with `⎕` and marked; a score at the end |
+| `EXAMPLES` | The example functions lessons 11 to 14 bring with them: `SQUARE`, `HYP`, `HELLO`, `MEAN`, `COUNT`, `FACT`, `SUMLOOP`, `ASK`, `GREET`, `GUESS`, `OOPS` |
 
 A section ends with `(TRY IT. TYPE GO TO GO ON, OR STOP TO LEAVE.)`
 and a `⎕:` prompt. Anything typed there is evaluated and printed, a
@@ -138,6 +139,9 @@ system command included, so the reader tries what the section showed
 where they read it; an assignment made there is a global, and
 outlasts the lesson. `GO` goes on and `STOP` leaves the lesson. An
 error in what is typed is reported and the prompt comes back. A
+definition, or a display with `∇NAME[⎕]∇`, cannot be typed at a
+pause, so lesson 11 sends the reader to the prompt for it, and
+`LESSON 11 2` brings them back to the section after. A
 quiz question prints its text and then
 the `⎕:` prompt; the answer is APL, so `4`, `2+2` and `,4` are all
 read, and the last is remarked on as a vector where a scalar was
@@ -157,7 +161,8 @@ yet written says so.
 
 Lessons written: 1 Where you are, 2 Numbers, 3 Vectors, 4 Comparison
 and logic, 5 Reduction and scan, 6 Selection, 7 Matrices, 8 Products,
-9 Order and counting, 10 Characters.
+9 Order and counting, 10 Characters, 11 Defining functions, 12
+Branching, 13 Input and output, 14 Errors.
 
-Samples: `course-1.apl`, `course-2-6.apl` and `course-7-10.apl` in
-(A), and their `-75` twins in (B).
+Samples: `course-1.apl`, `course-2-6.apl`, `course-7-10.apl` and
+`course-11-14.apl` in (A), and their `-75` twins in (B).

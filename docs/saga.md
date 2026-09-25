@@ -35,3 +35,13 @@ Lessons 7 to 10 (step 6): matrices, the two products, grade, roll
 and deal, encode and decode, and characters. The roll and the deal
 appear in a pinned transcript because `)LOAD` restores the file's
 random link, which is the reason the gate holds it at 16807.
+
+Lessons 11 to 14 (step 7): functions, branching, input and output,
+errors. A del cannot be opened at a quad prompt, so every lesson
+gained section starts -- `LESSON N S` -- and lesson 11 sends the
+reader to the prompt to define a function and back to its second
+section. The example functions ship in the workspace, so they can be
+called at the pauses, and lesson 14 shows a failing function both
+ways: abandoned at a pause, suspended at the prompt. The owner also
+settled that this repository publishes nothing of its own: sw-apl's
+demo reads it from GitHub, and the Pages workflow went.
