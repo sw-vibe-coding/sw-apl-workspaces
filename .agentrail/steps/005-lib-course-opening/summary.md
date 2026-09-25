@@ -1,0 +1,1 @@
+Lesson 1 revised for sw-apl a8294dd: the reader tries )DIALECT, )WSID, )LIBS, )LIB 2 and )HELP at the pause; the error-recovery paragraph gone; course-1 re-pinned in both modes; docs and plan updated, findings marked fixed.
