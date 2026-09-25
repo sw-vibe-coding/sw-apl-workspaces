@@ -24,3 +24,9 @@ evaluate what a reader tried, so the pause reads with quad and
 prints whatever is typed until GO or STOP, and every local on the
 way to it became a delta name so the reader's own names are not
 shadowed. Two interpreter findings went to plan.md.
+
+sw-apl caught up the same afternoon: library 2 (a718f19) and the
+quad-input replies (a8294dd). Two Phase 5 steps moved into this saga
+on the strength of it: the shim went, every sample loads from
+library 2, and lesson 1 now has the reader try the system commands
+at the pause itself.

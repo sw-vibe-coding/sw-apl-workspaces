@@ -4,14 +4,20 @@
 )LOAD 2 COURSE
 DESCRIBE
 CONTENTS
-⍝ Lesson 1. At the first pause two expressions are tried and printed;
-⍝ GO goes on from every pause.
+⍝ Lesson 1. At each pause what the section showed is tried: two
+⍝ expressions, then the system commands, which run at the quad prompt
+⍝ and hand it back; GO goes on.
 START
 2+2
 3×4
 GO
+)DIALECT
+)WSID
 GO
+)LIBS
+)LIB 2
 GO
+)HELP LIBS
 GO
 ⍝ The quiz: a right answer, a wrong one, an expression that makes the
 ⍝ right one, and STOP, which leaves without a score.
@@ -30,12 +36,10 @@ QUIZ 1
 LESSON 6
 STOP
 NEXT
-⍝ An error at a pause stops the lesson with its report; a bare branch
-⍝ clears it, and the lesson can be read again.
+⍝ An error at a pause is reported and the prompt comes back; STOP
+⍝ leaves the lesson.
 LESSON 1
 1 2 3+4 5
-→
-LESSON 1
 STOP
 ⍝ A quiz for a lesson not yet written, and a lesson that is not one.
 QUIZ 9

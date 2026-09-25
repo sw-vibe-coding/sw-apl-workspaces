@@ -133,12 +133,12 @@ which are written.
 | `QUIZ N` | Questions on lesson N, each answer read with `⎕` and marked; a score at the end |
 
 A section ends with `(TRY IT. TYPE GO TO GO ON, OR STOP TO LEAVE.)`
-and a `⎕:` prompt. Anything typed there is evaluated and printed, so
-the reader tries what the section showed where they read it; an
-assignment made there is a global, and outlasts the lesson. `GO`
-goes on and `STOP` leaves the lesson. An error in what is typed
-stops the lesson with the report; a bare `→` clears it and `LESSON N`
-reads the lesson again. A quiz question prints its text and then
+and a `⎕:` prompt. Anything typed there is evaluated and printed, a
+system command included, so the reader tries what the section showed
+where they read it; an assignment made there is a global, and
+outlasts the lesson. `GO` goes on and `STOP` leaves the lesson. An
+error in what is typed is reported and the prompt comes back. A
+quiz question prints its text and then
 the `⎕:` prompt; the answer is APL, so `4`, `2+2` and `,4` are all
 read, and the last is remarked on as a vector where a scalar was
 wanted. `STOP` at a question leaves the quiz. A wrong answer shows

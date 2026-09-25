@@ -21,14 +21,16 @@ what came back.
 The paragraphs below say what each sample shows.
 
 `course-1.apl` and `course-1-75.apl`, one per mode, load COURSE,
-print DESCRIBE and CONTENTS, read lesson 1 trying two expressions at
-the first pause and GO at the rest, and take quiz 1 twice: once with
-a right answer, a wrong one, an expression that makes the right one,
-and STOP; once through to the score, with a one-element vector where
-a scalar was wanted. Then NEXT reaches a lesson not yet written, an
-error typed at a pause stops the lesson and a bare branch clears it,
-STOP at a pause leaves, and a quiz and a lesson number out of range
-are refused.
+print DESCRIBE and CONTENTS, read lesson 1 trying at each pause what
+the section showed (two expressions, then the system commands, which
+run at the quad prompt and hand it back), and take quiz 1 twice:
+once with a right answer, a wrong one, an expression that makes the
+right one, and STOP; once through to the score, with a one-element
+vector where a scalar was wanted. Then NEXT reaches a lesson not yet
+written, an error typed at a pause is reported and the prompt comes
+back, STOP at a pause leaves, and a quiz and a lesson number out of
+range are refused. The two modes' transcripts differ where `)DIALECT`
+and `)HELP` answer for the mode.
 
 `course-2-6.apl` and `course-2-6-75.apl` read lessons 2 to 6, trying
 at the pauses what each section showed, including an assignment that

@@ -185,7 +185,7 @@ What this repository needs from sw-apl, and where it stands:
 | `)LIBS` naming this library | `library-config` | Landed |
 | Libraries by URL in the browser, an index file | `browser-libraries` | Landed; GitHub Pages for this repository still to be enabled |
 | `)HELP`, `)DIALECT` for COURSE's opening lesson | `dialect`, `help` | Landed |
-| System commands and errors in the reply to `⎕` | `quad-input-commands` | In progress; lesson 1 revised when it lands (`lib-course-opening`) |
+| System commands and errors in the reply to `⎕` | `quad-input-commands` | Landed (a8294dd); lesson 1 revised for it |
 
 ## Phases
 
@@ -455,11 +455,12 @@ into the `course` saga.
    raw.githubusercontent.com, and a check that the published demo
    lists and loads COURSE in each mode. **Milestone 5:** `)LOAD 2
    COURSE` and `START` in the browser.
-3. `lib-course-opening` -- once sw-apl's `quad-input-commands` lands:
-   lesson 1 lets the reader try `)DIALECT`, `)WSID`, `)LIBS` and
-   `)HELP` at the pause itself, drops the paragraph on clearing an
-   error with `→` (an error at a `⎕` prompt then re-prompts), checks
-   the text against what sw-apl prints, and re-pins course-1.
+3. `lib-course-opening` -- done 2026-09-24, in the `course` saga,
+   once sw-apl's `quad-input-commands` landed (a8294dd): lesson 1
+   lets the reader try `)DIALECT`, `)WSID`, `)LIBS`, `)LIB 2` and
+   `)HELP` at the pause itself, the paragraph on clearing an error
+   with `→` went (an error at a `⎕` prompt re-prompts), and course-1
+   was re-pinned in both modes.
 
 ## Decisions
 
@@ -489,11 +490,12 @@ into the `course` saga.
 ## Findings for sw-apl
 
 Found while writing the workspaces; reported to the owner, recorded
-here until sw-apl's plan takes them up. None is worked around in a
-way that makes a workspace not-APL.
+here until sw-apl's plan takes them up, and marked when fixed. None
+is worked around in a way that makes a workspace not-APL.
 
-- **An error in the reply to `⎕` suspends the caller** (2026-09-24,
-  COURSE step 2). A LENGTH ERROR typed at a `⎕` prompt inside
+- **Fixed in sw-apl a8294dd (2026-09-24): an error in the reply to
+  `⎕` now prints its report and asks again, and a system command
+  there runs and asks again.** As found (2026-09-24, COURSE step 2): A LENGTH ERROR typed at a `⎕` prompt inside
   `∆PAUSE` prints its report against `∆PAUSE[1]`, but `)SI` then
   shows the *calling* function suspended (`TEST[3]*`), and `→1`
   restarts that caller rather than the line that read. The two
@@ -501,9 +503,10 @@ way that makes a workspace not-APL.
   the input request re-issued after an error, rather than the
   function suspended, is worth checking at the same time. COURSE
   tells the reader to type `→` and read the lesson again, which is
-  right whichever way this is settled.
-- **A system command at a `⎕` prompt is a SYNTAX ERROR** (same
-  day). `)SI` typed in reply to `⎕` is reported as a syntax error
+  right whichever way this is settled. (Settled: the request is
+  repeated.)
+- **A system command at a `⎕` prompt was a SYNTAX ERROR** (same
+  day; fixed with the above). `)SI` typed in reply to `⎕` is reported as a syntax error
   in the line that read. APL\360 accepted system commands in reply
   to quad input. Lesson 1 therefore asks the reader to try
   `)DIALECT`, `)WSID`, `)LIBS` and `)HELP` after the lesson, not at

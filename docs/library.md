@@ -88,7 +88,7 @@ each entry in `workspaces` and takes the modes from the file itself;
 | `)LIBS` naming this library | `library-config` | Landed |
 | Libraries by URL in the browser | `browser-libraries` | Landed, through raw.githubusercontent.com; GitHub Pages for this repository still to be enabled |
 | `)DIALECT` and `)HELP`, which COURSE's first lesson shows | `dialect`, `help` | Landed |
-| A system command, or an error, in the reply to `⎕` | `quad-input-commands` | In progress; lesson 1 is revised when it lands |
+| A system command, or an error, in the reply to `⎕` | `quad-input-commands` | Landed; lesson 1 uses it |
 
 A gap in the interpreter found while writing a workspace -- a
 primitive that misbehaves, a reply that is wrong -- is reported to
