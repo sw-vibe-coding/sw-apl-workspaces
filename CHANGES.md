@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-25
 
+- drill: the tables, the generator, and SHOW
+- saga: complete 008-course-workspace; course saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - course: lessons 15 and 16, and the whole course read through
 
 ## 2026-09-24
