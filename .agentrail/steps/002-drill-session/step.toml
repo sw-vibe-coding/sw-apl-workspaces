@@ -1,0 +1,8 @@
+number = 2
+slug = "drill-session"
+status = "pending"
+description = "Phase 2 step 2 of docs/plan.md: the drill itself. EASY (one function, scalars..."
+role = "production"
+context_files = []
+created_at = "2026-09-25T10:49:35"
+commits = []

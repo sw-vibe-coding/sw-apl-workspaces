@@ -50,3 +50,12 @@ Lessons 15 and 16 (step 8): workspaces, tried at the pauses since
 every command but a load runs there, and the two modes, each half
 tried in its own mode and an error in the other. Then the
 read-through, `course-all`, in each mode: Milestone 1.
+
+## drill (2026-09-25)
+
+Phase 2 of `plan.md`: DRILL. Step 1 built the tables and the
+generator, and found the check that makes the tables trustworthy:
+in (B) the sample evaluates each exercise's characters with execute
+and compares with what the branch tables computed, and a hundred of
+a hundred agree. (A) gets the same exercises, since the sequence is
+the random link's.

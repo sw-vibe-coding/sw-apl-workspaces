@@ -69,3 +69,11 @@ errors whichever mode it runs in, and the date is labelled (VARIES).
 START, GO at every pause, every quiz with the right answers, and NEXT
 between lessons until it has nowhere to go. They are Milestone 1 of
 `docs/plan.md`.
+
+`drill-show.apl` loads DRILL and prints a hundred exercises with
+their answers, the same on every run because the workspace's random
+link is fixed. `drill-show-75.apl` does the same in (B) and then
+defines VERIFY, with execute, in the sample rather than the
+workspace: it makes a hundred more exercises, evaluates the
+characters of each, and counts how many agree with the value the
+tables gave. A hundred do.

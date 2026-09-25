@@ -1,0 +1,8 @@
+number = 3
+slug = "drill-topics"
+status = "pending"
+description = "Phase 2 step 3 of docs/plan.md: INDEX and STRUCTURE topics -- bracket indexin..."
+role = "production"
+context_files = []
+created_at = "2026-09-25T10:49:35"
+commits = []

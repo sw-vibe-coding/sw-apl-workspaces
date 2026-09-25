@@ -170,3 +170,32 @@ Samples: `course-1.apl`, `course-2-6.apl`, `course-7-10.apl`,
 `course-11-14.apl` and `course-15-16.apl` in (A), their `-75` twins
 in (B), and `course-all.apl` with its twin, which read the whole
 course through with every quiz answered.
+
+### DRILL
+
+Both modes, `ws/DRILL.apl.ws`. Exercises in APL made at random and
+marked. `plan.md` says how far it is built.
+
+| Function | What it does |
+|---|---|
+| `DESCRIBE` | What DRILL is and what to type |
+| `SHOW N` | Prints N exercises, each followed by its answer |
+
+An exercise is one function from the tables `MON` (the one-argument
+glyphs) and `DYA` (the two-argument glyphs) on small whole numbers,
+scalars or vectors of two to five, chosen so that the answer is
+whole where the function allows: a multiple for division, a small
+power, a divisor of 1 to 5 for residue, 1 and 0 for and and or, and
+two vectors always the same length.
+
+The machinery: `∆NEW` chooses an exercise and sets the caller's `∆E`
+(its characters) and `∆V` (its value); `∆MON` and `∆DYA` are branch
+tables that apply the glyph, since (A) has no execute, `∆DYA` reading
+the operands `∆X` and `∆Y` from its caller as sw-apl's BIRDS reads
+`FN`; `∆CHARS` writes a whole number or vector as APL prints it,
+without format, by encode; `∆SMALL` draws the operands. The random
+link is the file's, so `SHOW` gives the same exercises on every load.
+
+Samples: `drill-show.apl` in (A); `drill-show-75.apl` in (B), which
+also defines VERIFY with execute and counts how many of a hundred
+displays evaluate to the value the tables gave.

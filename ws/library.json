@@ -1,4 +1,5 @@
 {"name": "EXTENDED",
  "workspaces": [
-  {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"}
+  {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"},
+  {"name": "DRILL", "file": "DRILL.apl.ws", "modes": "(A)(B)"}
  ]}
