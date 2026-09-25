@@ -51,7 +51,7 @@ nothing. Only library 0 is written to.
 
 The published demo runs sw-apl in the page, with no service behind
 it, so a library there is fetched from a URL. This repository
-publishes `ws/` on GitHub Pages, and beside the workspaces an index,
+keeps, beside the workspaces in `ws/`, an index,
 `ws/library.json`:
 
 ```json
@@ -69,10 +69,11 @@ and every file it names before the session starts, with a timeout,
 and hands them to the session as its own library 1 is handed to it. A
 library that will not load is said so on the paper and the session
 starts without it. The published demo's library 2 is this
-repository's `ws/library.json` read through raw.githubusercontent.com,
-which serves across origins; it moves to this repository's GitHub
-Pages, which answers with `Access-Control-Allow-Origin: *`, once they
-are enabled for the repository.
+repository's `ws/library.json`, read straight from the repository on
+GitHub through raw.githubusercontent.com, which serves across
+origins. This repository publishes nothing of its own: the demo is
+sw-apl's, and a push to `main` here is all it takes for the demo to
+see a new workspace.
 
 `scripts/gen-index.sh` writes the index from the files and their
 modes lines; it is tracked, so what is served is what was committed,
@@ -86,7 +87,7 @@ each entry in `workspaces` and takes the modes from the file itself;
 |---|---|---|
 | `)LIB 2` and `)LOAD 2 NAME` from a configured directory | `library-config` | Landed; the samples use it |
 | `)LIBS` naming this library | `library-config` | Landed |
-| Libraries by URL in the browser | `browser-libraries` | Landed, through raw.githubusercontent.com; GitHub Pages for this repository still to be enabled |
+| Libraries by URL in the browser | `browser-libraries` | Landed, reading this repository through raw.githubusercontent.com |
 | `)DIALECT` and `)HELP`, which COURSE's first lesson shows | `dialect`, `help` | Landed |
 | A system command, or an error, in the reply to `⎕` | `quad-input-commands` | Landed; lesson 1 uses it |
 

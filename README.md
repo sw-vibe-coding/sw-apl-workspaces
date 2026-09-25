@@ -119,8 +119,8 @@ see sw-apl's own documentation.
 ## Repository layout
 
 ```
-ws/           the workspaces, and library.json, the index a browser
-              reads
+ws/           the workspaces, and library.json, the index sw-apl's
+              browser demo reads from this repository
 samples/      one transcript sample per workspace: loads it, runs
               DESCRIBE, exercises every public function with
               scripted input

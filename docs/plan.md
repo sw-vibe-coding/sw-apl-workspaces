@@ -156,10 +156,10 @@ steps are written against, and tests against sw-apl as it lands.
 - **In the browser** (the same sw-apl commit): the page reads
   `libraries.json` beside it and fetches each library's index and
   files. The published demo's library 2 is this repository's
-  `ws/library.json` through raw.githubusercontent.com; it moves to
-  this repository's GitHub Pages, whose responses carry
-  `Access-Control-Allow-Origin: *`, once Pages is enabled for the
-  repository. The index is `ws/library.json`:
+  `ws/library.json` through raw.githubusercontent.com, which serves
+  across origins. This repository publishes nothing itself (owner,
+  2026-09-24: no Pages and no demo of its own here); a push to `main`
+  is what the demo sees. The index is `ws/library.json`:
 
   ```
   {"name": "EXTENDED",
@@ -183,7 +183,7 @@ What this repository needs from sw-apl, and where it stands:
 |---|---|---|
 | `)LIB 2`, `)LOAD 2 NAME` from a configured directory | `library-config` | Landed; in use |
 | `)LIBS` naming this library | `library-config` | Landed |
-| Libraries by URL in the browser, an index file | `browser-libraries` | Landed; GitHub Pages for this repository still to be enabled |
+| Libraries by URL in the browser, an index file | `browser-libraries` | Landed; the demo reads `ws/library.json` from GitHub |
 | `)HELP`, `)DIALECT` for COURSE's opening lesson | `dialect`, `help` | Landed |
 | System commands and errors in the reply to `⎕` | `quad-input-commands` | Landed (a8294dd); lesson 1 revised for it |
 
@@ -209,7 +209,7 @@ had numbered libraries of its own.
 
 1. `scaffold` -- the rest: `scripts/gen-index.sh` writing
    `ws/library.json` and a gate that the tracked index is current;
-   the Pages workflow that publishes `ws/`; `samples/README.md`,
+   `samples/README.md`,
    `tests/reg-rs/`, `work/README.md`; and `docs/workspaces.md`,
    `docs/testing.md`, `docs/saga.md`, `docs/citations.md`,
    `docs/library.md`, so that every document the README names
@@ -450,11 +450,11 @@ into the `course` saga.
    switched from the shim's `)LOAD 1` to `)LOAD 2`, every baseline
    rebased with that one reason; the shim removed; `)LIBS` shows
    EXTENDED; the README's "Use it" says exactly what to type.
-2. `lib-browser` -- GitHub Pages enabled for this repository and
-   serving `ws/`, sw-apl's `libraries.json` pointed at it instead of
-   raw.githubusercontent.com, and a check that the published demo
-   lists and loads COURSE in each mode. **Milestone 5:** `)LOAD 2
-   COURSE` and `START` in the browser.
+2. `lib-browser` -- dropped (owner, 2026-09-24): this repository
+   has no Pages and no demo of its own. sw-apl's demo reads
+   `ws/library.json` from the repository on GitHub, and `)LIB 2` and
+   `)LOAD 2 COURSE` already work there, which is **Milestone 5**. The
+   Pages workflow added in `scaffold` was removed the same day.
 3. `lib-course-opening` -- done 2026-09-24, in the `course` saga,
    once sw-apl's `quad-input-commands` landed (a8294dd): lesson 1
    lets the reader try `)DIALECT`, `)WSID`, `)LIBS`, `)LIB 2` and
