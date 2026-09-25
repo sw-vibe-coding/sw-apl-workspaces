@@ -1,0 +1,1 @@
+COURSE lessons 11 to 14 with quizzes; LESSON N S section starts; the example functions shipped in the workspace with EXAMPLES; samples course-11-14 in both modes pinned; course-1 and course-7-10 rebased with reasons; Pages workflow removed and the plan's lib-browser step dropped on owner direction.
