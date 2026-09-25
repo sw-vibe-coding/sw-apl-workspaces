@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-25
 
+- drill: EASY, DRILL and HARD, the topics, the marking and the hints
+- saga: complete 001-drill-tables
+- docs(changes): refresh CHANGES.md to HEAD
 - drill: the tables, the generator, and SHOW
 - saga: complete 008-course-workspace; course saga done
 - docs(changes): refresh CHANGES.md to HEAD
