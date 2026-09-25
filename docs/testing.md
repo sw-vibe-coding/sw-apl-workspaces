@@ -39,8 +39,11 @@ just samples course              # print the transcripts, to look at
 ```
 
 Tests are stored under `tests/reg-rs/` (`.rgt` spec and `.out`
-baseline, tracked; the run database, not). Every test runs sw-apl
-through `scripts/sw-apl.sh` with `ws/` as library 2, and through
+baseline, tracked; the run database, not). Every test runs
+`scripts/run-sample.sh NAME`, which runs sw-apl with `ws/` as
+library 2 and a fresh library 0 of the sample's own under `target/`,
+so a sample that `)SAVE`s starts from nothing every time and leaves
+nothing for another to list, and through
 `scripts/normalize-apl-output.sh`, which masks the one thing a
 session prints that cannot come back the same, the sign-off's clock,
 and any value a sample labels `(VARIES): ` in its own output.
@@ -78,5 +81,6 @@ EXTENDED, with `--lib 2=ws,EXTENDED`, so a sample says `)LOAD 2 NAME`
 and `)LIBS` shows the library as a reader of the README would see it.
 The flag arrived in sw-apl at commit a718f19; an older binary refuses
 it, and `scripts/sw-apl.sh --help` shows whether the one in use has
-it. Library 0 is `work/` under the directory sw-apl runs from, which
-is ignored, so a sample that `)SAVE`s writes nothing that is tracked.
+it. A sample's library 0 is `target/lib0/NAME/work`, emptied before
+each run; `just apl` uses `work/` under the repository, which is
+ignored. Neither writes anything that is tracked.

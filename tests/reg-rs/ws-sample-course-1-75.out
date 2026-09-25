@@ -3,7 +3,7 @@
       ⍝ library 2, EXTENDED, given to sw-apl with --lib 2=ws,EXTENDED.
       ⍝ DESCRIBE is the greeting, CONTENTS the list, START the first lesson.
       )LOAD 2 COURSE
-SAVED 22.00.00 09/24/26
+SAVED 11.00.00 09/25/26
       DESCRIBE
 COURSE -- APL, LESSON BY LESSON, WITH QUIZZES.
 
@@ -173,24 +173,23 @@ HOW MANY LESSONS ARE THERE?
       ,16
 RIGHT VALUE, THOUGH ONE IS A SCALAR AND ONE A VECTOR.
 YOU GOT 4 OF 4.
-      ⍝ NEXT goes on from the last lesson read; lesson 15 is not written.
-      LESSON 14
-LESSON 14: ERRORS
+      ⍝ NEXT goes on from the last lesson read, and says so after the last.
+      LESSON 16
+LESSON 16: THE TWO MODES
 
-AN ERROR REPORT HAS THREE LINES: THE KIND OF ERROR, THE
-STATEMENT, AND A CARET UNDER THE POINT APL HAD REACHED WHEN
-IT GAVE UP. APL WORKS FROM THE RIGHT, SO EVERYTHING TO THE
-RIGHT OF THE CARET WAS DONE. TRY:
+SW-APL HAS TWO MODES, AND )DIALECT SAYS WHICH YOU ARE IN.
+(A) '70 IS MODELLED ON APL\360 OF 1970, USED FROM A 2741
+TYPEWRITER TERMINAL; (B) '75 ON THE APL OF THE IBM 5100,
+A DESKTOP COMPUTER OF 1975. THE LANGUAGE IS THE SAME CORE,
+AND EVERYTHING IN THIS COURSE SO FAR RUNS IN BOTH. EACH
+HAS A LITTLE THE OTHER HAS NOT. TRY:
 
-      1 2+1 2 3
-      2÷0
-      XYZ+1
-      (1 2 3)[5]
+      )DIALECT
 (TRY IT. TYPE GO TO GO ON, OR STOP TO LEAVE.)
 ⎕:
       STOP
       NEXT
-LESSON 15 IS NOT YET WRITTEN.
+THAT WAS THE LAST LESSON. CONTENTS LISTS THEM ALL.
       ⍝ An error at a pause is reported and the prompt comes back; STOP
       ⍝ leaves the lesson.
       LESSON 1
@@ -212,12 +211,12 @@ LENGTH ERROR
            ^
 ⎕:
       STOP
-      ⍝ A quiz for a lesson not yet written, and a lesson that is not one.
-      QUIZ 16
-QUIZ 16 IS NOT YET WRITTEN.
+      ⍝ A quiz and a lesson that are not there.
+      QUIZ 17
+THERE ARE 16 LESSONS. TYPE CONTENTS TO SEE THEM.
       LESSON 17
 THERE ARE 16 LESSONS. TYPE CONTENTS TO SEE THEM.
       )OFF
-22.46.46 09/24/26
+10.38.38 09/25/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

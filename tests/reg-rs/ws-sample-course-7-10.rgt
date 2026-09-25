@@ -1,4 +1,4 @@
-command = "scripts/sw-apl.sh --lib 2=ws,EXTENDED -f samples/course-7-10.apl"
+command = "scripts/run-sample.sh course-7-10"
 timeout = 120
 preprocess = "bash scripts/normalize-apl-output.sh"
 exit_code = 0

@@ -300,7 +300,8 @@ Steps:
    whole course in each mode, `docs/workspaces.md`'s entry, the README
    table row, and the sample's README paragraph. **Milestone 1:**
    `)LOAD 2 COURSE`, `START`, and every lesson and quiz runs in (A)
-   and in (B).
+   and in (B). Reached 2026-09-25: `samples/course-all.apl` and its
+   (B) twin are the proof, pinned.
 
 ### Phase 2: DRILL (saga `drill`)
 

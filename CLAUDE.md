@@ -328,8 +328,10 @@ scripts/reg-seed.sh       # seed a test for a new sample
 ```
 
 Every script gives sw-apl this repository as library 2 with
-`--lib 2=ws,EXTENDED`, so samples say `)LOAD 2 NAME`. The binary must
-be sw-apl a718f19 or later, which has the flag.
+`--lib 2=ws,EXTENDED`, so samples say `)LOAD 2 NAME`; a test runs
+`scripts/run-sample.sh NAME`, which also gives the sample a fresh
+library 0 of its own. The binary must be sw-apl a718f19 or later,
+which has the flag.
 
 ## Every step is TDD
 

@@ -119,9 +119,8 @@ never sets `⎕LX`, which would make it (B) only.
 
 ### COURSE
 
-Both modes, `ws/COURSE.apl.ws`. APL, lesson by lesson, with a quiz
-after each; the lessons are listed by `CONTENTS`, and `plan.md` says
-which are written.
+Both modes, `ws/COURSE.apl.ws`. APL in sixteen lessons, with a quiz
+after each; `CONTENTS` lists them.
 
 | Function | What it does |
 |---|---|
@@ -156,13 +155,18 @@ reads, tests for GO and STOP, and prints), `∆READ` (a quiz answer),
 same count, same values, same rank, with a remark for a scalar
 against a one-element vector), and `∆L1`, `∆Q1` and so on, one per
 lesson and quiz. Every local on the way to a pause is a delta name,
-so what the reader types there sees their own names. A lesson not
-yet written says so.
+so what the reader types there sees their own names. A number that is
+not a lesson's is refused.
 
-Lessons written: 1 Where you are, 2 Numbers, 3 Vectors, 4 Comparison
+The lessons: 1 Where you are, 2 Numbers, 3 Vectors, 4 Comparison
 and logic, 5 Reduction and scan, 6 Selection, 7 Matrices, 8 Products,
 9 Order and counting, 10 Characters, 11 Defining functions, 12
-Branching, 13 Input and output, 14 Errors.
+Branching, 13 Input and output, 14 Errors, 15 Workspaces, 16 The two
+modes. Lesson 15 has the reader save, list, copy and load at the
+pauses; lesson 16 shows what each mode has alone, and the reader
+tries their own mode's half.
 
-Samples: `course-1.apl`, `course-2-6.apl`, `course-7-10.apl` and
-`course-11-14.apl` in (A), and their `-75` twins in (B).
+Samples: `course-1.apl`, `course-2-6.apl`, `course-7-10.apl`,
+`course-11-14.apl` and `course-15-16.apl` in (A), their `-75` twins
+in (B), and `course-all.apl` with its twin, which read the whole
+course through with every quiz answered.

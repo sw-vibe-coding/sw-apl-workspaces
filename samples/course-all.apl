@@ -1,0 +1,166 @@
+⍝ COURSE, read through: START, then every lesson with GO at every
+⍝ pause, every quiz with the right answers, and NEXT between them,
+⍝ until NEXT has nowhere to go. Milestone 1 of docs/plan.md.
+)LOAD 2 COURSE
+START
+GO
+GO
+GO
+GO
+QUIZ 1
+4
+0
+2
+16
+NEXT
+GO
+GO
+GO
+QUIZ 2
+14
+2
+2
+3
+1024
+NEXT
+GO
+GO
+GO
+QUIZ 3
+1 2 3 4
+5
+4 6 8
+1 2 1 2 1
+1 2 3 4
+NEXT
+GO
+GO
+GO
+QUIZ 4
+0 0 1
+0
+0 1 0
+0
+0 20 30
+NEXT
+GO
+GO
+GO
+QUIZ 5
+10
+24
+1 3 6
+9
+3
+NEXT
+GO
+GO
+GO
+QUIZ 6
+5 6
+6 7 8
+3 2 1
+7 9
+2
+NEXT
+GO
+GO
+GO
+QUIZ 7
+2 3
+4
+6 15
+5 7 9
+3 2
+NEXT
+GO
+GO
+GO
+QUIZ 8
+32
+2 3
+6
+1
+1
+NEXT
+GO
+GO
+GO
+QUIZ 9
+2 3 1
+2 5 8
+5
+1 1 0
+2 3
+NEXT
+GO
+GO
+GO
+QUIZ 10
+3
+3
+3
+'LPA'
+1 0 1
+NEXT
+GO
+GO
+GO
+QUIZ 11
+1 4 9
+13
+'N'
+2
+5
+NEXT
+GO
+GO
+GO
+QUIZ 12
+1 2
+24
+0
+15
+2
+NEXT
+GO
+GO
+GO
+QUIZ 13
+'⍞'
+5
+1
+3
+12
+NEXT
+GO
+GO
+GO
+QUIZ 14
+'LENGTH ERROR'
+'DOMAIN ERROR'
+'VALUE ERROR'
+')SI'
+'→'
+NEXT
+GO
+GO
+GO
+QUIZ 15
+0
+')COPY'
+')LOAD'
+'CLEAR WS'
+'DESCRIBE'
+NEXT
+GO
+GO
+GO
+QUIZ 16
+'A'
+'B'
+4
+1900
+')DIALECT'
+NEXT
+)OFF

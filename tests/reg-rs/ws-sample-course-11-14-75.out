@@ -6,7 +6,7 @@
       ⍝ workspace; lesson 14's OOPS is left suspended at the prompt on
       ⍝ purpose, and resumed.
       )LOAD 2 COURSE
-SAVED 22.00.00 09/24/26
+SAVED 11.00.00 09/25/26
       EXAMPLES
 THE EXAMPLE FUNCTIONS OF LESSONS 11 TO 14, IN THIS WORKSPACE:
 
@@ -436,7 +436,7 @@ OOPS[2]  1 2+1 2 3
       )SI
 ∆PAUSE[3]
 ∆L14[45]
-LESSON[39]
+LESSON[38]
 NEXT[2]
 ⎕:
       GO
@@ -491,6 +491,6 @@ NO. THE ANSWER IS:
 →
 YOU GOT 4 OF 5.
       )OFF
-22.46.46 09/24/26
+10.38.39 09/25/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

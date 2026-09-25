@@ -6,7 +6,7 @@
       ⍝ come back the same because a loaded workspace starts its random
       ⍝ sequence where the file says.
       )LOAD 2 COURSE
-SAVED 22.00.00 09/24/26
+SAVED 11.00.00 09/25/26
       LESSON 7
 LESSON 7: MATRICES
 
@@ -361,6 +361,6 @@ WHAT IS 'ABC'∊'CAT'?
 RIGHT.
 YOU GOT 4 OF 5.
       )OFF
-22.46.47 09/24/26
+10.38.39 09/25/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

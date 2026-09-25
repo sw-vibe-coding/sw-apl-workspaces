@@ -45,3 +45,8 @@ called at the pauses, and lesson 14 shows a failing function both
 ways: abandoned at a pause, suspended at the prompt. The owner also
 settled that this repository publishes nothing of its own: sw-apl's
 demo reads it from GitHub, and the Pages workflow went.
+
+Lessons 15 and 16 (step 8): workspaces, tried at the pauses since
+every command but a load runs there, and the two modes, each half
+tried in its own mode and an error in the other. Then the
+read-through, `course-all`, in each mode: Milestone 1.

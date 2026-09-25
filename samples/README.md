@@ -56,3 +56,16 @@ second try because the workspace's random link is fixed. Lesson 14's
 errors are tried at a pause, OOPS is abandoned there and then left
 suspended at the prompt and resumed with a branch. Each quiz has one
 wrong answer.
+
+`course-15-16.apl` and `course-15-16-75.apl` read lessons 15 and 16.
+At lesson 15's pauses the workspace is renamed, saved into library 0,
+listed, HELLO is erased and copied back from library 2, and the
+libraries are listed; after the lesson the saved copy is loaded and
+dropped. The (B) twin saves under another name, so the two can run at
+once. Lesson 16 tries each mode's own features, so half of them are
+errors whichever mode it runs in, and the date is labelled (VARIES).
+
+`course-all.apl` and `course-all-75.apl` read the whole course:
+START, GO at every pause, every quiz with the right answers, and NEXT
+between lessons until it has nowhere to go. They are Milestone 1 of
+`docs/plan.md`.

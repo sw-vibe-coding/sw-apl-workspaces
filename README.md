@@ -29,7 +29,7 @@ has a `DESCRIBE` that says what it holds and what to type next.
 
 | Workspace | Modes | What it is |
 |---|---|---|
-| COURSE | both | APL, lesson by lesson, with quizzes marked as you go: `START` |
+| COURSE | both | APL in sixteen lessons, with a quiz after each, marked as you go: `START` |
 | DRILL | a version for each | Exercises made at random and marked: `EASY`, `DRILL`, `HARD`; in (B), `WRITE` as well |
 | STATS | both | Descriptive statistics, regression by domino, tests, random samples |
 | MATH | both | Primes, factors, combinatorics, base conversion |

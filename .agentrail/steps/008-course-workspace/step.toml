@@ -1,6 +1,6 @@
 number = 8
 slug = "course-workspace"
-status = "pending"
+status = "in-progress"
 description = "Phase 1 step 6 of docs/plan.md: COURSE lessons 15 and 16 -- Workspaces; The t..."
 role = "production"
 context_files = []
