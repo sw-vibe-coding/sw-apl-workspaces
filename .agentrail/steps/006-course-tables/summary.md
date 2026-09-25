@@ -1,0 +1,1 @@
+COURSE lessons 7 to 10 (matrices, products, order and counting, characters) with quizzes; samples course-7-10 in both modes pinned; course-1 rebased for its not-yet-written demos moving to lesson 11 and quiz 16; docs updated.
