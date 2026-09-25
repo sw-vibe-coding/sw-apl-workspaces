@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-24
 
+- course: lessons 7 to 10
+- saga: complete 005-lib-course-opening
+- docs(changes): refresh CHANGES.md to HEAD
 - course: lesson 1 tries the system commands at the pause
 - saga: complete 004-lib-cli
 - docs(changes): refresh CHANGES.md to HEAD
