@@ -1,0 +1,1 @@
+DRILL's session: the topic menu, EASY/DRILL/HARD, marking, the worked-out answer after three wrong, hints per glyph; inner/outer tables and a conforming outer operand for composed exercises; samples per level in both modes pinned; drill-show rebased and VERIFY moved to HARD.
