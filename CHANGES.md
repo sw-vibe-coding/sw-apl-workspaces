@@ -14,6 +14,10 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-24
 
+- course: lessons 11 to 14, section starts, and the example functions
+- plan: this repository publishes nothing of its own
+- saga: complete 006-course-tables
+- docs(changes): refresh CHANGES.md to HEAD
 - course: lessons 7 to 10
 - saga: complete 005-lib-course-opening
 - docs(changes): refresh CHANGES.md to HEAD
