@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-24
 
+- course: lesson 1 tries the system commands at the pause
+- saga: complete 004-lib-cli
+- docs(changes): refresh CHANGES.md to HEAD
 - lib: this repository is library 2, given to sw-apl with --lib
 - saga: complete 003-course-arrays
 - docs(changes): refresh CHANGES.md to HEAD
