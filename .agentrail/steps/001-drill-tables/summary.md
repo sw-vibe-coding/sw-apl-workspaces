@@ -1,0 +1,1 @@
+DRILL's tables and generator: MON/DYA, ∆MON/∆DYA branch tables, ∆CHARS by encode, ∆NEW operand rules, SHOW N; samples drill-show in both modes pinned, the (B) one verifying a hundred exercises with execute; four course baselines rebased for )LIB 2 listing DRILL.
