@@ -1,9 +1,9 @@
 # Samples
 
 One transcript sample per workspace, in glyph-form APL, each ending
-with `)OFF`. A sample loads its workspace from the shim library
-(`)LOAD 1 NAME` until sw-apl's numbered libraries land, `)LOAD 2
-NAME` after), runs `DESCRIBE`, and exercises every public function
+with `)OFF`. A sample loads its workspace from library 2, this
+repository's `ws/` given to sw-apl as `--lib 2=ws,EXTENDED`
+(`)LOAD 2 NAME`), runs `DESCRIBE`, and exercises every public function
 with every input scripted, so that the transcript sw-apl prints for
 it is the same every time. The transcripts are the tests: reg-rs
 pins one per sample under `tests/reg-rs/` (see `docs/testing.md`).

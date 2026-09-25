@@ -327,9 +327,9 @@ just run ws/NAME.apl.ws 75   # one workspace, one mode
 scripts/reg-seed.sh       # seed a test for a new sample
 ```
 
-`scripts/lib-shim.sh` makes `target/shim`, a library directory with
-`ws/` as its library 1, so samples say `)LOAD 1 NAME` until sw-apl's
-`library-config` step lands and they switch to `)LOAD 2 NAME`.
+Every script gives sw-apl this repository as library 2 with
+`--lib 2=ws,EXTENDED`, so samples say `)LOAD 2 NAME`. The binary must
+be sw-apl a718f19 or later, which has the flag.
 
 ## Every step is TDD
 

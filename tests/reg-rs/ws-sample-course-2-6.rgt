@@ -1,4 +1,4 @@
-command = "scripts/sw-apl.sh --library target/shim -f samples/course-2-6.apl"
+command = "scripts/sw-apl.sh --lib 2=ws,EXTENDED -f samples/course-2-6.apl"
 timeout = 120
 preprocess = "bash scripts/normalize-apl-output.sh"
 exit_code = 0

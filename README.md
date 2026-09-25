@@ -60,10 +60,28 @@ DRILL
       START
 ```
 
-Until sw-apl's library configuration lands, `scripts/lib-shim.sh`
-makes a library directory whose library 1 is this repository's
-`ws/`, and `sw-apl --library target/shim` lists and loads these
-workspaces as `)LIB 1`.
+At the terminal, give sw-apl the directory and the name:
+
+```bash
+sw-apl --lib 2=/path/to/sw-apl-workspaces/ws,EXTENDED
+sw-apl --mode 75 --lib 2=/path/to/sw-apl-workspaces/ws,EXTENDED
+```
+
+or keep it in `sw-apl.toml`, beside where sw-apl runs or in the
+user's configuration directory, so the flag need not be typed:
+
+```toml
+[[library]]
+number = 2
+name = "EXTENDED"
+path = "/path/to/sw-apl-workspaces/ws"
+```
+
+`sw-apl-server` takes the same flag and file, so the 2741 terminal
+and the local browser page see the library too. The published demo
+at sw-apl.softwarewrighter.com reads this repository's `ws/` over
+the network, so `)LOAD 2 COURSE` works there with nothing installed.
+`just apl` here starts a session with the library configured.
 
 ## Building and testing
 
@@ -107,7 +125,7 @@ samples/      one transcript sample per workspace: loads it, runs
               DESCRIBE, exercises every public function with
               scripted input
 tests/reg-rs  the pinned transcripts
-scripts/      gates, the library shim, the sample and reg-rs runners,
+scripts/      gates, the sample and reg-rs runners,
               the index and change-log generators
 docs/         plan, conventions, testing, citations
 work/         library 0 and scratch; not tracked

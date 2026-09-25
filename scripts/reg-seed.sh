@@ -4,10 +4,11 @@
 #
 # A sample names its mode as a workspace does, on its first line: one
 # that begins `⍝!MODES (B)` runs in (B) '75; any other runs in (A)
-# '70. Every test runs sw-apl through scripts/sw-apl.sh with the shim
-# library, so )LOAD 1 NAME finds ws/ (scripts/lib-shim.sh), and with
-# the normalize filter, so a sample may print a value that cannot
-# come back the same by labelling it (VARIES).
+# '70. Every test runs sw-apl through scripts/sw-apl.sh with ws/ as
+# library 2, EXTENDED (--lib, sw-apl a718f19 or later), so )LOAD 2
+# NAME finds a workspace here, and with the normalize filter, so a
+# sample may print a value that cannot come back the same by
+# labelling it (VARIES).
 #
 # Usage: scripts/reg-seed.sh [pattern]
 #        scripts/reg-seed.sh --all      recreate every test
@@ -15,8 +16,7 @@ set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 export REG_RS_DATA_DIR="$PWD/tests/reg-rs"
 mkdir -p "$REG_RS_DATA_DIR"
-./scripts/lib-shim.sh >/dev/null
-shim=target/shim
+lib="--lib 2=ws,EXTENDED"
 pattern="${1:-}"
 recreate=""
 [ "$pattern" = "--all" ] && { recreate="yes"; pattern=""; }
@@ -35,7 +35,7 @@ for f in samples/*.apl; do
     fi
     echo "  create $name"
     reg-rs create -t "$name" \
-        -c "scripts/sw-apl.sh$(mode_of "$f") --library $shim -f $f" \
+        -c "scripts/sw-apl.sh$(mode_of "$f") $lib -f $f" \
         --timeout 120 --desc "Transcript of $f" --preprocess "$filter"
 done
 reg-rs run -q && echo "ALL PASS" || echo "SOME FAILURES"

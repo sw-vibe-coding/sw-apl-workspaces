@@ -23,21 +23,19 @@ in (A), and the other way round, by its modes line.
 
 ## At the terminal and the service
 
-sw-apl takes a library from a directory. Three ways, in the order
-they exist:
+sw-apl takes a library from a directory, two ways:
 
-- **Today, the shim.** `scripts/lib-shim.sh` makes `target/shim/`
-  with this repository's `ws/` as its library 1, and
-  `sw-apl --library target/shim` lists and loads these workspaces as
-  `)LIB 1`. This is how the samples run until the next way exists.
-- **`--lib 2=PATH/ws,EXTENDED`**, once sw-apl's library configuration
-  lands: a numbered library from any directory, read-only, with the
-  same file naming and modes lines as library 1. `sw-apl-server`
-  takes the same flag, so the 2741 terminal and the local browser
-  page see the library too.
-- **`sw-apl.toml`**, the same as a file, in the directory sw-apl runs
-  from or the user's configuration directory, so the flag need not
-  be typed:
+- **`--lib 2=PATH/ws,EXTENDED`**: a numbered library from any
+  directory, read-only, with the same file naming and modes lines as
+  library 1; the flag may be given again for another library.
+  `sw-apl-server` takes the same flag, so the 2741 terminal and the
+  local browser page see the library too. The scripts here run
+  sw-apl with `--lib 2=ws,EXTENDED`, and `just apl` starts a session
+  with it.
+- **`sw-apl.toml`**, the same as a file: `--config FILE`, else
+  `./sw-apl.toml` where sw-apl runs, else `sw-apl/config.toml` in the
+  user's configuration directory. A relative path is from the file,
+  and a flag wins over the file.
 
   ```toml
   [[library]]
@@ -46,10 +44,8 @@ they exist:
   path = "/path/to/sw-apl-workspaces/ws"
   ```
 
-The flag and the file are sw-apl's to settle (its `docs/plan.md`,
-Phase 10, `library-config`); the forms above are what this repository
-is written against, and the README's "Use it" is updated when they
-land.
+A directory that is not there is said so on stderr and lists
+nothing. Only library 0 is written to.
 
 ## In the browser
 
@@ -67,26 +63,32 @@ publishes `ws/` on GitHub Pages, and beside the workspaces an index,
  ]}
 ```
 
-sw-apl's page reads its list of libraries from a file beside it,
-fetches each index and the files it names before the session starts,
-and hands them to the session as its own library 1 is handed to it.
-Pages answers every request with `Access-Control-Allow-Origin: *`,
-which is what lets a page on another origin fetch them.
+sw-apl's page reads its list of libraries from `libraries.json`
+beside it (number, name, and the URL of an index), fetches each index
+and every file it names before the session starts, with a timeout,
+and hands them to the session as its own library 1 is handed to it. A
+library that will not load is said so on the paper and the session
+starts without it. The published demo's library 2 is this
+repository's `ws/library.json` read through raw.githubusercontent.com,
+which serves across origins; it moves to this repository's GitHub
+Pages, which answers with `Access-Control-Allow-Origin: *`, once they
+are enabled for the repository.
 
 `scripts/gen-index.sh` writes the index from the files and their
 modes lines; it is tracked, so what is served is what was committed,
-and `just gates` fails when it is stale. The field names are this
-repository's proposal until sw-apl's `browser-libraries` step settles
-them; changing them is that script alone.
+and `just gates` fails when it is stale. The page reads the `file` of
+each entry in `workspaces` and takes the modes from the file itself;
+`name` and `modes` in the index are for a reader.
 
 ## What this repository needs from sw-apl
 
 | Need | sw-apl step | Until then |
 |---|---|---|
-| `)LIB 2` and `)LOAD 2 NAME` from a configured directory | `library-config` | The shim, and `)LOAD 1` in the samples |
-| `)LIBS` naming this library | `library-config` | Nothing to do here |
-| Libraries by URL in the browser | `browser-libraries` | `library.json` and Pages are ready |
-| `)DIALECT` and `)HELP`, which COURSE's first lesson shows | `dialect`, `help` | The lesson's text is checked against sw-apl's replies when they land |
+| `)LIB 2` and `)LOAD 2 NAME` from a configured directory | `library-config` | Landed; the samples use it |
+| `)LIBS` naming this library | `library-config` | Landed |
+| Libraries by URL in the browser | `browser-libraries` | Landed, through raw.githubusercontent.com; GitHub Pages for this repository still to be enabled |
+| `)DIALECT` and `)HELP`, which COURSE's first lesson shows | `dialect`, `help` | Landed |
+| A system command, or an error, in the reply to `⎕` | `quad-input-commands` | In progress; lesson 1 is revised when it lands |
 
 A gap in the interpreter found while writing a workspace -- a
 primitive that misbehaves, a reply that is wrong -- is reported to

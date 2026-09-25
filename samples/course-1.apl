@@ -1,8 +1,7 @@
-⍝ COURSE: the shape of the course, and lesson 1. Loaded from library
-⍝ 1 through the shim library, until sw-apl has a numbered library of
-⍝ its own and this says )LOAD 2. DESCRIBE is the greeting, CONTENTS
-⍝ the list, START the first lesson.
-)LOAD 1 COURSE
+⍝ COURSE: the shape of the course, and lesson 1. This repository is
+⍝ library 2, EXTENDED, given to sw-apl with --lib 2=ws,EXTENDED.
+⍝ DESCRIBE is the greeting, CONTENTS the list, START the first lesson.
+)LOAD 2 COURSE
 DESCRIBE
 CONTENTS
 ⍝ Lesson 1. At the first pause two expressions are tried and printed;

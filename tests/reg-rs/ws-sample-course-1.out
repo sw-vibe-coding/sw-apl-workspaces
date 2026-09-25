@@ -1,8 +1,7 @@
-      ⍝ COURSE: the shape of the course, and lesson 1. Loaded from library
-      ⍝ 1 through the shim library, until sw-apl has a numbered library of
-      ⍝ its own and this says )LOAD 2. DESCRIBE is the greeting, CONTENTS
-      ⍝ the list, START the first lesson.
-      )LOAD 1 COURSE
+      ⍝ COURSE: the shape of the course, and lesson 1. This repository is
+      ⍝ library 2, EXTENDED, given to sw-apl with --lib 2=ws,EXTENDED.
+      ⍝ DESCRIBE is the greeting, CONTENTS the list, START the first lesson.
+      )LOAD 2 COURSE
 SAVED 16.30.00 09/24/26
       DESCRIBE
 COURSE -- APL, LESSON BY LESSON, WITH QUIZZES.
@@ -191,9 +190,13 @@ IT ANSWERS AT ONCE. THERE IS NO PROGRAM TO WRITE FIRST.
 ⎕:
       1 2 3+4 5
 LENGTH ERROR
+      1 2 3+4 5
+           ^
+⎕:
+      →
+INTERRUPT
 ∆PAUSE[3]  L:∆A←⎕
                 ^
-      →
       LESSON 1
 LESSON 1: WHERE YOU ARE
 
@@ -214,6 +217,6 @@ QUIZ 9 IS NOT YET WRITTEN.
       LESSON 17
 THERE ARE 16 LESSONS. TYPE CONTENTS TO SEE THEM.
       )OFF
-16.23.22 09/24/26
+20.11.28 09/24/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

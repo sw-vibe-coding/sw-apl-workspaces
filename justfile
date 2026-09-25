@@ -27,10 +27,14 @@ precommit: gates check
 # Run one workspace file through sw-apl in a mode (70 or 75) and
 # print the transcript: `just run ws/COURSE.apl.ws 75`.
 run file mode="70":
-    ./scripts/sw-apl.sh --mode {{mode}} -f {{file}}
+    ./scripts/sw-apl.sh --mode {{mode}} --lib 2=ws,EXTENDED -f {{file}}
+
+# A session with this library as library 2, in a mode: `just apl 75`.
+apl mode="70":
+    ./scripts/sw-apl.sh --mode {{mode}} --lib 2=ws,EXTENDED
 
 # Print every sample's transcript, each in the mode its first line
-# names, with the shim library so )LOAD 1 NAME finds ws/.
+# names, with ws/ as library 2 so )LOAD 2 NAME finds a workspace.
 samples pattern="":
     ./scripts/run-samples.sh {{pattern}}
 
@@ -38,11 +42,6 @@ samples pattern="":
 # them; scripts/reg-seed.sh creates a test for a new sample.
 reg:
     ./scripts/reg.sh run -q
-
-# The library directory sw-apl's --library takes, with ws/ as its
-# library 1, until sw-apl has a --lib 2= of its own.
-shim:
-    @./scripts/lib-shim.sh
 
 # Regenerate ws/library.json, the index a browser reads to find
 # this library; tracked, and gated to be current.

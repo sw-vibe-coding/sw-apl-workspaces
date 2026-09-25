@@ -40,7 +40,7 @@ just samples course              # print the transcripts, to look at
 
 Tests are stored under `tests/reg-rs/` (`.rgt` spec and `.out`
 baseline, tracked; the run database, not). Every test runs sw-apl
-through `scripts/sw-apl.sh` with the shim library, and through
+through `scripts/sw-apl.sh` with `ws/` as library 2, and through
 `scripts/normalize-apl-output.sh`, which masks the one thing a
 session prints that cannot come back the same, the sign-off's clock,
 and any value a sample labels `(VARIES): ` in its own output.
@@ -68,16 +68,15 @@ Then seed the reg-rs test and pin it.
 `scripts/sw-apl.sh` decides which interpreter runs, in one place:
 `SW_APL` if set, else the release build in the sw-apl checkout beside
 this repository (`../sw-apl/target/release/sw-apl`), else `sw-apl` on
-the path. `scripts/sw-apl.sh --version` says which one, with the
-commit it was built from; note it when a transcript moves.
+the path. `scripts/sw-apl.sh --version` says which one; note it when a
+transcript moves.
 
-## The shim
+## The library
 
-sw-apl finds library 1 under `--library DIR` as `DIR/ws/lib1/`.
-`scripts/lib-shim.sh` makes `target/shim/`, with `ws/lib1` a link to
-this repository's `ws/` and an empty `work/` for library 0, so that
-`)LOAD 1 NAME` finds a workspace here and a sample that `)SAVE`s
-writes into `target/`, which is ignored. The samples say `)LOAD 1`
-while the shim is in use; when sw-apl can be given a numbered library
-of its own, they say `)LOAD 2` and every baseline is rebased once,
-with that reason (`plan.md`, Phase 5).
+Every script gives sw-apl this repository's `ws/` as library 2,
+EXTENDED, with `--lib 2=ws,EXTENDED`, so a sample says `)LOAD 2 NAME`
+and `)LIBS` shows the library as a reader of the README would see it.
+The flag arrived in sw-apl at commit a718f19; an older binary refuses
+it, and `scripts/sw-apl.sh --help` shows whether the one in use has
+it. Library 0 is `work/` under the directory sw-apl runs from, which
+is ignored, so a sample that `)SAVE`s writes nothing that is tracked.

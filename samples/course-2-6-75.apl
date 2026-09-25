@@ -3,7 +3,7 @@
 ⍝ reduction and scan, selection. Each lesson is read with its pauses
 ⍝ answered by GO, a few of them trying what the lesson showed, and
 ⍝ each quiz is taken with one wrong answer among the right ones.
-)LOAD 1 COURSE
+)LOAD 2 COURSE
 LESSON 2
 7÷2
 2×3+4
