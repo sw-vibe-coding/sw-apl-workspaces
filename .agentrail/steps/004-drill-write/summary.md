@@ -1,0 +1,1 @@
+WRITE in (B): hidden functions, the reader's expression run by execute and marked; DRILL split into a pair with the (A) file derived from the (B) file by scripts/gen-pair.sh, gated; sample drill-write-75 pinned; (B) baselines rebased for the latent DESCRIBE; a sw-apl finding on ⎕LX output order recorded.
