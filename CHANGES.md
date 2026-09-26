@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- stats: the tests, the normal distribution, and the random functions
+- saga: complete 002-stats-relate
+- docs(changes): refresh CHANGES.md to HEAD
 - stats: covariance, correlation and least squares
 - saga: complete 001-stats-describe on its commit
 - docs(changes): refresh CHANGES.md to HEAD
