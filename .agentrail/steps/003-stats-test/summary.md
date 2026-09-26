@@ -1,0 +1,1 @@
+STATS tests and random functions: TTEST1, TTEST2, CHISQ, NORMAL (A&S 26.2.17), PNORM, RANDU, RANDIN, RANDN (Box-Muller), SAMPLE, SHUFFLE, HOWTEST, HOWRANDOM; sample extended with hand-worked tests, pinned in both modes. Milestone 3.
