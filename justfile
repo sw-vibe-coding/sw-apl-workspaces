@@ -15,6 +15,7 @@ gates:
     sw-markdown-checker -f "samples/*.md"
     ./scripts/check-provenance.sh
     ./scripts/gen-index.sh --check
+    ./scripts/gen-pair.sh --check
 
 # Every workspace, in every mode it claims, loads without an error
 # report, and every line it prints fits 64 columns.
@@ -47,6 +48,11 @@ reg:
 # this library; tracked, and gated to be current.
 index:
     ./scripts/gen-index.sh
+
+# Derive NAME.a-70.apl.ws from NAME.b-75.apl.ws for a workspace that
+# is a pair: `just pair DRILL`. Gated to be current.
+pair name:
+    ./scripts/gen-pair.sh {{name}}
 
 # Regenerate CHANGES.md from git log.
 changes:

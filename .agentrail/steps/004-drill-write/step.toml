@@ -1,6 +1,6 @@
 number = 4
 slug = "drill-write"
-status = "pending"
+status = "in-progress"
 description = "Phase 2 step 4 of docs/plan.md: the (B) pair. WRITE, a drill that shows a val..."
 role = "production"
 context_files = []

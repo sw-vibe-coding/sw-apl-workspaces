@@ -2,7 +2,7 @@
       ⍝ compress, each under a reduction. One right, three wrong in a row
       ⍝ worked out step by step, three right, and STOP with the score.
       )LOAD 2 DRILL
-SAVED 15.30.00 09/25/26
+SAVED 09.00.00 09/26/26
       HARD
 WHICH FUNCTIONS? ARITHMETIC, COMPARE, MAXMIN, REDUCE, INDEX,
 STRUCTURE OR ALL.
@@ -50,6 +50,6 @@ RIGHT.
       STOP
 STOPPED. 4 RIGHT OF 7.
       )OFF
-6.55.02 09/26/26
+11.26.06 09/26/26
 CONNECTED 0.00.00
 CPU TIME 0.00.00

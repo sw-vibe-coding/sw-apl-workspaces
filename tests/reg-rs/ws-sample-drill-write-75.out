@@ -1,0 +1,88 @@
+      ⍝!MODES (B)
+      ⍝ WRITE, in (B) only: an exercise with its functions hidden, and its
+      ⍝ value; the reader writes the expression, which is run with execute
+      ⍝ and marked. The value itself and an empty line are refused; right
+      ⍝ expressions, wrong ones, three wrong in a row revealing the
+      ⍝ exercise, then an expression that is an error, which stops WRITE
+      ⍝ with its report; a bare branch clears it, and WRITE is stopped at
+      ⍝ the topic prompt. The file's latent expression prints DESCRIBE on
+      ⍝ load.
+      )LOAD 2 DRILL
+DRILL -- EXERCISES IN APL, MADE AT RANDOM AND MARKED.
+
+   EASY        ONE FUNCTION ON SINGLE NUMBERS.
+   DRILL       ONE OR TWO FUNCTIONS ON VECTORS.
+   HARD        TWO FUNCTIONS, PARENTHESES, REDUCTIONS.
+   WRITE       AN EXERCISE WITH ITS FUNCTIONS HIDDEN: WRITE IT.
+   SHOW N      PRINT N EXERCISES, EACH WITH ITS ANSWER.
+
+EACH ASKS WHICH FUNCTIONS TO DRILL, THEN PRINTS AN EXERCISE
+AND A QUAD PROMPT. TYPE THE ANSWER AS APL: A NUMBER, OR A
+VECTOR, OR AN EXPRESSION THAT MAKES ONE. STOP ENDS THE DRILL
+AND PRINTS THE SCORE. HOWDRILL SAYS MORE.
+SAVED 09.00.00 09/26/26
+      WRITE
+WHICH FUNCTIONS? ARITHMETIC, COMPARE, MAXMIN, REDUCE, INDEX,
+STRUCTURE OR ALL.
+TOPIC: ARITHMETIC
+0?6 GIVES
+0
+WRITE IT: 0
+THAT IS THE VALUE. WRITE AN EXPRESSION THAT MAKES IT.
+WRITE IT: 
+WRITE IT: 0×6
+RIGHT.
+(0?5)?0 GIVES
+0
+WRITE IT: (0×5)+0
+RIGHT.
+?5 9 8 5 GIVES
+1 1 1 1
+WRITE IT: -5 9 8 5
+NO. THE ANSWER IS:
+1 1 1 1
+2 0 7 3 6?9 3 2 9 7 GIVES
+18 0 14 27 42
+WRITE IT: 2 0 7 3 6×9 3 2 9 7
+RIGHT.
+1?7 4 2?2 GIVES
+¯8 ¯5 ¯3
+WRITE IT: 1-7 4 2+2
+RIGHT.
+5 3 9 4?0 3 0 1 GIVES
+1 27 1 4
+WRITE IT: 5 3 9 4×0 3 0 1
+NO. THE ANSWER IS:
+1 27 1 4
+?4 9 0 7 GIVES
+4 9 0 7
+WRITE IT: -4 9 0 7
+NO. THE ANSWER IS:
+4 9 0 7
+(7 7 9 8?3 3 5 5)?4 8 2 4 GIVES
+14 18 16 17
+WRITE IT: (7 7 9 8×3 3 5 5)+4 8 2 4
+NO. THE ANSWER IS:
+14 18 16 17
+THREE WRONG IN A ROW. WORKED OUT:
+   FIRST, 7 7 9 8+3 3 5 5 IS
+   10 10 14 13
+   THEN (7 7 9 8+3 3 5 5)+4 8 2 4 IS
+   14 18 16 17
+   + ADDS, ELEMENT BY ELEMENT.
+   + ADDS, ELEMENT BY ELEMENT.
+5?8 GIVES
+¯3
+WRITE IT: 5-
+SYNTAX ERROR
+WRITE[21]  EVAL:∆Z←⍎∆T
+                   ^
+      →
+      WRITE
+WHICH FUNCTIONS? ARITHMETIC, COMPARE, MAXMIN, REDUCE, INDEX,
+STRUCTURE OR ALL.
+TOPIC: STOP
+      )OFF
+11.26.06 09/26/26
+CONNECTED 0.00.00
+CPU TIME 0.00.00

@@ -361,7 +361,10 @@ Steps:
    runs in both modes and the transcripts are pinned. Reached
    2026-09-25.
 4. `drill-write` -- the (B) pair: WRITE, the split into `.a-70` and
-   `.b-75` files, the shared-function gate, a (B) sample.
+   `.b-75` files, the shared-function gate, a (B) sample. Done
+   2026-09-26; the gate became a generator, `scripts/gen-pair.sh`,
+   which derives the (A) file from the (B) one, so the shared
+   functions cannot differ rather than being checked not to.
 
 ### Phase 3: STATS (saga `stats`)
 
@@ -508,7 +511,13 @@ is worked around in a way that makes a workspace not-APL.
   right whichever way this is settled. (Settled: the request is
   repeated.)
 - **A system command at a `⎕` prompt was a SYNTAX ERROR** (same
-  day; fixed with the above). `)SI` typed in reply to `⎕` is reported as a syntax error
+  day; fixed with the above).
+- **`⎕LX` output comes before the SAVED line** (2026-09-26, DRILL
+  step 4). sw-apl's `docs/workspaces.md` says a `)LOAD` in (B) runs
+  `⍎⎕LX` once the workspace is in, "its output after the SAVED line";
+  loading DRILL in (B) prints DESCRIBE's output first and the SAVED
+  line after it. One of the two should change; the transcripts here
+  are pinned to what it does today. `)SI` typed in reply to `⎕` is reported as a syntax error
   in the line that read. APL\360 accepted system commands in reply
   to quad input. Lesson 1 therefore asks the reader to try
   `)DIALECT`, `)WSID`, `)LIBS` and `)HELP` after the lesson, not at

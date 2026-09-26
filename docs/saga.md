@@ -74,3 +74,9 @@ which is what lets a reduction sit over it at HARD without ever
 reducing an empty vector. Milestone 2: the drill in both modes, the
 transcripts pinned, and three hundred HARD exercises checked by
 execute in (B).
+
+Step 4 made DRILL a pair. The plan asked for a gate that the shared
+functions agree; a generator is stronger, since there is then only
+one place to edit: the (B) file marks what is its own, and the (A)
+file is derived. WRITE hides the functions of an exercise and has
+the reader write it, which is only possible with execute.

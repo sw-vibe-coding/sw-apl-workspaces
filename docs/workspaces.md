@@ -173,9 +173,15 @@ course through with every quiz answered.
 
 ### DRILL
 
-Both modes, `ws/DRILL.apl.ws`. Exercises in APL made at random and
-marked, in the spirit of APLCOURSE's TEACH and EASYDRILL and written
-fresh.
+A pair: `ws/DRILL.a-70.apl.ws` for (A) and `ws/DRILL.b-75.apl.ws` for
+(B), both called DRILL. Exercises in APL made at random and marked,
+in the spirit of APLCOURSE's TEACH and EASYDRILL and written fresh.
+The (B) file is the source: it has everything, and `WRITE`, which
+needs execute; `scripts/gen-pair.sh` derives the (A) file from it by
+dropping the functions whose first comment says `(B) ONLY`, the
+lines that only call one, and the `⎕LX` line, and `just gates` fails
+when the derived file is stale. So the two never drift, and a change
+is made once, in the (B) file, then `just pair DRILL`.
 
 | Function | What it does |
 |---|---|
@@ -184,6 +190,7 @@ fresh.
 | `EASY` | One function on single numbers |
 | `DRILL` | One function on vectors, or two |
 | `HARD` | Two functions: a chain, in parentheses, or under a reduction |
+| `WRITE` | (B) only. An exercise with its functions hidden as `?`, and its value; the reader writes the expression, which is run and marked |
 | `SHOW N` | Prints N exercises, each followed by its answer |
 
 Each level first asks the topic, read with `⍞`: ARITHMETIC (`+ - × ÷
@@ -210,6 +217,16 @@ the length, a compression that keeps something; at HARD it sits
 under a reduction. The random link is the file's, so a level and a
 topic give the same exercises on every load.
 
+`WRITE` turns the drill round. After the topic, it prints an exercise
+at the DRILL level with every function hidden (`3 1 4?2 GIVES`, then
+`6 2 8`), reads a line with `⍞`, refuses the value itself and an
+empty line, runs the line with execute, and marks the result as the
+other levels do, three wrong in a row revealing the exercise.
+Indexing and compression have no glyph to hide and are left out. An
+expression that is an error stops WRITE with the report, since the
+language has no way to catch one; HOWDRILL says to type `→` and
+WRITE again. In (B) the file's `⎕LX` prints DESCRIBE on load.
+
 The machinery: `∆RUN` is the loop; `∆MENU` sets the topic's tables
 (`∆M` one-argument, `∆D` two-argument, `∆R` reductions, `∆C` allowed
 inside a composed exercise, `∆O` allowed outside one); `∆KIND` picks
@@ -229,3 +246,4 @@ one level each with scripted answers, `drill-index.apl` and
 has a `-75` twin, and the (B) `drill-show-75.apl` also defines VERIFY
 with execute and counts how many of three hundred HARD exercises,
 from every table, evaluate to the value the tables gave.
+`drill-write-75.apl`, (B) only, plays WRITE.

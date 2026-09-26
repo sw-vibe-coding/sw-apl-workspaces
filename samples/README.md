@@ -94,3 +94,10 @@ under a reduction; each with right and wrong answers, three wrong in
 a row worked out, and STOP. Both have (B) twins. The (B)
 `drill-show-75.apl` now checks three hundred HARD exercises from
 every table by execute.
+
+`drill-write-75.apl`, in (B) only, plays WRITE on ARITHMETIC: the
+value itself is refused, right expressions are marked right, three
+wrong in a row reveal the exercise, and an expression that is an
+error stops WRITE with its report, which a bare branch clears. Every
+(B) drill sample now begins with DESCRIBE, printed by the file's
+latent expression on load.
