@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- stats: covariance, correlation and least squares
+- saga: complete 001-stats-describe on its commit
+- docs(changes): refresh CHANGES.md to HEAD
 - stats: the descriptive functions
 - saga: complete 001-stats-describe
 - docs(changes): refresh CHANGES.md to HEAD
