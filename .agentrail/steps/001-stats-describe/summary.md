@@ -1,1 +1,1 @@
-STATS descriptive functions: MEAN to HIST with HOWs, both modes; sample stats-describe pinned in both modes with hand-worked values; quantile definition cited.
+STATS descriptive functions: MEAN to HIST with HOWs, both modes; sample stats-describe pinned in both modes with hand-worked values; quantile definition cited; four course baselines rebased for )LIB 2 listing STATS. (Reopened and completed again on the real commit.)
