@@ -33,13 +33,18 @@ has a `DESCRIBE` that says what it holds and what to type next.
 | DRILL | a version for each | Exercises made at random and marked: `EASY`, `DRILL`, `HARD`; in (B), `WRITE` as well |
 | STATS | both | Descriptive statistics, regression by domino, t and chi-square tests, the normal distribution, random samples |
 | MATH | both | Primes, factors, gcd, totient, Fibonacci, Pascal, permutations and combinations, base conversion, Roman numerals |
-| PLOT | both | Character plots that fit 64 columns |
+| PLOT | both | Character plots that fit 64 columns: `PLOT`, `GRAPH`, `SCATTER`, `BAR` |
 | MATRIX | both | Linear algebra over domino: determinant, inverse, solve |
 | POLY | both | Polynomials as coefficient vectors |
 | CALC | both | Integration, roots, series |
 
 The table is the plan's order of work, COURSE and DRILL first;
 `docs/plan.md` says which are written.
+
+The 2741 terminal that sw-apl ships, dialled into a local service
+with this library, drawing a sine wave with PLOT:
+
+![aplterm drawing with PLOT](images/plot.webp)
 
 ## Use it
 
@@ -96,6 +101,7 @@ just gates           # markdown, provenance, modes, the random link
 just check           # every workspace, every mode it claims, no errors
 scripts/reg.sh run   # transcript regressions (reg-rs), one per sample
 just samples         # print every sample's transcript
+just tape            # re-record images/plot.gif and .webp (vhs, ffmpeg)
 ```
 
 ## Documentation
@@ -127,7 +133,8 @@ samples/      one transcript sample per workspace: loads it, runs
 tests/reg-rs  the pinned transcripts
 scripts/      gates, the sample and reg-rs runners,
               the index and change-log generators
-docs/         plan, conventions, testing, citations
+docs/         plan, conventions, testing, citations, the vhs tape
+images/       the recording of the terminal drawing with PLOT
 work/         library 0 and scratch; not tracked
 ```
 

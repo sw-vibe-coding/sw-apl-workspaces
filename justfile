@@ -54,6 +54,12 @@ index:
 pair name:
     ./scripts/gen-pair.sh {{name}}
 
+# Re-record the terminal drawing with PLOT: docs/tapes/plot.tape
+# against a local service, to images/plot.gif and images/plot.webp
+# (needs vhs, ttyd, ffmpeg, gif2webp and sw-apl's release binaries).
+tape name="plot":
+    ./scripts/tape.sh {{name}}
+
 # Regenerate CHANGES.md from git log.
 changes:
     ./scripts/gen-changes.sh

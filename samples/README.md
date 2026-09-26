@@ -124,3 +124,8 @@ worked by hand in the comments: the primes to 50, the factors of
 triangle, the permutations of three and the pairs from four, base
 conversions, 1984 in Roman numerals, the Collatz sequence from 6,
 and the edges at 1 and 0.
+
+`plot.apl` and its (B) twin draw a straight line, a sine wave joined
+into a curve, a parabola at a lower HEIGHT, unsorted points joined
+and alone, a bar chart, and the edges: a constant Y and bars of
+nothing.

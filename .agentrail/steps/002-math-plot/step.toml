@@ -1,6 +1,6 @@
 number = 2
 slug = "math-plot"
-status = "pending"
+status = "in-progress"
 description = "Phase 4 step 2 of docs/plan.md. ws/PLOT.apl.ws, modes (A)(B): character plots..."
 role = "production"
 context_files = []

@@ -317,3 +317,30 @@ HOWPERMS, HOWCOMBS and HOWBASE. Every value the sample prints is
 worked by hand in its comments.
 
 Samples: `math.apl` in (A) and its `-75` twin in (B).
+
+### PLOT
+
+Both modes, `ws/PLOT.apl.ws`. Pictures in characters, 64 columns
+wide, in the spirit of what PLOTFORMAT was for and written fresh.
+
+| Function | What it does |
+|---|---|
+| `PLOT Y` | Y against its position, the points joined |
+| `X GRAPH Y` | Y against X, the points joined in order of X |
+| `X SCATTER Y` | Y against X, the points alone |
+| `BAR V` | A horizontal bar per element, the largest scaled to 58 stars |
+| `HEIGHT` | The rows in a picture, 15 to begin with; assign it to change it |
+
+A picture is a matrix of blanks and stars, 60 wide and `HEIGHT`
+tall, with an axis down the left and along the bottom. A point goes
+to the column nearest its X and the row nearest its Y, the greatest
+Y at the top; PLOT and GRAPH fill the rows between each point and the
+next so a curve is joined, and SCATTER leaves the points alone. The
+least and greatest of each axis are printed as lines of text above
+and below the picture, since this APL has no format to write them
+into it. An axis of one value is given a range of one, so nothing is
+divided by zero. HOWPLOT.
+
+Samples: `plot.apl` in (A) and its `-75` twin in (B). `docs/tapes/
+plot.tape` records the 2741 terminal drawing with it; `just tape`
+renders it to `images/plot.gif` and `images/plot.webp`.

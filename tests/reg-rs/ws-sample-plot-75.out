@@ -1,0 +1,138 @@
+      ⍝!MODES (B)
+      ⍝ PLOT: pictures in characters. A straight line, a sine wave over six
+      ⍝ radians joined into a curve, a parabola at a lower HEIGHT, the same
+      ⍝ points given in an unsorted X both joined and alone, a bar chart,
+      ⍝ and the edges: a constant Y, which is one row, and bars of nothing.
+      )LOAD 2 PLOT
+SAVED 17.30.00 09/26/26
+      DESCRIBE
+PLOT -- PICTURES IN CHARACTERS, 64 COLUMNS WIDE.
+
+   PLOT Y        Y AGAINST ITS POSITION, POINTS JOINED.
+   X GRAPH Y     Y AGAINST X, POINTS JOINED IN ORDER OF X.
+   X SCATTER Y   Y AGAINST X, POINTS ALONE.
+   BAR V         A HORIZONTAL BAR PER ELEMENT OF V.
+
+THE LEAST AND GREATEST OF EACH AXIS ARE PRINTED ABOVE AND
+BELOW THE PICTURE, WHICH IS HEIGHT ROWS TALL: SET HEIGHT TO
+CHANGE IT. TYPE HOWPLOT FOR MORE.
+      PLOT 2×⍳10
+Y FROM 2 TO 20
+|                                                           *
+|                                                           *
+|                                                    *      *
+|                                              *     *       
+|                                              *             
+|                                       *      *             
+|                                 *     *                    
+|                                 *                          
+|                          *      *                          
+|                    *     *                                 
+|                    *                                       
+|             *      *                                       
+|       *     *                                              
+|       *                                                    
+|*      *                                                    
++------------------------------------------------------------
+X FROM 1 TO 10
+      PLOT 1○(⍳60)÷10
+Y FROM ¯0.9999232576 TO 0.999573603
+|           *********                                        
+|         ***       ****                                     
+|      ****            ***                                   
+|     **                 ***                                 
+|   ***                    **                                
+|  **                       ***                              
+|***                          **                             
+|                              ***                           
+|                                **                          
+|                                 ***                       *
+|                                   **                    ***
+|                                    ***                ***  
+|                                      ***            ***    
+|                                        ****      ****      
+|                                           ********         
++------------------------------------------------------------
+X FROM 1 TO 60
+      HEIGHT←8
+      PLOT (⍳15)*2
+Y FROM 1 TO 225
+|                                                           *
+|                                                       *   *
+|                                                   *   *    
+|                                          *   *    *        
+|                                  *   *   *                 
+|                         *    *   *                         
+|                 *   *   *                                  
+|*   *   *    *   *                                          
++------------------------------------------------------------
+X FROM 1 TO 15
+      5 3 1 4 2 GRAPH 25 9 1 16 4
+Y FROM 1 TO 25
+|                                                           *
+|                                                           *
+|                                                           *
+|                                            *              *
+|                                            *               
+|                              *             *               
+|               *              *                             
+|*              *                                            
++------------------------------------------------------------
+X FROM 1 TO 5
+      5 3 1 4 2 SCATTER 25 9 1 16 4
+Y FROM 1 TO 25
+|                                                           *
+|                                                            
+|                                                            
+|                                            *               
+|                                                            
+|                              *                             
+|               *                                            
+|*                                                           
++------------------------------------------------------------
+X FROM 1 TO 5
+      BAR 3 1 4 1 5 9 2 6
+BARS FROM 0 TO 9
+|*******************                                       
+|******                                                    
+|**************************                                
+|******                                                    
+|********************************                          
+|**********************************************************
+|*************                                             
+|***************************************                   
+      PLOT 7 7 7
+Y FROM 7 TO 7
+|                                                            
+|                                                            
+|                                                            
+|                                                            
+|                                                            
+|                                                            
+|                                                            
+|*                             *                            *
++------------------------------------------------------------
+X FROM 1 TO 3
+      BAR 0 0
+BARS FROM 0 TO 0
+|                                                          
+|                                                          
+      HOWPLOT
+A PICTURE IS A MATRIX OF BLANKS AND STARS, 60 WIDE AND HEIGHT
+TALL, WITH AN AXIS DOWN THE LEFT AND ALONG THE BOTTOM. EACH
+POINT GOES TO THE COLUMN NEAREST ITS X, THE LEAST X AT THE
+LEFT AND THE GREATEST AT THE RIGHT, AND TO THE ROW NEAREST
+ITS Y, THE GREATEST Y AT THE TOP. PLOT AND GRAPH THEN FILL THE
+ROWS BETWEEN EACH POINT AND THE NEXT, SO A CURVE IS JOINED;
+SCATTER LEAVES THE POINTS ALONE. THE NUMBERS ON THE AXES ARE
+PRINTED AS LINES OF TEXT, SINCE THIS APL HAS NO WAY TO WRITE
+THEM INTO THE PICTURE.
+
+      PLOT 1○(⍳60)÷10
+
+DRAWS A SINE WAVE OVER SIX RADIANS; PLOT (⍳15)*2 A PARABOLA.
+BAR V SCALES THE LARGEST BAR TO 58 STARS.
+      )OFF
+16.44.36 09/26/26
+CONNECTED 0.00.00
+CPU TIME 0.00.00

@@ -112,3 +112,11 @@ outer product of binomial, permutations built by insertion,
 combinations from the binary rows with K ones. One reminder from
 the language: a strand is constants only, so an empty matrix is
 `(0,K)⍴0`, not `0 K⍴0`.
+
+PLOT (step 2): a picture is a ravelled vector of blanks with stars
+put in by linear index, since indexing a matrix by two vectors marks
+the whole cross product; the curve is joined by filling the rows
+between each point and the next in the later column. The owner asked
+for a recording: `docs/tapes/plot.tape` drives aplterm against a
+local service with this library, and `scripts/tape.sh` renders it
+and converts the gif to an animated webp.
