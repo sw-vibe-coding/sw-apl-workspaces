@@ -1,0 +1,56 @@
+      ⍝!MODES (B)
+      ⍝ DRILL at the HARD level on STRUCTURE: take, drop, rotate and
+      ⍝ compress, each under a reduction. One right, three wrong in a row
+      ⍝ worked out step by step, three right, and STOP with the score.
+      )LOAD 2 DRILL
+SAVED 15.30.00 09/25/26
+      HARD
+WHICH FUNCTIONS? ARITHMETIC, COMPARE, MAXMIN, REDUCE, INDEX,
+STRUCTURE OR ALL.
+TOPIC: STRUCTURE
+×/0 1 0 0/2 0 6 6
+⎕:
+      0
+RIGHT.
+⌈/3↑0 3 0 4
+⎕:
+      99
+NO. THE ANSWER IS:
+3
+⌈/0 1/6 4
+⎕:
+      99
+NO. THE ANSWER IS:
+4
+⌈/1↑6 7 9
+⎕:
+      99
+NO. THE ANSWER IS:
+6
+THREE WRONG IN A ROW. WORKED OUT:
+   FIRST, 1↑6 7 9 IS
+   6
+   THEN ⌈/1↑6 7 9 IS
+   6
+   N↑V IS THE FIRST N ELEMENTS OF V; A NEGATIVE N, THE LAST.
+   ⌈/ IS THE LARGEST ELEMENT.
+⌊/4⌽0 6 8 2
+⎕:
+      0
+RIGHT.
+×/1↑1 4 8
+⎕:
+      1
+RIGHT.
+⌈/¯3⌽9 4 2
+⎕:
+      9
+RIGHT.
+×/1⌽9 5 4
+⎕:
+      STOP
+STOPPED. 4 RIGHT OF 7.
+      )OFF
+6.55.01 09/26/26
+CONNECTED 0.00.00
+CPU TIME 0.00.00

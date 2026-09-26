@@ -358,7 +358,8 @@ Steps:
 3. `drill-topics` -- INDEX and STRUCTURE topics (indexing, take, drop,
    reverse, rotate, compress, membership, index-of) and a vector
    reduction in HARD; the samples extended. **Milestone 2:** DRILL
-   runs in both modes and the transcripts are pinned.
+   runs in both modes and the transcripts are pinned. Reached
+   2026-09-25.
 4. `drill-write` -- the (B) pair: WRITE, the split into `.a-70` and
    `.b-75` files, the shared-function gate, a (B) sample.
 

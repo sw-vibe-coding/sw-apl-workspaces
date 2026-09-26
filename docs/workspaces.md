@@ -175,7 +175,7 @@ course through with every quiz answered.
 
 Both modes, `ws/DRILL.apl.ws`. Exercises in APL made at random and
 marked, in the spirit of APLCOURSE's TEACH and EASYDRILL and written
-fresh. `plan.md` says which topics are built.
+fresh.
 
 | Function | What it does |
 |---|---|
@@ -189,8 +189,9 @@ fresh. `plan.md` says which topics are built.
 Each level first asks the topic, read with `⍞`: ARITHMETIC (`+ - × ÷
 | *`, and `- × |` on one argument), COMPARE (`< ≤ = ≥ > ≠ ∧ ∨`),
 MAXMIN (`⌈ ⌊`), REDUCE (`+/ ×/ ⌈/ ⌊/`, over vectors and over `+ - ×`),
-or ALL; an empty line is ALL, a word that is none of these is asked
-again, and STOP leaves. Then it prints an exercise and the `⎕:`
+INDEX (`(V)[I]`, `V⍳X`, `X∊V`), STRUCTURE (`↑ ↓ ⌽ /` with a left
+argument, and `⍳ ⍴ ⌽` on one), or ALL; an empty line is ALL, a word
+that is none of these is asked again, and STOP leaves. Then it prints an exercise and the `⎕:`
 prompt, reads the answer as APL, and marks it as COURSE's quizzes do:
 value, count and rank, with a remark for a scalar against a
 one-element vector; a wrong answer shows the right one; three wrong
@@ -203,23 +204,28 @@ divisor of 1 to 5 for residue, 1 and 0 for and and or; two vectors
 are the same length, and the operand outside a composed exercise
 conforms to the inner value. A comparison or a residue may be the
 inner function but not the outer, where the inner value may be
-anything. The random link is the file's, so a level and a topic give
-the same exercises on every load.
+anything. An indexing or structural exercise is always valid and
+never empty: indices within range, a take, drop or rotation within
+the length, a compression that keeps something; at HARD it sits
+under a reduction. The random link is the file's, so a level and a
+topic give the same exercises on every load.
 
 The machinery: `∆RUN` is the loop; `∆MENU` sets the topic's tables
 (`∆M` one-argument, `∆D` two-argument, `∆R` reductions, `∆C` allowed
 inside a composed exercise, `∆O` allowed outside one); `∆KIND` picks
 the shape by level and tables; `∆NEW` makes the exercise and sets the
 caller's `∆E`, `∆V`, the inner step `∆E1` and `∆V1`, and the glyphs
-for the hints; `∆PAIR` and `∆OUTER` draw operands; `∆MON`, `∆DYA` and
-`∆REDUCE` are branch tables that apply a glyph, since (A) has no
-execute, `∆DYA` reading `∆X` and `∆Y` from its caller as sw-apl's
-BIRDS reads `FN`; `∆CHARS` writes a number or vector as APL prints
+for the hints; `∆PAIR`, `∆OUTER` and `∆SPAIR` draw operands, `∆SHOWS`
+writes an indexing or structural exercise; `∆MON`, `∆DYA`, `∆REDUCE`
+and `∆STR` are branch tables that apply a glyph, since (A) has no
+execute, `∆DYA` and `∆STR` reading `∆X` and `∆Y` from their caller as
+sw-apl's BIRDS reads `FN`; `∆CHARS` writes a number or vector as APL prints
 it, without format, by encode; `∆CHECK`, `∆IS`, `∆WORK` and `∆HINT`
 mark and explain.
 
 Samples: `drill-easy.apl`, `drill-drill.apl` and `drill-hard.apl`,
-one level each with scripted answers, and `drill-show.apl`; each has
-a `-75` twin, and the (B) `drill-show-75.apl` also defines VERIFY
-with execute and counts how many of a hundred HARD exercises evaluate
-to the value the tables gave.
+one level each with scripted answers, `drill-index.apl` and
+`drill-structure.apl` for the two topics, and `drill-show.apl`; each
+has a `-75` twin, and the (B) `drill-show-75.apl` also defines VERIFY
+with execute and counts how many of three hundred HARD exercises,
+from every table, evaluate to the value the tables gave.

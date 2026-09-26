@@ -66,3 +66,11 @@ line of explanation per glyph. Composed exercises brought two rules
 the singles did not need: the outer operand conforms to the inner
 value, and a residue, a division, a power or a logical function may
 be inner but not outer, where the inner value may be anything.
+
+Step 3 added INDEX and STRUCTURE. Each exercise there is made valid
+and non-empty by construction -- indices within range, a take, drop
+or rotation within the length, a compression that keeps something --
+which is what lets a reduction sit over it at HARD without ever
+reducing an empty vector. Milestone 2: the drill in both modes, the
+transcripts pinned, and three hundred HARD exercises checked by
+execute in (B).

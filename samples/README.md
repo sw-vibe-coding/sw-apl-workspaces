@@ -76,7 +76,7 @@ link is fixed. `drill-show-75.apl` does the same in (B) and then
 defines VERIFY, with execute, in the sample rather than the
 workspace: it makes a hundred more exercises, evaluates the
 characters of each, and counts how many agree with the value the
-tables gave. A hundred do.
+tables gave. All of them do.
 
 `drill-easy.apl`, `drill-drill.apl` and `drill-hard.apl`, with their
 (B) twins, sit the drill at each level: EASY on ARITHMETIC, with a
@@ -86,3 +86,11 @@ where a scalar was wanted, and a second EASY stopped at the topic
 prompt; DRILL on ALL, with vector answers; HARD on REDUCE, where
 three wrong in a row show the inner step and then the reduction.
 Every one ends with STOP and the score.
+
+`drill-index.apl` sits DRILL on INDEX -- indexing a vector, index-of
+and membership, some under a reduction -- and `drill-structure.apl`
+sits HARD on STRUCTURE, where take, drop, rotate and compress sit
+under a reduction; each with right and wrong answers, three wrong in
+a row worked out, and STOP. Both have (B) twins. The (B)
+`drill-show-75.apl` now checks three hundred HARD exercises from
+every table by execute.
