@@ -1,0 +1,1 @@
+MATH: sixteen number-theory and combinatorics functions with HOWs, both modes; sample math pinned in both modes with hand-worked values; course baselines rebased for )LIB 2 listing MATH.
