@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- stats: the descriptive functions
+- saga: complete 001-stats-describe
+- docs(changes): refresh CHANGES.md to HEAD
 - saga: complete 004-drill-write; drill saga done
 - docs(changes): refresh CHANGES.md to HEAD
 - drill: WRITE, and DRILL as a pair derived from its (B) file
