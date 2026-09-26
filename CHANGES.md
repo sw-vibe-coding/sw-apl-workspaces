@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- plot: PLOT, pictures in characters, and a recording of the terminal drawing
+- saga: complete 001-math-math
+- docs(changes): refresh CHANGES.md to HEAD
 - math: MATH, number theory and combinatorics
 - saga: complete 003-stats-test; stats saga done
 - docs(changes): refresh CHANGES.md to HEAD
