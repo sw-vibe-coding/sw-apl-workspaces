@@ -247,3 +247,30 @@ has a `-75` twin, and the (B) `drill-show-75.apl` also defines VERIFY
 with execute and counts how many of three hundred HARD exercises,
 from every table, evaluate to the value the tables gave.
 `drill-write-75.apl`, (B) only, plays WRITE.
+
+### STATS
+
+Both modes, `ws/STATS.apl.ws`. Statistics on numeric vectors, written
+from the definitions; a matrix is taken as the vector of all its
+elements. `plan.md` says how far it is built.
+
+| Function | What it does |
+|---|---|
+| `DESCRIBE` | The list below, and which HOWs there are |
+| `MEAN V`, `MEDIAN V`, `MODE V` | The average; the middle value or the mean of the two; every most frequent value, each once, in the order first met |
+| `RANGE V` | The greatest less the least |
+| `VAR V`, `SD V` | Sample variance (over n-1) and its root |
+| `PVAR V`, `PSD V` | Population variance (over n) and its root |
+| `P QUANTILE V` | The value a fraction P of the way up the sorted vector, by linear interpolation at position 1+P×(n-1); P may be a vector |
+| `SUMMARY V` | Least, lower quartile, median, upper quartile, greatest, mean, sample sd, one a line |
+| `ZSCORE V` | Each value in sample standard deviations from the mean |
+| `RANK V` | The place of each value in ascending order, 1 the least, ties sharing the mean of their places |
+| `FREQ V` | A two-column matrix: the distinct values in order, and their counts |
+| `N HIST V` | The bin edges, then a row of stars per bin from the least to the greatest; a value on an edge goes in the bin above, the greatest in the last; scaled to 60 when a count is larger, with a line saying what a star stands for |
+
+Counts are `×/⍴V`, so a scalar comes back where one is wanted. The
+quantile is the interpolating definition most packages default to
+(Hyndman and Fan's type 7; `citations.md`). Every value the sample
+prints is worked by hand in the sample's comments.
+
+Samples: `stats-describe.apl` in (A) and its `-75` twin in (B).

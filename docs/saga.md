@@ -80,3 +80,12 @@ functions agree; a generator is stronger, since there is then only
 one place to edit: the (B) file marks what is its own, and the (A)
 file is derived. WRITE hides the functions of an exercise and has
 the reader write it, which is only possible with execute.
+
+## stats (2026-09-26)
+
+Phase 3 of `plan.md`: STATS, clean-room. Step 1 is the descriptive
+functions. Everything is arithmetic, grade and the outer product;
+the one decision was which sample quantile to compute, and the
+interpolating one that packages default to won, cited. The sample's
+comments carry the hand working for every printed value, which is
+what the transcript is pinned against.

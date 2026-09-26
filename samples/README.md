@@ -101,3 +101,10 @@ wrong in a row reveal the exercise, and an expression that is an
 error stops WRITE with its report, which a bare branch clears. Every
 (B) drill sample now begins with DESCRIBE, printed by the file's
 latent expression on load.
+
+`stats-describe.apl` and its (B) twin run every descriptive function
+of STATS on 2 4 4 4 5 5 7 9, whose mean, median, mode, variances,
+quartiles, ranks and histogram are worked by hand in the sample's
+comments, then on a skewed set with a repeated non-integer, and at
+the edges: an odd count, equal values, a matrix, a hundred counting
+numbers twenty to a bin, and a bin over sixty scaled.

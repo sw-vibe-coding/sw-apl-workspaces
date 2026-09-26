@@ -2,5 +2,6 @@
  "workspaces": [
   {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"},
   {"name": "DRILL", "file": "DRILL.a-70.apl.ws", "modes": "(A)"},
-  {"name": "DRILL", "file": "DRILL.b-75.apl.ws", "modes": "(B)"}
+  {"name": "DRILL", "file": "DRILL.b-75.apl.ws", "modes": "(B)"},
+  {"name": "STATS", "file": "STATS.apl.ws", "modes": "(A)(B)"}
  ]}

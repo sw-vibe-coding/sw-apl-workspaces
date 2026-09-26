@@ -1,0 +1,5 @@
+command = "scripts/run-sample.sh stats-describe-75"
+timeout = 120
+preprocess = "bash scripts/normalize-apl-output.sh"
+exit_code = 0
+desc = "Transcript of samples/stats-describe-75.apl"

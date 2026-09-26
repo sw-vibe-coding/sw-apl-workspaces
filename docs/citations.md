@@ -54,6 +54,11 @@ carry the same files, for example
 
 ## Mathematics
 
-Added as the workspaces that use them are written: the rational
-approximation STATS's `NORMAL` uses, the series CALC's `SERIES`
-compares, and so on, each with the book or paper it comes from.
+Each with the book or paper it comes from; the workspace's comment
+names the function.
+
+- **Rob J. Hyndman and Yanan Fan, "Sample Quantiles in Statistical
+  Packages"**, The American Statistician 50(4), 1996, 361-365. The
+  nine definitions of a sample quantile; STATS's `QUANTILE` is their
+  type 7, linear interpolation at position 1+p(n-1), the default of
+  most packages. <https://doi.org/10.2307/2684934>
