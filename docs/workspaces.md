@@ -251,8 +251,8 @@ from every table, evaluate to the value the tables gave.
 ### STATS
 
 Both modes, `ws/STATS.apl.ws`. Statistics on numeric vectors, written
-from the definitions; a matrix is taken as the vector of all its
-elements. `plan.md` says how far it is built.
+from the definitions; a matrix given to a one-variable function is
+taken as the vector of all its elements.
 
 | Function | What it does |
 |---|---|
@@ -271,12 +271,25 @@ elements. `plan.md` says how far it is built.
 | `X REGRESS Y` | Least squares by domino on a design matrix of ones and X: the intercept, then a coefficient per column of X, which is a vector (one regressor) or a matrix (one per column, a row per observation) |
 | `X RESID Y`, `X RSQ Y` | Y less the fit; one less the residual sum of squares over the total |
 | `B PREDICT X` | The fit at new X for coefficients B |
+| `M TTEST1 V` | One sample against a mean M: the statistic and n-1 |
+| `X TTEST2 Y` | Two samples, variances pooled: the statistic and n1+n2-2 |
+| `CHISQ T` | A contingency table: the statistic and (rows-1)×(columns-1) |
+| `NORMAL Z`, `PNORM Z` | The standard normal distribution function, good to seven places, and the two-sided probability of a Z that large |
+| `RANDU N`, `A RANDIN N` | N uniform on 0 to 1, never an end; on A[1] to A[2] |
+| `RANDN N` | N standard normal, by Box-Muller |
+| `N SAMPLE V`, `SHUFFLE V` | N of V without replacement; all of V in a random order |
 
 Counts are `×/⍴V`, so a scalar comes back where one is wanted. The
 quantile is the interpolating definition most packages default to
 (Hyndman and Fan's type 7; `citations.md`). An exact fit leaves
 residuals of the order of 1E¯15, the arithmetic's rounding, which
-HOWREGRESS says and the sample shows against a bound. Every other
-value the sample prints is worked by hand in the sample's comments.
+HOWREGRESS says and the sample shows against a bound. There is no t
+distribution: HOWTEST says to read a t against the normal from thirty
+degrees of freedom and to use a table below that; a short
+approximation good enough to print a p-value was not found. The
+random functions draw on roll, so from a fresh load they give the
+same values every time (HOWRANDOM), which is what lets the sample pin
+them. Every other value the sample prints is worked by hand in the
+sample's comments.
 
 Samples: `stats-describe.apl` in (A) and its `-75` twin in (B).

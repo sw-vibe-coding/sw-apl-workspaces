@@ -111,4 +111,9 @@ numbers twenty to a bin, and a bin over sixty scaled. Then two
 variables: an exact line, whose residuals are rounding and are shown
 against a bound; a scattered set whose covariance, correlation,
 coefficients, residuals and R squared are worked by hand; and two
-regressors as the columns of a matrix, fitted exactly.
+regressors as the columns of a matrix, fitted exactly. Then the
+tests, each worked by hand: a one-sample t, a two-sample t, and a
+chi-square on a two-by-two table; the normal distribution at values
+whose probabilities are tabulated; and the random functions, whose
+values are the same on every run because the workspace's random
+link is fixed, two thousand normal deviates summarised.

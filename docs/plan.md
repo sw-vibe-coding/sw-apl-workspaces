@@ -409,7 +409,9 @@ Steps:
 2. `stats-relate` -- COV, CORR, REGRESS and its relatives; the sample
    extended with a data set whose fit is known exactly.
 3. `stats-test` -- the tests and NORMAL; RANDN, RANDU, SAMPLE, SHUFFLE
-   with pinned transcripts. **Milestone 3.**
+   with pinned transcripts. **Milestone 3.** Reached 2026-09-26. No
+   TDIST: no approximation short enough and good enough was found,
+   so HOWTEST says how to read a t without one.
 
 ### Phase 4: the other mathematics workspaces (saga `math`)
 

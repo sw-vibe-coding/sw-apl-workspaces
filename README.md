@@ -31,7 +31,7 @@ has a `DESCRIBE` that says what it holds and what to type next.
 |---|---|---|
 | COURSE | both | APL in sixteen lessons, with a quiz after each, marked as you go: `START` |
 | DRILL | a version for each | Exercises made at random and marked: `EASY`, `DRILL`, `HARD`; in (B), `WRITE` as well |
-| STATS | both | Descriptive statistics, regression by domino, tests, random samples |
+| STATS | both | Descriptive statistics, regression by domino, t and chi-square tests, the normal distribution, random samples |
 | MATH | both | Primes, factors, combinatorics, base conversion |
 | PLOT | both | Character plots that fit 64 columns |
 | MATRIX | both | Linear algebra over domino: determinant, inverse, solve |

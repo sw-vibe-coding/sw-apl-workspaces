@@ -62,3 +62,12 @@ names the function.
   nine definitions of a sample quantile; STATS's `QUANTILE` is their
   type 7, linear interpolation at position 1+p(n-1), the default of
   most packages. <https://doi.org/10.2307/2684934>
+- **Milton Abramowitz and Irene A. Stegun (eds.), Handbook of
+  Mathematical Functions**, National Bureau of Standards, 1964,
+  formula 26.2.17: the rational approximation to the normal
+  distribution function with error under 7.5E¯8, which STATS's
+  `NORMAL` computes. <https://personal.math.ubc.ca/~cbm/aands/>
+- **G. E. P. Box and Mervin E. Muller, "A Note on the Generation of
+  Random Normal Deviates"**, Annals of Mathematical Statistics 29(2),
+  1958, 610-611: the transform STATS's `RANDN` uses.
+  <https://doi.org/10.1214/aoms/1177706645>

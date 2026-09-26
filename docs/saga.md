@@ -95,3 +95,10 @@ domino on a design matrix of ones and X, which takes a vector or a
 matrix of regressors alike. Domino returns exact coefficients and
 residuals that are rounding, of the order of 1E¯15; the sample shows
 those against a bound rather than pinning noise.
+
+Step 3, the tests and the random side. The one thing the language
+forced: an ambivalent function needs a quad name to tell one
+argument from two, which (A) has not, so the uniform on an interval
+is a function of its own, RANDIN. No t distribution: nothing short
+enough and accurate enough turned up, and HOWTEST says what to do
+instead. Milestone 3.

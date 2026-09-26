@@ -81,4 +81,35 @@ Y2
 X2 REGRESS Y2
 (X2 REGRESS Y2) PREDICT 2 2⍴6 1 7 0
 HOWREGRESS
+⍝ Tests. One sample, 2 4 4 4 5 5 7 9 against a mean of 4: the mean
+⍝ is 5, the sample sd 2.138089935, the standard error that over the
+⍝ root of 8, 0.755928946, so t is 1.322875656 on 7 degrees of
+⍝ freedom. Two samples, 1 2 3 4 5 and 2 4 5 4 5: means 3 and 4,
+⍝ variances 2.5 and 1.5, pooled variance (4×2.5+4×1.5)÷8, 2, so t is
+⍝ ¯1 over the root of 2×0.4, ¯1.118033989, on 8. A two-by-two table
+⍝ 10 20 / 30 40: row totals 30 70, column totals 40 60, expected
+⍝ 12 18 / 28 42, and the statistic 4÷12 plus 4÷18 plus 4÷28 plus
+⍝ 4÷42, 0.7936507937, on 1.
+4 TTEST1 V
+1 2 3 4 5 TTEST2 2 4 5 4 5
+CHISQ 2 2⍴10 20 30 40
+⍝ The normal distribution at 0, 1.96, ¯1 and 3, tabulated as 0.5,
+⍝ 0.9750021, 0.1586553 and 0.9986501; the approximation is within
+⍝ 7.5E¯8 of each, and prints its own last digits. PNORM 1.96 is the
+⍝ familiar 0.05, less the same error.
+NORMAL 0 1.96 ¯1 3
+PNORM 1.96
+⍝ Random. The values are the same on every run from a fresh load,
+⍝ since the workspace's random link is fixed; two thousand normal
+⍝ deviates have a mean near 0 and a standard deviation near 1.
+RANDU 3
+10 20 RANDIN 3
+RANDN 3
+Z←RANDN 2000
+MEAN Z
+SD Z
+3 SAMPLE ⍳10
+SHUFFLE 'APL'
+HOWTEST
+HOWRANDOM
 )OFF
