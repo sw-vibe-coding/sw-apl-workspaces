@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- math: MATH, number theory and combinatorics
+- saga: complete 003-stats-test; stats saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - stats: the tests, the normal distribution, and the random functions
 - saga: complete 002-stats-relate
 - docs(changes): refresh CHANGES.md to HEAD
