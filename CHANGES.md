@@ -12,8 +12,14 @@ counts, deferred follow-ups), see
 narratives, see [`docs/saga.md`](docs/saga.md).
 
 
+## 2026-09-26
+
+- drill: the INDEX and STRUCTURE topics
+
 ## 2026-09-25
 
+- saga: complete 002-drill-session
+- docs(changes): refresh CHANGES.md to HEAD
 - drill: EASY, DRILL and HARD, the topics, the marking and the hints
 - saga: complete 001-drill-tables
 - docs(changes): refresh CHANGES.md to HEAD
