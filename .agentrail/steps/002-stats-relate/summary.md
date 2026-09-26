@@ -1,0 +1,1 @@
+STATS two-variable functions: COV, CORR, REGRESS by domino (vector or matrix of regressors), RESID, RSQ, PREDICT, HOWREGRESS; sample extended with an exact line, a hand-worked scattered set and a two-regressor fit, pinned in both modes.
