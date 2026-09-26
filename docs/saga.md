@@ -102,3 +102,13 @@ argument from two, which (A) has not, so the uniform on an interval
 is a function of its own, RANDIN. No t distribution: nothing short
 enough and accurate enough turned up, and HOWTEST says what to do
 instead. Milestone 3.
+
+## math (2026-09-26)
+
+Phase 4 of `plan.md`: the mathematics workspaces. MATH first: number
+theory and combinatorics, each function a few lines of the classic
+idioms -- the one-expression sieve, Euclid as a loop, Pascal by an
+outer product of binomial, permutations built by insertion,
+combinations from the binary rows with K ones. One reminder from
+the language: a strand is constants only, so an empty matrix is
+`(0,K)⍴0`, not `0 K⍴0`.

@@ -1,27 +1,27 @@
-# stats
+# math
 
-Phase 3 of docs/plan.md: STATS, a statistics workspace, clean-room.
-STATPAK's manual and the STATPACK functions in the SHARP catalogue
-say what such a package offered; the mathematics is textbook, and
-every function here is written from the definition. Both modes, one
-file: arithmetic, domino and mixed output are all it needs. Each
-function has a HOW where one line of DESCRIBE is not enough; every
-printed line within 64 columns; the random link left at 16807.
+Phase 4 of docs/plan.md: the other mathematics workspaces, each
+small, both-mode, standing alone: MATH (number theory and
+combinatorics), PLOT (character plots to 64 columns), MATRIX (linear
+algebra over domino), POLY (polynomials as coefficient vectors), CALC
+(numerical calculus). A function two workspaces need is written once
+and copied, with a comment saying where the original is. Each has a
+DESCRIBE, HOWs where a line is not enough, a sample per mode with the
+values worked by hand, and every printed line within 64 columns.
 
-docs/plan.md, "Phase 3: STATS", holds the function list. Every step:
-the sample and its expected transcript first, on a data set whose
-values are worked by hand in the sample's comments; `just gates`,
-`just check` and `just reg` before the commit; commit, push, report.
-Milestone 3: STATS complete in both modes, transcripts pinned.
+docs/plan.md, "Phase 4", holds the function lists. Every step: the
+sample first; `just gates`, `just check` and `just reg`; commit,
+push, report. Milestone 4: the five workspaces in both modes, pinned.
 
 ## Steps
 
-1. stats-describe -- MEAN, MEDIAN, MODE, RANGE, VAR, SD, PVAR, PSD,
-   QUANTILE, SUMMARY, ZSCORE, RANK, FREQ, HIST; DESCRIBE and the HOWs;
-   a sample on a fixed data set with the values worked by hand.
-2. stats-relate -- COV, CORR, REGRESS (by domino, one regressor or a
-   matrix of them), RESID, RSQ, PREDICT; the sample extended with a
-   data set whose fit is known exactly.
-3. stats-test -- TTEST1, TTEST2, CHISQ, NORMAL (a cited rational
-   approximation), TDIST if a short one exists; RANDN by Box-Muller,
-   RANDU, SAMPLE, SHUFFLE, with pinned transcripts. Milestone 3.
+1. math-math -- MATH: PRIMES, ISPRIME, FACTORS, DIVISORS, GCD, LCM,
+   TOTIENT, FIB, PASCAL, PERMS, COMBS, BASE, UNBASE, DIGITS, ROMAN,
+   COLLATZ.
+2. math-plot -- PLOT: PLOT Y, X PLOT Y, BAR, SCATTER, axes marked by
+   the least and greatest values, drawn with the outer product.
+3. math-matrix -- MATRIX: ID, DET, INV, SOLVE, TRACE, MPOW, NORM,
+   ISSYM, GRAM, HOWDOMINO.
+4. math-poly -- POLY: PEVAL, PADD, PMUL, PDIV, PDERIV, PINT, PROOTS,
+   PSHOW.
+5. math-calc -- CALC: INTEG, DERIV, NEWTON, BISECT, SERIES. Milestone 4.

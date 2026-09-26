@@ -117,3 +117,10 @@ chi-square on a two-by-two table; the normal distribution at values
 whose probabilities are tabulated; and the random functions, whose
 values are the same on every run because the workspace's random
 link is fixed, two thousand normal deviates summarised.
+
+`math.apl` and its (B) twin run every function of MATH, the values
+worked by hand in the comments: the primes to 50, the factors of
+360, the divisors of 28, a gcd and lcm, totients, Fibonacci, Pascal's
+triangle, the permutations of three and the pairs from four, base
+conversions, 1984 in Roman numerals, the Collatz sequence from 6,
+and the edges at 1 and 0.

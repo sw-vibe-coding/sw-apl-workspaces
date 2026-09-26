@@ -293,3 +293,27 @@ them. Every other value the sample prints is worked by hand in the
 sample's comments.
 
 Samples: `stats-describe.apl` in (A) and its `-75` twin in (B).
+
+### MATH
+
+Both modes, `ws/MATH.apl.ws`. Number theory and combinatorics on
+whole numbers.
+
+| Function | What it does |
+|---|---|
+| `PRIMES N` | The primes up to N, by the one-expression sieve (an N by N table, so N in the hundreds) |
+| `ISPRIME N`, `FACTORS N`, `DIVISORS N` | Whether N is prime; its prime factors with repetition, by trial division; every divisor |
+| `A GCD B`, `A LCM B` | Euclid's algorithm; the least common multiple from it |
+| `TOTIENT N` | Euler's function, from the distinct prime factors |
+| `FIB N` | The first N Fibonacci numbers |
+| `PASCAL N` | Rows 0 to N of Pascal's triangle as a matrix, by an outer product of binomial |
+| `PERMS N` | Every permutation of 1 to N, one a row, built by putting each new number at every position of every permutation so far |
+| `K COMBS N` | Every K-subset of 1 to N, one a row, in dictionary order, from the binary rows with K ones |
+| `B BASE N`, `B UNBASE D`, `DIGITS N` | Encode and decode with the number of digits worked out |
+| `ROMAN N` | Roman numerals, greedy |
+| `COLLATZ N` | The sequence from N to 1 |
+
+HOWPERMS, HOWCOMBS and HOWBASE. Every value the sample prints is
+worked by hand in its comments.
+
+Samples: `math.apl` in (A) and its `-75` twin in (B).
