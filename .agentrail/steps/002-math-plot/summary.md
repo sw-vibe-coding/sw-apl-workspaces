@@ -1,0 +1,1 @@
+PLOT: PLOT, GRAPH, SCATTER, BAR with HEIGHT, both modes; sample plot pinned in both modes; a vhs tape of aplterm drawing with PLOT, rendered by scripts/tape.sh to images/plot.gif and an animated images/plot.webp, shown in the README.
