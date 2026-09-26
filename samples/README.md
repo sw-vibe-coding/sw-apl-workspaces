@@ -107,4 +107,8 @@ of STATS on 2 4 4 4 5 5 7 9, whose mean, median, mode, variances,
 quartiles, ranks and histogram are worked by hand in the sample's
 comments, then on a skewed set with a repeated non-integer, and at
 the edges: an odd count, equal values, a matrix, a hundred counting
-numbers twenty to a bin, and a bin over sixty scaled.
+numbers twenty to a bin, and a bin over sixty scaled. Then two
+variables: an exact line, whose residuals are rounding and are shown
+against a bound; a scattered set whose covariance, correlation,
+coefficients, residuals and R squared are worked by hand; and two
+regressors as the columns of a matrix, fitted exactly.

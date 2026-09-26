@@ -1,6 +1,6 @@
 number = 2
 slug = "stats-relate"
-status = "pending"
+status = "in-progress"
 description = "Phase 3 step 2 of docs/plan.md: two variables. X COV Y, X CORR Y (Pearson), X..."
 role = "production"
 context_files = []

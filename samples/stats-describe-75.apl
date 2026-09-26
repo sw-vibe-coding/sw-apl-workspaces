@@ -49,4 +49,36 @@ MEAN 2 2⍴1 2 3 4
 2 HIST 200⍴1 1 2
 HOWQUANTILE
 HOWRANK
+⍝ Two variables. On the line Y=1+2X the fit is exact: intercept 1,
+⍝ slope 2, correlation 1, and residuals that are rounding, of the
+⍝ order of 1E¯15, so their sum of magnitudes is shown against a
+⍝ bound rather than printed.
+X←1 2 3 4 5
+Y←3 5 7 9 11
+X REGRESS Y
+X CORR Y
+X RSQ Y
+1E¯10>+/|X RESID Y
+(X REGRESS Y) PREDICT 6 7
+⍝ With scatter, Y←2 4 5 4 5: the means are 3 and 4; the products of
+⍝ deviations sum to 6 and the squares of X's to 10, so the slope is
+⍝ 0.6 and the intercept 4-0.6×3, 2.2. The covariance is 6÷4, 1.5.
+⍝ Y's squared deviations sum to 6, so its sample sd is 1.5*0.5 and
+⍝ the correlation 6÷60*0.5, 0.7745966692. The fitted values are
+⍝ 2.8 3.4 4 4.6 5.2, the residuals sum of squares 2.4, and R
+⍝ squared 1-2.4÷6, 0.6, the correlation squared.
+Y←2 4 5 4 5
+X COV Y
+X CORR Y
+X REGRESS Y
+X RESID Y
+X RSQ Y
+(X REGRESS Y) PREDICT 6
+⍝ Two regressors as the columns of a matrix, Y←1+2×X1+3×X2 exactly.
+X2←5 2⍴1 1 2 0 3 1 4 0 5 1
+Y2←1+(2×X2[;1])+3×X2[;2]
+Y2
+X2 REGRESS Y2
+(X2 REGRESS Y2) PREDICT 2 2⍴6 1 7 0
+HOWREGRESS
 )OFF

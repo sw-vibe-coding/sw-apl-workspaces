@@ -89,3 +89,9 @@ the one decision was which sample quantile to compute, and the
 interpolating one that packages default to won, cited. The sample's
 comments carry the hand working for every printed value, which is
 what the transcript is pinned against.
+
+Step 2, two variables: covariance, correlation and least squares by
+domino on a design matrix of ones and X, which takes a vector or a
+matrix of regressors alike. Domino returns exact coefficients and
+residuals that are rounding, of the order of 1E¯15; the sample shows
+those against a bound rather than pinning noise.

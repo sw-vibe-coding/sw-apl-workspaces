@@ -267,10 +267,16 @@ elements. `plan.md` says how far it is built.
 | `RANK V` | The place of each value in ascending order, 1 the least, ties sharing the mean of their places |
 | `FREQ V` | A two-column matrix: the distinct values in order, and their counts |
 | `N HIST V` | The bin edges, then a row of stars per bin from the least to the greatest; a value on an edge goes in the bin above, the greatest in the last; scaled to 60 when a count is larger, with a line saying what a star stands for |
+| `X COV Y`, `X CORR Y` | Sample covariance (over n-1) and Pearson's correlation |
+| `X REGRESS Y` | Least squares by domino on a design matrix of ones and X: the intercept, then a coefficient per column of X, which is a vector (one regressor) or a matrix (one per column, a row per observation) |
+| `X RESID Y`, `X RSQ Y` | Y less the fit; one less the residual sum of squares over the total |
+| `B PREDICT X` | The fit at new X for coefficients B |
 
 Counts are `×/⍴V`, so a scalar comes back where one is wanted. The
 quantile is the interpolating definition most packages default to
-(Hyndman and Fan's type 7; `citations.md`). Every value the sample
-prints is worked by hand in the sample's comments.
+(Hyndman and Fan's type 7; `citations.md`). An exact fit leaves
+residuals of the order of 1E¯15, the arithmetic's rounding, which
+HOWREGRESS says and the sample shows against a bound. Every other
+value the sample prints is worked by hand in the sample's comments.
 
 Samples: `stats-describe.apl` in (A) and its `-75` twin in (B).
