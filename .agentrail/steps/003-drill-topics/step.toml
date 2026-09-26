@@ -1,8 +1,9 @@
 number = 3
 slug = "drill-topics"
-status = "in-progress"
+status = "completed"
 description = "Phase 2 step 3 of docs/plan.md: INDEX and STRUCTURE topics -- bracket indexin..."
 role = "production"
 context_files = []
 created_at = "2026-09-25T10:49:35"
-commits = []
+completed_at = "2026-09-26T06:55:13"
+commits = ["f933b128dbc8340745256a6052163fa965b2a14a"]

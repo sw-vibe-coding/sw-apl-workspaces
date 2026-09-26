@@ -1,0 +1,1 @@
+INDEX and STRUCTURE topics: valid, non-empty exercises by construction, reductions over them at HARD, two more kinds, hints; samples drill-index and drill-structure in both modes pinned; VERIFY at three hundred. Milestone 2.
