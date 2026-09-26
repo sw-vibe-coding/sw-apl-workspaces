@@ -1,8 +1,9 @@
 number = 1
 slug = "stats-describe"
-status = "in-progress"
+status = "completed"
 description = "Phase 3 step 1 of docs/plan.md. ws/STATS.apl.ws, modes (A)(B), SOURCE line, L..."
 role = "production"
 context_files = []
 created_at = "2026-09-26T12:27:54"
-commits = []
+completed_at = "2026-09-26T12:32:34"
+commits = ["97ca5790db02f795f98f4d0429ed8757af585442"]

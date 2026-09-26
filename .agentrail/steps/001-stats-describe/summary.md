@@ -1,0 +1,1 @@
+STATS descriptive functions: MEAN to HIST with HOWs, both modes; sample stats-describe pinned in both modes with hand-worked values; quantile definition cited.
