@@ -1,0 +1,1 @@
+COURSE lessons 1, 15 and 16 name the eight workspaces of library 2 in the present tense; read through in both modes with full quiz scores; course-1, course-15-16 and course-all re-pinned.
