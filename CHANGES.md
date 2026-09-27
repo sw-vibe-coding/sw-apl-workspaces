@@ -14,6 +14,10 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- oracle: MATH and MATRIX against num-integer and nalgebra
+- gitignore: the oracle's build output
+- saga: complete 001-oracle-scaffold
+- docs(changes): refresh CHANGES.md to HEAD
 - oracle: an independent check of STATS, in Rust, through sw-apl's API
 - images: a local page to view the PLOT recording in a browser
 - saga: archive polish
