@@ -34,3 +34,7 @@
 # the SQLite run database and its lock are per-machine state.
 tests/reg-rs/*.tdb
 tests/reg-rs/*.tdb.lock
+
+# The oracle is a cargo workspace of its own; its build output stays
+# under it.
+/oracle/target/
