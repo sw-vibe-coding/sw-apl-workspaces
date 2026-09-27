@@ -161,3 +161,16 @@ latent expression's output before the SAVED line and its version
 stamp is still the one from 20 September, and its plan has not taken
 the finding up. The finding says what to do when it does. The polish
 saga is complete.
+
+## oracle (2026-09-26)
+
+Phase 7 of `plan.md`: an independent oracle, in Rust, through
+sw-apl's API rather than its CLI. Step 1 built the way in -- a
+console fed from a queue, a host with `ws/` as library 2, a parser
+of printed numbers -- and checked STATS end to end against closed
+forms, `nalgebra` and `statrs`, in both modes: every descriptive
+function on forty random vectors, least squares with one and two
+regressors, the tests, and TPROB and CHIPROB on a grid of ninety-six
+points each out to the far tails. All agreed on the first full run,
+which says more about the hand working than about luck, and a test
+asserts that a wrong expectation fails.

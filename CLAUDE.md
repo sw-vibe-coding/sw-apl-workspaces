@@ -325,13 +325,20 @@ just reg                  # reg-rs transcript regressions
 just samples [pattern]    # print sample transcripts
 just run ws/NAME.apl.ws 75   # one workspace, one mode
 scripts/reg-seed.sh       # seed a test for a new sample
+just oracle               # the Rust oracle in oracle/: cargo test
+just oracle-gates         # its fmt, clippy -D warnings, sw-checklist
 ```
 
 Every script gives sw-apl this repository as library 2 with
 `--lib 2=ws,EXTENDED`, so samples say `)LOAD 2 NAME`; a test runs
 `scripts/run-sample.sh NAME`, which also gives the sample a fresh
 library 0 of its own. The binary must be sw-apl a718f19 or later,
-which has the flag.
+which has the flag. The oracle under `oracle/` depends on sw-apl's
+crates by path (`../sw-apl`), so it builds only beside that checkout;
+the sibling's Rust gates apply to it (fmt, clippy -D warnings, the
+sw-checklist sizes: 25 lines a function, four a module, four modules
+a crate), and a change to a workspace's numbers is followed by `just
+oracle`.
 
 ## Every step is TDD
 

@@ -101,6 +101,8 @@ just gates           # markdown, provenance, modes, the random link
 just check           # every workspace, every mode it claims, no errors
 scripts/reg.sh run   # transcript regressions (reg-rs), one per sample
 just samples         # print every sample's transcript
+just oracle          # sw-apl in process on random inputs against
+                     # statrs and nalgebra, both modes (Rust toolchain)
 just tape            # re-record images/plot.gif and .webp (vhs, ffmpeg)
 ```
 
@@ -133,6 +135,8 @@ samples/      one transcript sample per workspace: loads it, runs
 tests/reg-rs  the pinned transcripts
 scripts/      gates, the sample and reg-rs runners,
               the index and change-log generators
+oracle/       a cargo workspace: the independent oracle, cargo tests
+              that check the workspaces' numbers against references
 docs/         plan, conventions, testing, citations, the vhs tape
 images/       the recording of the terminal drawing with PLOT, and
               plot/index.html, a page to view it in a browser locally

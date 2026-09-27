@@ -86,3 +86,36 @@ it, and `scripts/sw-apl.sh --help` shows whether the one in use has
 it. A sample's library 0 is `target/lib0/NAME/work`, emptied before
 each run; `just apl` uses `work/` under the repository, which is
 ignored. Neither writes anything that is tracked.
+
+## The oracle
+
+The transcripts pin what a workspace did; the hand working in the
+samples says why it is right, a few cases per function. The oracle
+under `oracle/` is the third check: sw-apl run in process on many
+seeded random inputs, every number compared with a reference that
+shares nothing with the APL.
+
+```bash
+just oracle          # cargo test in oracle/, both modes
+just oracle-gates    # fmt, clippy -D warnings, sw-checklist
+```
+
+It is a cargo workspace of its own with one crate, `apl-oracle`,
+which depends on sw-apl's `apl-session` by path (`../sw-apl`): a
+`Console` that feeds lines from a queue, a `Host` with `ws/` as
+library 2 exactly as `--lib 2=ws,EXTENDED` builds it, a wrapper that
+loads a workspace and evaluates a line, returning the numbers it
+printed or the error it reported, and a parser from APL's printed
+numbers (high minus, E notation, rows) to `f64`. The checks are the
+integration tests in `oracle/crates/apl-oracle/tests/`, one file per
+workspace. Each draws cases from a fixed seed, runs them in (A) and
+in (B), and compares within a tolerance stated at the top of the
+file: `statrs` for the normal, t and chi-square distributions,
+`nalgebra` for least squares and linear algebra, closed forms written
+in the test for the rest. A failure prints the APL line, so the case
+can be typed at the prompt, and one test asserts that a wrong
+expectation fails.
+
+The oracle sits beside the gates, not in them: it needs the Rust
+toolchain and the sibling checkout, and it compiles part of sw-apl
+the first time. Run it when a workspace's numbers change.

@@ -516,6 +516,69 @@ work itself turned up, planned 2026-09-26 at the owner's request.
    plan says and complete the step with that; it costs nothing to
    come back.
 
+## Phase 7: an independent oracle (saga `oracle`)
+
+Owner question 2026-09-26: how sure are we the workspaces are
+correct, and what would make them surer? The transcripts are
+regression, not correctness; the hand working in the samples covers
+a few cases per function. So an oracle: a Rust check that runs the
+workspaces on many random inputs and compares every number with a
+reference that shares nothing with them.
+
+Design (owner and agent, 2026-09-26):
+
+- **In process, through sw-apl's API**, not the CLI. `apl-session`
+  exposes `Session::attached(console, host)` and `respond(line)`, which
+  returns the transcript lines and an error flag; `apl-libraries`
+  builds the store `--lib 2=ws,EXTENDED` builds. The oracle depends on
+  those crates by path (`../sw-apl`), implements a `Console` that
+  feeds lines from a queue, and runs each case in (A) and in (B) one
+  `Mode` apart. No process, no file, thousands of cases a second.
+- **Rust integration tests are the validation**: a cargo workspace
+  under `oracle/`, one library crate (the console, the host, a parser
+  from APL's printed numbers back to `f64`), and the checks as
+  `cargo test` integration tests, one file per workspace. `statrs`
+  gives the normal, t and chi-square distributions and the incomplete
+  beta and gamma functions behind them; `nalgebra` gives least
+  squares, determinants and inverses; `rand_chacha` a fixed seed, so
+  a failure replays and names the APL line that provoked it.
+- **Tolerances per function**: exact for whole numbers; 1E¯8 relative
+  for arithmetic, since STATS prints ten significant digits; looser,
+  and stated, for iterative things (PROOTS, NEWTON, DERIV).
+- **A pinned report.** `apl-oracle` also prints a deterministic
+  summary per family (cases, mismatches, largest error); reg-rs pins
+  it, so the oracle's verdict is a regression beside the transcripts.
+- **Executable `.apl` cases** with sw-apl's shebang under
+  `oracle/cases/` for what the API does not touch: loading from the
+  library directory as the demo does, one end-to-end run per
+  workspace.
+- The sibling's Rust gates apply to the oracle's crates: `cargo fmt`,
+  `clippy -D warnings`, and `sw-checklist`'s sizes (25 lines a
+  function, four functions a module, four modules a crate). `just
+  oracle` runs it; it is beside the gates, not in them, since it needs
+  the toolchain and the sibling checkout.
+
+Steps:
+
+1. `oracle-scaffold` -- done 2026-09-26. The workspace, the library crate, `just
+   oracle`, and STATS: every descriptive function, quantile against
+   type 7, covariance, correlation and REGRESS against least squares,
+   the tests, and TPROB and CHIPROB swept against `statrs` over a grid
+   of degrees of freedom and values including the extremes never
+   tried by hand.
+2. `oracle-math-matrix` -- MATH (gcd, lcm, factors, primes, totient,
+   base and unbase round trips, Roman numerals against a reference,
+   Collatz, Fibonacci, Pascal, permutation and combination counts and
+   properties) and MATRIX (determinant, inverse, solve, trace, norm
+   against `nalgebra`; GRAM's columns orthonormal).
+3. `oracle-poly-calc` -- POLY (evaluation, product and quotient round
+   trips, derivative and integral, roots of polynomials built from
+   known real roots) and CALC (integrals against closed forms,
+   derivatives against analytic ones, roots, the series against the
+   primitives); the pinned reports in reg-rs; the shebang cases;
+   `docs/testing.md`'s oracle section. **Milestone 5:** every
+   numerical workspace checked against an independent reference.
+
 ## Decisions
 
 - **Names**: COURSE, DRILL, STATS, then MATH, PLOT, MATRIX, POLY,

@@ -1,0 +1,10 @@
+[workspace]
+members = ["crates/apl-oracle"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+version = "0.1.0"
+authors = ["Michael A Wright"]
+repository = "https://github.com/sw-vibe-coding/sw-apl-workspaces"

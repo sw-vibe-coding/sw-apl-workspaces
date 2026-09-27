@@ -55,6 +55,17 @@ index:
 pair name:
     ./scripts/gen-pair.sh {{name}}
 
+# The independent oracle: sw-apl run in process on many seeded random
+# inputs, every number checked against statrs, nalgebra or a closed
+# form, in both modes. Needs the Rust toolchain and ../sw-apl.
+oracle:
+    cd oracle && cargo test --workspace
+
+# The oracle's own gates: format, clippy, sizes.
+oracle-gates:
+    cd oracle && cargo fmt --all -- --check && cargo clippy --workspace --all-targets -- -D warnings
+    sw-checklist oracle
+
 # Re-record the terminal drawing with PLOT: docs/tapes/plot.tape
 # against a local service, to images/plot.gif and images/plot.webp
 # (needs vhs, ttyd, ffmpeg, gif2webp and sw-apl's release binaries).
