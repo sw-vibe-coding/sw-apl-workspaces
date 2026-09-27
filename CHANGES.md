@@ -14,6 +14,11 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- oracle: an independent check of STATS, in Rust, through sw-apl's API
+- images: a local page to view the PLOT recording in a browser
+- saga: archive polish
+- saga: complete 004-upstream-repin; polish saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - plan: upstream checked, nothing to re-pin yet
 - saga: complete 003-gates-width
 - docs(changes): refresh CHANGES.md to HEAD
