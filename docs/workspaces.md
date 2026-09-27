@@ -344,3 +344,25 @@ divided by zero. HOWPLOT.
 Samples: `plot.apl` in (A) and its `-75` twin in (B). `docs/tapes/
 plot.tape` records the 2741 terminal drawing with it; `just tape`
 renders it to `images/plot.gif` and `images/plot.webp`.
+
+### MATRIX
+
+Both modes, `ws/MATRIX.apl.ws`. Linear algebra, mostly over domino.
+
+| Function | What it does |
+|---|---|
+| `ID N` | The N by N identity |
+| `DET M` | The determinant by elimination with partial pivoting; a singular matrix gives 0 |
+| `INV M`, `A SOLVE B` | Domino: the inverse; X with A+.×X equal to B, B a vector or a matrix of right-hand sides |
+| `TRACE M` | The sum of the diagonal, by dyadic transpose |
+| `M MPOW N` | M to the power N by matrix product; N of 0 is the identity |
+| `NORM V` | The Euclidean length of a vector, or of all the elements of a matrix |
+| `ISSYM M` | 1 when M is square and equal to its transpose |
+| `GRAM M` | Gram-Schmidt on the columns: orthonormal columns; a dependent column is a DOMAIN ERROR |
+
+HOWDOMINO says what `⌹` is, including least squares; HOWDET and
+HOWGRAM say how those two work. A matrix times its inverse, or an
+orthonormal matrix's transpose times itself, is the identity up to
+rounding of the order of 1E¯14, which the sample shows rounded.
+
+Samples: `matrix.apl` in (A) and its `-75` twin in (B).

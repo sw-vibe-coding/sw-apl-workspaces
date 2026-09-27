@@ -120,3 +120,10 @@ between each point and the next in the later column. The owner asked
 for a recording: `docs/tapes/plot.tape` drives aplterm against a
 local service with this library, and `scripts/tape.sh` renders it
 and converts the gif to an animated webp.
+
+MATRIX (step 3): domino does the inverse and the solve, and the
+determinant is elimination with partial pivoting, written out so a
+reader can see what domino does inside. The classic 3 by 3 with an
+integer inverse comes back exact; the products that should be the
+identity carry 1E¯14 and are shown rounded rather than pinned as
+noise.

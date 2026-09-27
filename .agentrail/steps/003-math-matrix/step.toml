@@ -1,6 +1,6 @@
 number = 3
 slug = "math-matrix"
-status = "pending"
+status = "in-progress"
 description = "Phase 4 step 3 of docs/plan.md. ws/MATRIX.apl.ws, modes (A)(B): ID N, DET M (..."
 role = "production"
 context_files = []

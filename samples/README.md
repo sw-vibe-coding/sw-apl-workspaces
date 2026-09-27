@@ -129,3 +129,9 @@ and the edges at 1 and 0.
 into a curve, a parabola at a lower HEIGHT, unsorted points joined
 and alone, a bar chart, and the edges: a constant Y and bars of
 nothing.
+
+`matrix.apl` and its (B) twin work a 2 by 2 and a 3 by 3 with an
+integer inverse by hand in the comments: determinants, inverses, a
+solve, a singular case, the Fibonacci matrix to the fifth power, the
+norm, symmetry, and two columns made orthonormal; products that are
+the identity up to rounding are shown rounded.
