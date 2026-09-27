@@ -14,6 +14,11 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- bench: the same subjects timed in APL and in Rust
+- plan: Phase 8, speed beside Rust; the bench saga
+- saga: archive oracle
+- saga: complete 003-oracle-poly-calc on 4435c9a; oracle saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - oracle: POLY and CALC, the pinned report, the shebang cases; two POLY defects fixed
 - saga: complete 003-oracle-poly-calc; oracle saga done
 - saga: complete 002-oracle-math-matrix
