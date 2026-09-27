@@ -1,0 +1,1 @@
+Oracle tests for MATH (num-integer, sieves, definitions, Roman 1 to 3999, permutation and combination properties) and MATRIX (nalgebra on well-conditioned random matrices, Gram-Schmidt by properties); Apl::load widens the print width so matrices are read whole; every workspace value agreed; fmt, clippy, sw-checklist clean.
