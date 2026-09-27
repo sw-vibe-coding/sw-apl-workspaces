@@ -508,7 +508,7 @@ work itself turned up, planned 2026-09-26 at the owner's request.
    transcript in `tests/reg-rs/*.out` that is output, not an echoed
    input line (six spaces or a `[n]` prompt), is at most 64
    characters. Fix whatever it finds.
-4. `upstream-repin` -- sw-apl's `⎕LX` output order (the finding
+4. `upstream-repin` -- checked 2026-09-26, nothing landed; the finding records it. sw-apl's `⎕LX` output order (the finding
    below) and its stale `--version` stamp. When the fixes land,
    rebuild, re-run every transcript, re-pin the (B) drill baselines
    whose load prints DESCRIBE, and mark the finding fixed. If they
@@ -566,7 +566,11 @@ is worked around in a way that makes a workspace not-APL.
   `⍎⎕LX` once the workspace is in, "its output after the SAVED line";
   loading DRILL in (B) prints DESCRIBE's output first and the SAVED
   line after it. One of the two should change; the transcripts here
-  are pinned to what it does today. `)SI` typed in reply to `⎕` is reported as a syntax error
+  are pinned to what it does today. Checked 2026-09-26 against
+  sw-apl at c0e6e51: the order is unchanged, its plan does not
+  mention it, and its `--version` still stamps commit 3b16be6 of
+  2026-09-20. When either changes: rebuild, run every transcript,
+  re-pin the (B) drill baselines, and mark this fixed. `)SI` typed in reply to `⎕` is reported as a syntax error
   in the line that read. APL\360 accepted system commands in reply
   to quad input. Lesson 1 therefore asks the reader to try
   `)DIALECT`, `)WSID`, `)LIBS` and `)HELP` after the lesson, not at

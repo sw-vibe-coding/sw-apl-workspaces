@@ -155,3 +155,9 @@ Step 3, the width gates: awk's length counts bytes on this system,
 so a glyph was three columns and the check-ws gate was wrong in both
 directions without ever failing; perl reads characters. The pinned
 transcripts got the check they never had, and passed it.
+
+Step 4 found nothing to re-pin: at c0e6e51 sw-apl still prints the
+latent expression's output before the SAVED line and its version
+stamp is still the one from 20 September, and its plan has not taken
+the finding up. The finding says what to do when it does. The polish
+saga is complete.

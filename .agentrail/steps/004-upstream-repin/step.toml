@@ -1,6 +1,6 @@
 number = 4
 slug = "upstream-repin"
-status = "pending"
+status = "in-progress"
 description = "Phase 6 step 4 of docs/plan.md. Check ../sw-apl for the quad-LX output order ..."
 role = "production"
 context_files = []
