@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- plan: upstream checked, nothing to re-pin yet
+- saga: complete 003-gates-width
+- docs(changes): refresh CHANGES.md to HEAD
 - gates: width in characters, and over every pinned transcript
 - saga: complete 002-stats-tdist
 - docs(changes): refresh CHANGES.md to HEAD
