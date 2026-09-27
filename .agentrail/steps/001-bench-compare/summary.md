@@ -1,0 +1,1 @@
+criterion benches timing thirteen subjects through the in-process session and the Rust reference; one run's table and its reading in docs/testing.md: primitives and domino 30 to 60 times slower than Rust, APL-level loops ten thousand, DET in APL forty times slower than INV by domino, the sieve quadratic, the modes equal; notes in workspaces.md; just bench.

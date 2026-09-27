@@ -1,8 +1,9 @@
 number = 1
 slug = "bench-compare"
-status = "in-progress"
+status = "completed"
 description = "Phase 8 of docs/plan.md. criterion as a dev-dependency of apl-oracle; benches..."
 role = "production"
 context_files = []
 created_at = "2026-09-26T20:33:41"
-commits = []
+completed_at = "2026-09-26T20:45:29"
+commits = ["7c8548b76eb73175ba02c2918b4ad0fc2bbd1e66"]
