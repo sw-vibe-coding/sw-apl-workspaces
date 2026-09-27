@@ -1,6 +1,6 @@
 number = 1
 slug = "course-refresh"
-status = "pending"
+status = "in-progress"
 description = "Phase 6 step 1 of docs/plan.md. COURSE was written before its companions exis..."
 role = "production"
 context_files = []
