@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- calc: CALC, numerical calculus; Phase 4 and the plan complete
+- saga: complete 004-math-poly
+- docs(changes): refresh CHANGES.md to HEAD
 - poly: POLY, polynomials as coefficient vectors
 - saga: complete 003-math-matrix
 - docs(changes): refresh CHANGES.md to HEAD
