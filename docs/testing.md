@@ -205,4 +205,6 @@ interpreter must be; the shape of the gap is the finding.
 The guidance for writing these workspaces follows: reach for a
 primitive over a loop wherever one exists (`⌹` over elimination, a
 reduction over a running total), and keep an APL-level loop for
-what has no primitive, knowing what it costs.
+what has no primitive, knowing what it costs. `performance.md` is
+the full analysis: the method, the three classes of ratio and why,
+what the comparison is not, and how to extend it.

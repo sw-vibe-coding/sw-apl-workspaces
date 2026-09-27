@@ -116,7 +116,11 @@ documents show real APL glyphs.
 - [Master plan](docs/plan.md) -- goal, constraints, phases, decisions
 - [Workspaces](docs/workspaces.md) -- the conventions every workspace
   here follows: DESCRIBE, HOWNAME, prompts, STOP, 64 columns
-- [Testing](docs/testing.md) -- transcripts, reg-rs, the gates
+- [Testing](docs/testing.md) -- transcripts, reg-rs, the gates, the
+  oracle
+- [Performance](docs/performance.md) -- the same subjects timed in
+  APL and in Rust, and what the shape of the gap means for how the
+  workspaces are written
 - [The library](docs/library.md) -- how sw-apl reaches this
   repository at the terminal, the service and the browser
 - [Citations](docs/citations.md) -- every source consulted, none
