@@ -1,8 +1,9 @@
 number = 2
 slug = "stats-tdist"
-status = "in-progress"
+status = "completed"
 description = "Phase 6 step 2 of docs/plan.md. In ws/STATS.apl.ws: T TPROB DF, the two-sided..."
 role = "production"
 context_files = []
 created_at = "2026-09-26T18:34:37"
-commits = []
+completed_at = "2026-09-26T19:33:28"
+commits = ["61cdddfd3f564ed9da3ef835809422e849233730"]

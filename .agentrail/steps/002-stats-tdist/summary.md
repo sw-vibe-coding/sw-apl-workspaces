@@ -1,0 +1,1 @@
+TPROB and CHIPROB for STATS by the incomplete beta and gamma functions (Numerical Recipes methods, cited), log-gamma from factorial with Stirling beyond 100; HOWTEST updated; sample extended with tabulated points and re-pinned in both modes.
