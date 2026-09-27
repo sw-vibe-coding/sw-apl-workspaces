@@ -61,6 +61,12 @@ pair name:
 oracle:
     cd oracle && cargo test --workspace
 
+# Speed, APL beside Rust: criterion benches timing the same subject
+# through the in-process session and through the oracle's reference.
+# Not pinned; one run's table is in docs/testing.md.
+bench:
+    cd oracle && cargo bench --workspace
+
 # The oracle's own gates: format, clippy, sizes.
 oracle-gates:
     cd oracle && cargo fmt --all -- --check && cargo clippy --workspace --all-targets -- -D warnings

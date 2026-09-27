@@ -1,6 +1,6 @@
 number = 1
 slug = "bench-compare"
-status = "pending"
+status = "in-progress"
 description = "Phase 8 of docs/plan.md. criterion as a dev-dependency of apl-oracle; benches..."
 role = "production"
 context_files = []

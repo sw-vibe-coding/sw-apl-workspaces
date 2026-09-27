@@ -151,3 +151,58 @@ expectation fails.
 The oracle sits beside the gates, not in them: it needs the Rust
 toolchain and the sibling checkout, and it compiles part of sw-apl
 the first time. Run it when a workspace's numbers change.
+
+## Speed, APL beside Rust
+
+`just bench` runs `criterion` benches in the oracle crate that time
+the same subject two ways: one line evaluated in an in-process
+session whose workspace was loaded outside the timed loop, and the
+oracle's Rust reference on the same data. The numbers vary by
+machine and day and are not pinned; this is one run, on an Apple M1
+Max on 2026-09-26, against sw-apl at c0e6e51, with criterion's
+measurement time cut to three seconds. Times are the middle
+estimate; the last column is APL's time over Rust's.
+
+| Subject | APL, (A) | APL, (B) | Rust | APL over Rust |
+|---|---|---|---|---|
+| mean-of-1000 | 24.2 us | 24.1 us | 831 ns | 29 |
+| sd-of-1000 | 115.9 us |  | 1.8 us | 63 |
+| factors-of-360360 | 212.8 us |  | 104 ns | 2,046 |
+| gcd-1071-462 | 103.9 us |  | 10 ns | 10,662 |
+| collatz-27 | 1.48 ms |  | 115 ns | 12,962 |
+| primes-to-100 | 297.2 us |  | 261 ns | 1,139 |
+| primes-to-300 | 2.49 ms |  | 605 ns | 4,112 |
+| regress-200-points | 67.5 us | 66.9 us | 2.0 us | 34 |
+| det-5x5 | 206.2 us |  | 118 ns | 1,748 |
+| inv-5x5 | 18.2 us |  | 379 ns | 48 |
+| tprob-2-on-10 | 1.87 ms |  | 229 ns | 8,183 |
+| chiprob-5-on-3 | 2.01 ms |  | 176 ns | 11,447 |
+| proots-quartic | 21.55 ms |  | 5.0 us | 4,282 |
+
+What it shows. Rust is faster everywhere, as compiled code against an
+interpreter must be; the shape of the gap is the finding.
+
+- **An array primitive costs little.** MEAN and SD of a thousand
+  numbers, and REGRESS by domino on two hundred points, run 30 to 60
+  times slower than Rust: the work is one primitive, done inside
+  sw-apl by a Rust loop, and what is paid is the interpretation of a
+  line or two around it. INV of a 5 by 5 is domino too, at 48.
+- **A loop written in APL costs thousands.** GCD, COLLATZ and FACTORS
+  run a few lines per step, and every step is interpreted: ten
+  thousand times slower. DET, elimination written out in APL, is
+  1,700 times slower than `nalgebra` where INV, which is `⌹`, is 48:
+  the same matrix, and the difference is whether the loop is in APL
+  or in a primitive. The continued fractions behind TPROB and CHIPROB
+  are loops of the same kind, and PROOTS is bisection and Newton in a
+  loop over sixty and fifty steps.
+- **The one-line sieve is quadratic.** PRIMES 100 is 1,100 times
+  slower than a Rust sieve and PRIMES 300 is 4,100 times: the
+  N-by-N table grows with the square of N, and the ratio grows with
+  it. That is what "N in the hundreds" in MATH's DESCRIBE means.
+- **The modes are the same speed.** (A) and (B) differ by a few per
+  cent, inside the noise.
+
+The guidance for writing these workspaces follows: reach for a
+primitive over a loop wherever one exists (`⌹` over elimination, a
+reduction over a running total), and keep an APL-level loop for
+what has no primitive, knowing what it costs.

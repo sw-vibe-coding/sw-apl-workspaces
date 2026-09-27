@@ -641,7 +641,10 @@ Design:
 
 One step, `bench-compare`: the benches, `just bench`, the table and
 its reading in `docs/testing.md`, and a note in `docs/workspaces.md`
-where a workspace's own idiom is the slow one.
+where a workspace's own idiom is the slow one. Done 2026-09-26: an
+array primitive or domino runs 30 to 60 times slower than Rust, a
+loop written in APL ten thousand times, and the one-line sieve grows
+with the square of N; the modes are the same speed.
 
 ## Findings by the oracle
 

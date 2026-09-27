@@ -192,3 +192,14 @@ rather than the workspaces: a matrix wider than 64 wraps unless the
 width is opened after the load, and ten printed digits set a floor
 of about 5E¯10 under any tolerance. Nothing the oracle found was a
 workspace defect. The oracle saga is complete.
+
+## bench (2026-09-26)
+
+Phase 8 of `plan.md`: the same subject timed through the in-process
+session and through the oracle's Rust reference, with criterion.
+The shape of the answer, not the ratio, is the finding: a primitive
+or domino is 30 to 60 times slower than Rust, a loop written in APL
+ten thousand, and DET written out in APL is forty times slower than
+INV by `⌹` on the same matrix. The table and its reading are in
+`testing.md`, labelled with the machine, the day and the sw-apl
+commit, and not pinned.

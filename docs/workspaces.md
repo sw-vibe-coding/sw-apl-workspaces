@@ -315,7 +315,9 @@ whole numbers.
 | `COLLATZ N` | The sequence from N to 1 |
 
 HOWPERMS, HOWCOMBS and HOWBASE. Every value the sample prints is
-worked by hand in its comments.
+worked by hand in its comments. PRIMES is the one-line sieve, an N by
+N table, so its cost grows with the square of N: a few milliseconds
+at 300, and not for thousands (`testing.md`, Speed).
 
 Samples: `math.apl` in (A) and its `-75` twin in (B).
 
@@ -362,7 +364,10 @@ Both modes, `ws/MATRIX.apl.ws`. Linear algebra, mostly over domino.
 | `GRAM M` | Gram-Schmidt on the columns: orthonormal columns; a dependent column is a DOMAIN ERROR |
 
 HOWDOMINO says what `⌹` is, including least squares; HOWDET and
-HOWGRAM say how those two work. A matrix times its inverse, or an
+HOWGRAM say how those two work. DET is elimination written out in
+APL, to show the method, and is some forty times slower than INV,
+which is the primitive; for speed, take a determinant from `⌹` where
+the matrix allows (`testing.md`, Speed). A matrix times its inverse, or an
 orthonormal matrix's transpose times itself, is the identity up to
 rounding of the order of 1E¯14, which the sample shows rounded.
 

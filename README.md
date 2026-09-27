@@ -104,6 +104,7 @@ scripts/reg.sh run   # transcript regressions (reg-rs), one per sample,
 just samples         # print every sample's transcript
 just oracle          # sw-apl in process on random inputs against
                      # statrs and nalgebra, both modes (Rust toolchain)
+just bench           # the same subjects timed in APL and in Rust
 just tape            # re-record images/plot.gif and .webp (vhs, ffmpeg)
 ```
 
