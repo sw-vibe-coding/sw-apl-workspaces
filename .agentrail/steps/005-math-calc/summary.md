@@ -1,0 +1,1 @@
+CALC: AT, INTEG, INTEGV, DERIV, NEWTON, BISECT, SERIES with HOWCALC, both modes; sample calc pinned in both modes; Milestone 4 and the plan complete; README and plan closed out.
