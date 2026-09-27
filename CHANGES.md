@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- matrix: MATRIX, linear algebra over domino
+- saga: complete 002-math-plot
+- docs(changes): refresh CHANGES.md to HEAD
 - plot: PLOT, pictures in characters, and a recording of the terminal drawing
 - saga: complete 001-math-math
 - docs(changes): refresh CHANGES.md to HEAD
