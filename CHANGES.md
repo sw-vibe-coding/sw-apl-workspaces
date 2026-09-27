@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- stats: TPROB and CHIPROB, the p-values
+- saga: complete 001-course-refresh
+- docs(changes): refresh CHANGES.md to HEAD
 - course: the library as it is, in lessons 1, 15 and 16
 - plan: Phase 6, what came up on the way; the polish saga
 - saga: complete 005-math-calc; math saga done
