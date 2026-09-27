@@ -1,0 +1,1 @@
+Upstream checked at sw-apl c0e6e51: the latent-expression order and the version stamp are unchanged and the finding is not in its plan; recorded in docs/plan.md with what to do when it lands. Nothing re-pinned.
