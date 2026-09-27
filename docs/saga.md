@@ -127,3 +127,10 @@ reader can see what domino does inside. The classic 3 by 3 with an
 integer inverse comes back exact; the products that should be the
 identity carry 1E¯14 and are shown rounded rather than pinned as
 noise.
+
+POLY (step 4): highest power first because decode is Horner's rule.
+Two things the transcript taught: `⍴P` is a one-element vector and
+makes encode produce a matrix, so a count is `×/⍴P`; and a repeated
+root is found only to six or so places, since the polynomial's value
+beside it is lost to cancellation, so PROOTS rounds there and merges
+values within 1E¯5.

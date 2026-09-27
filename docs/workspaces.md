@@ -366,3 +366,26 @@ orthonormal matrix's transpose times itself, is the identity up to
 rounding of the order of 1E¯14, which the sample shows rounded.
 
 Samples: `matrix.apl` in (A) and its `-75` twin in (B).
+
+### POLY
+
+Both modes, `ws/POLY.apl.ws`. Polynomials as vectors of
+coefficients, highest power first, because that is the order decode
+wants: `X⊥P` is Horner's rule. Results come back without leading
+zeros, and a zero polynomial is `,0`.
+
+| Function | What it does |
+|---|---|
+| `P PEVAL X` | P at X, a number or a vector of them, by an outer product of powers |
+| `P PADD Q`, `P PMUL Q` | The sum; the product, as the outer product of the coefficients summed along its diagonals |
+| `P PDIV Q`, `P PREM Q` | The quotient and the remainder of long division |
+| `PDERIV P`, `PINT P` | The derivative; the integral with constant 0 |
+| `PROOTS P` | The real roots, ascending, each once, to six places: Newton's method from forty-one starts across the Cauchy bound, fifty steps at once; a repeated root once, no complex roots |
+| `PSHOW P` | P written out as characters, whole coefficients exactly and others to three places, without format |
+
+HOWPOLY. A repeated root is found only roughly, since the
+polynomial's value beside it is lost to cancellation: a double root
+to six places or so, a triple to five. PROOTS rounds to six and
+merges values within 1E¯5, so a double root comes back once.
+
+Samples: `poly.apl` in (A) and its `-75` twin in (B).

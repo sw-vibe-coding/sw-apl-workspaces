@@ -135,3 +135,8 @@ integer inverse by hand in the comments: determinants, inverses, a
 solve, a singular case, the Fibonacci matrix to the fifth power, the
 norm, symmetry, and two columns made orthonormal; products that are
 the identity up to rounding are shown rounded.
+
+`poly.apl` and its (B) twin work with X*2-3X+2 and its factors:
+evaluation, sum, product, quotient and remainder, derivative and
+integral, the roots of that and of a cubic, a repeated root found
+once, no roots for X*2+1, and polynomials written out.
