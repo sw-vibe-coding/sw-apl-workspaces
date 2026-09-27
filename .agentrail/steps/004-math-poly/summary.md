@@ -1,0 +1,1 @@
+POLY: PEVAL, PADD, PMUL, PDIV, PREM, PDERIV, PINT, PROOTS, PSHOW with HOWPOLY, both modes; sample poly pinned in both modes with hand-worked values.
