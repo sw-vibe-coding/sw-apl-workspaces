@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- poly: POLY, polynomials as coefficient vectors
+- saga: complete 003-math-matrix
+- docs(changes): refresh CHANGES.md to HEAD
 - matrix: MATRIX, linear algebra over domino
 - saga: complete 002-math-plot
 - docs(changes): refresh CHANGES.md to HEAD
