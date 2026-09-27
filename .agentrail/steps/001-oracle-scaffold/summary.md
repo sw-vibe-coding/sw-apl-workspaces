@@ -1,0 +1,1 @@
+The oracle scaffold: a cargo workspace driving sw-apl in process (console, host with ws/ as library 2, number parser) and tests/stats.rs checking STATS in both modes against closed forms, nalgebra and statrs, including TPROB and CHIPROB grids; all agree; fmt, clippy, sw-checklist clean; just oracle.
