@@ -1,0 +1,1 @@
+MATRIX: ID, DET by elimination, INV and SOLVE by domino, TRACE, MPOW, NORM, ISSYM, GRAM, with HOWDOMINO, HOWDET, HOWGRAM; sample matrix pinned in both modes with hand-worked values.

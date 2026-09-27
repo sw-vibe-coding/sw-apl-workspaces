@@ -1,8 +1,9 @@
 number = 3
 slug = "math-matrix"
-status = "in-progress"
+status = "completed"
 description = "Phase 4 step 3 of docs/plan.md. ws/MATRIX.apl.ws, modes (A)(B): ID N, DET M (..."
 role = "production"
 context_files = []
 created_at = "2026-09-26T16:22:27"
-commits = []
+completed_at = "2026-09-26T17:12:32"
+commits = ["d0d2d36b2a9518d1c9d3a3d1fb0d8097b94c25ac"]
