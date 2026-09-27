@@ -1,6 +1,6 @@
 number = 2
 slug = "oracle-math-matrix"
-status = "pending"
+status = "in-progress"
 description = "Phase 7 step 2 of docs/plan.md. tests/math.rs: GCD and LCM against num-intege..."
 role = "production"
 context_files = []

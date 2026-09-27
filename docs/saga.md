@@ -174,3 +174,13 @@ regressors, the tests, and TPROB and CHIPROB on a grid of ninety-six
 points each out to the far tails. All agreed on the first full run,
 which says more about the hand working than about luck, and a test
 asserts that a wrong expectation fails.
+
+Step 2, MATH and MATRIX: gcd and lcm against `num-integer`, every
+Roman numeral from 1 to 3999 against a reference, factors, primes,
+totients, Pascal, permutations and combinations by their properties,
+base conversions both ways; determinants, inverses, solves, traces,
+norms and powers against `nalgebra` on well-conditioned random
+matrices, and Gram-Schmidt by orthonormality and span. The one
+failure was the oracle's: a 5 by 5 inverse wrapped at the
+workspace's width of 64 and read as extra rows, so the oracle now
+opens the width after each load. Every workspace value agreed.

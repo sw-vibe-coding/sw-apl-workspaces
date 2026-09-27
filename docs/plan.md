@@ -566,7 +566,7 @@ Steps:
    the tests, and TPROB and CHIPROB swept against `statrs` over a grid
    of degrees of freedom and values including the extremes never
    tried by hand.
-2. `oracle-math-matrix` -- MATH (gcd, lcm, factors, primes, totient,
+2. `oracle-math-matrix` -- done 2026-09-26. MATH (gcd, lcm, factors, primes, totient,
    base and unbase round trips, Roman numerals against a reference,
    Collatz, Fibonacci, Pascal, permutation and combination counts and
    properties) and MATRIX (determinant, inverse, solve, trace, norm

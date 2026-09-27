@@ -11,9 +11,10 @@
 //! precision; NORMAL is a rational approximation good to 7.5E¯8 and is
 //! compared at `APPROX`.
 
-use std::path::{Path, PathBuf};
+mod common;
 
 use apl_oracle::{Apl, Mode, apl as lit, rows};
+use common::{check, load};
 use nalgebra::{DMatrix, DVector};
 use rand::{RngExt, SeedableRng};
 use rand_chacha::ChaCha8Rng;
@@ -24,27 +25,8 @@ const DIST: f64 = 1e-8;
 const APPROX: f64 = 7.5e-8;
 const CASES: usize = 40;
 
-fn root() -> PathBuf {
-    Path::new(env!("CARGO_MANIFEST_DIR")).join("../../..")
-}
-
 fn stats(mode: Mode) -> Apl {
-    let mut apl = Apl::new(mode, &root());
-    apl.load("STATS").expect(")LOAD 2 STATS");
-    apl
-}
-
-fn close(got: f64, want: f64, tol: f64) -> bool {
-    (got - want).abs() <= tol * got.abs().max(want.abs()).max(1.0)
-}
-
-/// `line` prints `want`, to within `tol`; the message names the line.
-fn check(apl: &mut Apl, line: &str, want: &[f64], tol: f64) {
-    let got = apl
-        .numbers(line)
-        .unwrap_or_else(|e| panic!("APL error:\n{e}"));
-    let same = got.len() == want.len() && got.iter().zip(want).all(|(g, w)| close(*g, *w, tol));
-    assert!(same, "{line}\n  APL:  {got:?}\n  want: {want:?}");
+    load(mode, "STATS")
 }
 
 fn ints(rng: &mut ChaCha8Rng, n: usize, lo: i32, hi: i32) -> Vec<f64> {

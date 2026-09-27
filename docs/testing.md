@@ -111,8 +111,12 @@ integration tests in `oracle/crates/apl-oracle/tests/`, one file per
 workspace. Each draws cases from a fixed seed, runs them in (A) and
 in (B), and compares within a tolerance stated at the top of the
 file: `statrs` for the normal, t and chi-square distributions,
-`nalgebra` for least squares and linear algebra, closed forms written
-in the test for the rest. A failure prints the APL line, so the case
+`nalgebra` for least squares and linear algebra, `num-integer` for
+gcd and lcm, closed forms and definitions written in the test for
+the rest, and for what has no single right answer -- a set of
+permutations, an orthonormal basis -- the properties it must have.
+After a load the oracle opens the print width to its widest, so a
+matrix comes back one row a line rather than wrapped at 64. A failure prints the APL line, so the case
 can be typed at the prompt, and one test asserts that a wrong
 expectation fails.
 

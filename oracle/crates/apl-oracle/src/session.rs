@@ -7,11 +7,12 @@ use apl_session::{Added, Files, Host, Mode, QUOTA, Session, Source};
 use crate::console::Fed;
 use crate::parse::numbers;
 
-/// A session in `mode`, with `ws/` under the repository root as
+/// A session in a mode, with `ws/` under the repository root as
 /// library 2, EXTENDED, exactly as `--lib 2=ws,EXTENDED` gives it, and
 /// a scratch library 0 under `target/`.
 pub struct Apl {
     session: Session,
+    mode: Mode,
 }
 
 impl Apl {
@@ -29,17 +30,24 @@ impl Apl {
             store: Box::new(store),
             mode,
         };
-        Apl {
-            session: Session::attached(Box::new(Fed::default()), host),
-        }
+        let session = Session::attached(Box::new(Fed::default()), host);
+        Apl { session, mode }
     }
 
-    /// `)LOAD 2 NAME`.
+    /// `)LOAD 2 NAME`, then the print width opened to its widest, so
+    /// that a matrix comes back one row a line rather than wrapped at
+    /// the workspace's 64; the width is a setting the load restores,
+    /// which is why it is set after. `)WIDTH` in (A), `⎕PW` in (B).
     ///
     /// # Errors
     /// The load's reply, when it reported an error.
     pub fn load(&mut self, name: &str) -> Result<(), String> {
-        self.eval(&format!(")LOAD 2 {name}")).map(|_| ())
+        self.eval(&format!(")LOAD 2 {name}"))?;
+        let widen = match self.mode {
+            Mode::A => ")WIDTH 254",
+            Mode::B => "⎕PW←254",
+        };
+        self.eval(widen).map(|_| ())
     }
 
     /// One input line: the transcript lines it printed.

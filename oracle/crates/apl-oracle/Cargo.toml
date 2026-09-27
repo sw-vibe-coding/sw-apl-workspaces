@@ -12,6 +12,7 @@ apl-session = { path = "../../../../sw-apl/components/session/crates/apl-session
 
 [dev-dependencies]
 nalgebra = "0.35.0"
+num-integer = "0.1.47"
 rand = "0.10.3"
 rand_chacha = "0.10.0"
 statrs = "0.19.1"
