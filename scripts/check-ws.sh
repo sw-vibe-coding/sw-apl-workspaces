@@ -27,7 +27,9 @@ for f in ws/*.apl.ws; do
         else
             echo "  ok   $f loads in ($m)"
         fi
-        wide="$(awk 'length($0) > 64 { n++ } END { print n+0 }' <<<"$out")"
+        # Characters, not bytes: awk's length counts bytes here, and a
+        # glyph is three of them. perl -CSD reads UTF-8 as characters.
+        wide="$(perl -CSD -ne '$n++ if length($_) - 1 > 64; END { print $n + 0 }' <<<"$out")"
         if [ "$wide" != 0 ]; then
             echo "  FAIL $f in ($m): $wide printed line(s) wider than 64 columns"
             status=1

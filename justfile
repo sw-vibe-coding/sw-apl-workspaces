@@ -16,6 +16,7 @@ gates:
     ./scripts/check-provenance.sh
     ./scripts/gen-index.sh --check
     ./scripts/gen-pair.sh --check
+    ./scripts/check-width.sh
 
 # Every workspace, in every mode it claims, loads without an error
 # report, and every line it prints fits 64 columns.

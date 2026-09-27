@@ -500,7 +500,7 @@ work itself turned up, planned 2026-09-26 at the owner's request.
    degrees of freedom. The sample checks against tabulated values: t
    of 2 on 10 degrees is 0.0734 two-sided, chi-square of 3.841 on 1
    is 0.05, and the normal limit as the degrees grow.
-3. `gates-width` -- `scripts/check-ws.sh` counts a printed line's
+3. `gates-width` -- done 2026-09-26. `scripts/check-ws.sh` counts a printed line's
    width with awk, which on this system counts bytes, so a line of
    60 characters holding five glyphs would fail at 64 and one of 70
    characters holding none would pass. Count characters. And add the

@@ -150,3 +150,8 @@ Numerical Recipes, about forty lines of APL between them, with the
 gamma function from factorial up to 100 and Stirling beyond, since
 sw-apl's factorial stops short of 150. Checked at the tabulated 5
 per cent points, the Cauchy case and the normal limit.
+
+Step 3, the width gates: awk's length counts bytes on this system,
+so a glyph was three columns and the check-ws gate was wrong in both
+directions without ever failing; perl reads characters. The pinned
+transcripts got the check they never had, and passed it.
