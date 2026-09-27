@@ -116,7 +116,35 @@ gcd and lcm, closed forms and definitions written in the test for
 the rest, and for what has no single right answer -- a set of
 permutations, an orthonormal basis -- the properties it must have.
 After a load the oracle opens the print width to its widest, so a
-matrix comes back one row a line rather than wrapped at 64. A failure prints the APL line, so the case
+matrix comes back one row a line rather than wrapped at 64.
+
+What each file checks: `stats.rs`, every function against closed
+forms, `nalgebra` and `statrs`, TPROB and CHIPROB on a grid out to the
+far tails; `math.rs`, primes, factors, gcd and lcm, totients, the
+sequences, Pascal, permutations and combinations by their properties,
+base conversions both ways, every Roman numeral to 3999; `matrix.rs`,
+`nalgebra` on well-conditioned random matrices, Gram-Schmidt by
+orthonormality and span; `poly.rs`, Horner, the division identity,
+derivative and integral, roots of polynomials built from known roots;
+`calc.rs`, integrals against antiderivatives and the primitives,
+derivatives against analytic ones, roots, and the series within the
+tolerance asked. `cases.rs` runs the shebang cases.
+
+**The shebang cases** under `oracle/cases/` are executable `.apl`
+files, one per workspace, that reach it through the library directory
+as the CLI and the demo do, which the in-process tests do not touch:
+
+```
+#!/usr/bin/env -S scripts/sw-apl.sh --no-echo --lib 2=ws,EXTENDED -f
+```
+
+Run one from the repository root to see what APL said.
+
+**The report** is pinned. `scripts/oracle-report.sh` runs the oracle
+and prints each test binary's result line with its timing stripped,
+so it is the same on every green run; a reg-rs test, `oracle-report`,
+pins it beside the transcripts. `just reg` therefore needs the Rust
+toolchain and the sibling checkout, as the oracle does. A failure prints the APL line, so the case
 can be typed at the prompt, and one test asserts that a wrong
 expectation fails.
 

@@ -381,13 +381,18 @@ zeros, and a zero polynomial is `,0`.
 | `P PADD Q`, `P PMUL Q` | The sum; the product, as the outer product of the coefficients summed along its diagonals |
 | `P PDIV Q`, `P PREM Q` | The quotient and the remainder of long division |
 | `PDERIV P`, `PINT P` | The derivative; the integral with constant 0 |
-| `PROOTS P` | The real roots, ascending, each once, to six places: Newton's method from forty-one starts across the Cauchy bound, fifty steps at once; a repeated root once, no complex roots |
+| `PROOTS P` | The real roots, ascending, each once, to six places: the polynomial sampled at 401 points across the Cauchy bound, every sign change bisected, and Newton from every point for a root that touches without crossing, kept when its last step is under 1E¯7; roots closer than 1E¯3 are one root, at their mean; no complex roots |
 | `PSHOW P` | P written out as characters, whole coefficients exactly and others to three places, without format |
 
 HOWPOLY. A repeated root is found only roughly, since the
-polynomial's value beside it is lost to cancellation: a double root
-to six places or so, a triple to five. PROOTS rounds to six and
-merges values within 1E¯5, so a double root comes back once.
+polynomial's value beside it is lost to cancellation: the root is a
+plateau where the polynomial computes as zero, about 1E¯5 wide for a
+double root and 1E¯4 for a quadruple, which is why PROOTS merges
+values within 1E¯3 and takes their mean. The oracle found the two
+defects the first PROOTS had: a loose Cauchy bound spread forty-one
+Newton starts too far apart to find every root, and PDERIV of a
+constant was a RANK ERROR because `⍴P` was read before the `P←,P`
+to its left.
 
 Samples: `poly.apl` in (A) and its `-75` twin in (B).
 

@@ -99,7 +99,8 @@ the sw-apl checkout beside this one, else `sw-apl` on the path.
 ```bash
 just gates           # markdown, provenance, modes, the random link
 just check           # every workspace, every mode it claims, no errors
-scripts/reg.sh run   # transcript regressions (reg-rs), one per sample
+scripts/reg.sh run   # transcript regressions (reg-rs), one per sample,
+                     # and the oracle's pinned report
 just samples         # print every sample's transcript
 just oracle          # sw-apl in process on random inputs against
                      # statrs and nalgebra, both modes (Rust toolchain)

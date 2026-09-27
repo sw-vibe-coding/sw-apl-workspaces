@@ -1,6 +1,6 @@
 number = 3
 slug = "oracle-poly-calc"
-status = "pending"
+status = "in-progress"
 description = "Phase 7 step 3 of docs/plan.md. tests/poly.rs: PEVAL against Horner, PADD and..."
 role = "production"
 context_files = []

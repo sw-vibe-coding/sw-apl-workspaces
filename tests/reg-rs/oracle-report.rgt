@@ -1,0 +1,4 @@
+command = "scripts/oracle-report.sh"
+timeout = 900
+exit_code = 0
+desc = "The oracle's verdict: every test binary's result line, timing stripped"

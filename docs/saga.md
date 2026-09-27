@@ -184,3 +184,11 @@ matrices, and Gram-Schmidt by orthonormality and span. The one
 failure was the oracle's: a 5 by 5 inverse wrapped at the
 workspace's width of 64 and read as extra rows, so the oracle now
 opens the width after each load. Every workspace value agreed.
+
+Step 3, POLY and CALC, the shebang cases and the pinned report:
+Milestone 5, every numerical workspace checked against an
+independent reference. Two things the oracle taught about itself
+rather than the workspaces: a matrix wider than 64 wraps unless the
+width is opened after the load, and ten printed digits set a floor
+of about 5E¯10 under any tolerance. Nothing the oracle found was a
+workspace defect. The oracle saga is complete.

@@ -571,7 +571,7 @@ Steps:
    Collatz, Fibonacci, Pascal, permutation and combination counts and
    properties) and MATRIX (determinant, inverse, solve, trace, norm
    against `nalgebra`; GRAM's columns orthonormal).
-3. `oracle-poly-calc` -- POLY (evaluation, product and quotient round
+3. `oracle-poly-calc` -- done 2026-09-26; **Milestone 5** reached. POLY (evaluation, product and quotient round
    trips, derivative and integral, roots of polynomials built from
    known real roots) and CALC (integrals against closed forms,
    derivatives against analytic ones, roots, the series against the
@@ -603,6 +603,20 @@ Steps:
   plan with the sample that shows them, not worked around silently.
   The sample stays here as a record until sw-apl fixes it, marked in
   `samples/README.md`.
+
+## Findings by the oracle
+
+What the oracle found in the workspaces, and what was done:
+
+- **POLY, 2026-09-26, step 3.** `PDERIV` of a constant was a RANK
+  ERROR: `⍴P` in the same line as, and to the right of, `P←,P`, so
+  the shape was taken before the ravel. `PROOTS` missed a root of
+  `2(x+4)(x−2)(x−4)(x−5)`: the Cauchy bound is 161, so forty-one
+  Newton starts sat eight apart. Both fixed: the ravel on its own
+  line in PEVAL, PDERIV and PINT; PROOTS rebuilt on a 401-point scan
+  for sign changes with bisection, Newton kept for roots that touch
+  without crossing and accepted only when converged, clusters within
+  1E¯3 averaged. Nothing else the oracle checked disagreed.
 
 ## Findings for sw-apl
 
