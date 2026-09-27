@@ -134,7 +134,8 @@ tests/reg-rs  the pinned transcripts
 scripts/      gates, the sample and reg-rs runners,
               the index and change-log generators
 docs/         plan, conventions, testing, citations, the vhs tape
-images/       the recording of the terminal drawing with PLOT
+images/       the recording of the terminal drawing with PLOT, and
+              plot/index.html, a page to view it in a browser locally
 work/         library 0 and scratch; not tracked
 ```
 
