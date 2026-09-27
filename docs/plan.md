@@ -604,6 +604,45 @@ Steps:
   The sample stays here as a record until sw-apl fixes it, marked in
   `samples/README.md`.
 
+## Phase 8: speed, APL beside Rust (saga `bench`)
+
+Owner suggestion 2026-09-26: with the oracle's in-process session and
+its Rust references in hand, `cargo bench` can time the same subject
+both ways and say whether the two are comparable or one is
+consistently faster, and by how much.
+
+Design:
+
+- `criterion` benches in `oracle/crates/apl-oracle/benches/`, one
+  group per subject, each with two functions: `apl`, a thin wrapper
+  that evaluates one line in a session already loaded (the load and
+  the widening outside the timed loop), and `rust`, the oracle's
+  reference for the same computation on the same data. Both modes for
+  the APL side where it matters.
+- Subjects chosen to show the shape of the answer, not just a ratio:
+  a vector primitive on a thousand numbers (MEAN, SD), where sw-apl's
+  array code is one call; a loop written in APL (FACTORS, GCD, COLLATZ),
+  where the interpreter pays per line; domino (REGRESS on two hundred
+  points, DET and INV on 5 by 5) against `nalgebra`; the continued
+  fractions (TPROB, CHIPROB) against `statrs`; PROOTS on a quartic
+  against a Rust scan-and-bisect; PRIMES by the N-by-N sieve against
+  a Rust sieve, at N of 100 and 300, which shows how the one-liner
+  scales.
+- The numbers are not pinned: they vary by machine and day. One
+  run's table goes in `docs/testing.md` under a heading that says the
+  machine, the date and the sw-apl commit, with the ratio per subject
+  and a sentence on what it shows. `just bench` runs it.
+- What the comparison is: an interpreter with a bounded workspace
+  against compiled code with none. Rust will be faster everywhere;
+  the finding worth having is *where the gap is small* (array
+  primitives that run as one Rust loop inside sw-apl) and *where it
+  is wide* (APL-level loops, and anything quadratic like the sieve),
+  which is guidance for how to write these workspaces.
+
+One step, `bench-compare`: the benches, `just bench`, the table and
+its reading in `docs/testing.md`, and a note in `docs/workspaces.md`
+where a workspace's own idiom is the slow one.
+
 ## Findings by the oracle
 
 What the oracle found in the workspaces, and what was done:
