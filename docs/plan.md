@@ -474,17 +474,47 @@ into the `course` saga.
    with `→` went (an error at a `⎕` prompt re-prompts), and course-1
    was re-pinned in both modes.
 
-## After the plan
+## Phase 6: what came up on the way (saga `polish`)
 
-Every phase is done (2026-09-26). What remains is what came up on
-the way, none of it planned:
+Every planned phase was done on 2026-09-26. This phase is what the
+work itself turned up, planned 2026-09-26 at the owner's request.
 
-- A t distribution for STATS, if a short approximation good enough
-  to print a p-value turns up.
-- COURSE's lesson 16 names DRILL and STATS "as they arrive"; both
-  have. A read-through of the course against the finished library
-  would freshen that and lesson 1's `)LIB 2`.
-- The findings for sw-apl below, one still open.
+1. `course-refresh` -- COURSE was written before its companions
+   existed. Lesson 16 says DRILL and STATS are arriving; lesson 15
+   shows `)LIB 2`; lesson 1 too. Read the course through against the
+   finished library, put every such line in the present tense naming
+   what is there (COURSE, DRILL, STATS, MATH, PLOT, MATRIX, POLY,
+   CALC, and what each is for in a line), and re-pin course-1,
+   course-15-16 and course-all in both modes. No other lesson text
+   changes unless it is wrong.
+2. `stats-tdist` -- the p-values STATS could not print. `T TPROB DF`,
+   the two-sided probability of a t that large, by the regularized
+   incomplete beta function I(ν÷(ν+t²); ν÷2, ½) evaluated as a
+   continued fraction (Lentz's method, as Numerical Recipes gives it),
+   with the beta function from factorial, which this APL takes at
+   non-integers; and `X CHIPROB DF`, the upper tail of chi-square, by
+   the regularized incomplete gamma function, series for small x and
+   continued fraction for large. Both cited in `citations.md`. HOWTEST
+   loses its "use a table" and says how to read the tests with these;
+   TTEST1, TTEST2 and CHISQ keep returning the statistic and the
+   degrees of freedom. The sample checks against tabulated values: t
+   of 2 on 10 degrees is 0.0734 two-sided, chi-square of 3.841 on 1
+   is 0.05, and the normal limit as the degrees grow.
+3. `gates-width` -- `scripts/check-ws.sh` counts a printed line's
+   width with awk, which on this system counts bytes, so a line of
+   60 characters holding five glyphs would fail at 64 and one of 70
+   characters holding none would pass. Count characters. And add the
+   check the samples have never had: every line of every pinned
+   transcript in `tests/reg-rs/*.out` that is output, not an echoed
+   input line (six spaces or a `[n]` prompt), is at most 64
+   characters. Fix whatever it finds.
+4. `upstream-repin` -- sw-apl's `⎕LX` output order (the finding
+   below) and its stale `--version` stamp. When the fixes land,
+   rebuild, re-run every transcript, re-pin the (B) drill baselines
+   whose load prints DESCRIBE, and mark the finding fixed. If they
+   have not landed when this step is reached, record what sw-apl's
+   plan says and complete the step with that; it costs nothing to
+   come back.
 
 ## Decisions
 
