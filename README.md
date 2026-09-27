@@ -36,10 +36,10 @@ has a `DESCRIBE` that says what it holds and what to type next.
 | PLOT | both | Character plots that fit 64 columns: `PLOT`, `GRAPH`, `SCATTER`, `BAR` |
 | MATRIX | both | Linear algebra over domino: determinant, inverse, solve |
 | POLY | both | Polynomials as coefficient vectors: evaluate, add, multiply, divide, differentiate, integrate, real roots, write out |
-| CALC | both | Integration, roots, series |
+| CALC | both | Simpson integration, derivatives, Newton and bisection, series for e, pi and sine |
 
-The table is the plan's order of work, COURSE and DRILL first;
-`docs/plan.md` says which are written.
+Every one is written and pinned by a transcript in each mode it
+runs in; `docs/plan.md` is the plan they came from.
 
 The 2741 terminal that sw-apl ships, dialled into a local service
 with this library, drawing a sine wave with PLOT:

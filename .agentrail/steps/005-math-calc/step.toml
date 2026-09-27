@@ -1,6 +1,6 @@
 number = 5
 slug = "math-calc"
-status = "pending"
+status = "in-progress"
 description = "Phase 4 step 5 of docs/plan.md. ws/CALC.apl.ws, modes (A)(B): numerical calcu..."
 role = "production"
 context_files = []

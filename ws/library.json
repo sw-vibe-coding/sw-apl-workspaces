@@ -1,5 +1,6 @@
 {"name": "EXTENDED",
  "workspaces": [
+  {"name": "CALC", "file": "CALC.apl.ws", "modes": "(A)(B)"},
   {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"},
   {"name": "DRILL", "file": "DRILL.a-70.apl.ws", "modes": "(A)"},
   {"name": "DRILL", "file": "DRILL.b-75.apl.ws", "modes": "(B)"},

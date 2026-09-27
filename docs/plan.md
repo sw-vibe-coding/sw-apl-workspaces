@@ -445,7 +445,12 @@ is, since there is no cross-workspace reference in APL\360.
 
 Steps: one per workspace, `math-math`, `math-plot`, `math-matrix`,
 `math-poly`, `math-calc`, each with DESCRIBE, the HOWs, a sample and
-its README paragraph. **Milestone 4.**
+its README paragraph. **Milestone 4.** Reached 2026-09-26: the five
+workspaces in both modes, pinned; PLOT also has the terminal
+recording `images/plot.webp`. Functions were named for a monadic and
+a dyadic form where one name would have needed a quad name (PLOT and
+GRAPH, RANDU and RANDIN), and CALC names a function by a character
+of a table or a polynomial, since nothing can be handed a function.
 
 ### Phase 5: the library in sw-apl (saga `library`)
 
@@ -468,6 +473,18 @@ into the `course` saga.
    `)HELP` at the pause itself, the paragraph on clearing an error
    with `→` went (an error at a `⎕` prompt re-prompts), and course-1
    was re-pinned in both modes.
+
+## After the plan
+
+Every phase is done (2026-09-26). What remains is what came up on
+the way, none of it planned:
+
+- A t distribution for STATS, if a short approximation good enough
+  to print a p-value turns up.
+- COURSE's lesson 16 names DRILL and STATS "as they arrive"; both
+  have. A read-through of the course against the finished library
+  would freshen that and lesson 1's `)LIB 2`.
+- The findings for sw-apl below, one still open.
 
 ## Decisions
 

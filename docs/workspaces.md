@@ -389,3 +389,28 @@ to six places or so, a triple to five. PROOTS rounds to six and
 merges values within 1E¯5, so a double root comes back once.
 
 Samples: `poly.apl` in (A) and its `-75` twin in (B).
+
+### CALC
+
+Both modes, `ws/CALC.apl.ws`. Numerical calculus. This APL cannot
+hand one function to another, so a function is named: one character
+of the table `FNS` (`*` exponential, `⍟` logarithm, `÷` reciprocal,
+`|` magnitude, `Q` square root, `S` sine, `C` cosine, `T` tangent),
+or a vector of coefficients, which is a polynomial as POLY writes
+them.
+
+| Function | What it does |
+|---|---|
+| `F AT X` | F at X, a number or a vector: the table, or Horner |
+| `A INTEG F` | Simpson's rule over A[1] to A[2] in A[3] steps, made even; exact for a cubic |
+| `H INTEGV Y` | The same over a table of values with step H; the trapezium rule when their number is even |
+| `F DERIV X` | The central difference over a step of 1E¯5 |
+| `F NEWTON X` | Newton's method from X with that derivative, until the step is under 1E¯12 or fifty steps |
+| `F BISECT A` | Bisection over A[1] to A[2], sixty halvings; without a sign change it says so and gives A[1] |
+| `SERIES T` | e, pi and sin 1 by their series until a term is under T, each with the terms taken and the primitive beside it |
+
+HOWCALC. `ESERIES T`, `PISERIES T` and `X SINSERIES T` each return
+the sum and the terms taken; pi is Nilakantha's series, which
+converges where Leibniz's crawls.
+
+Samples: `calc.apl` in (A) and its `-75` twin in (B).

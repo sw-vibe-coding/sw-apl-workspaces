@@ -140,3 +140,9 @@ the identity up to rounding are shown rounded.
 evaluation, sum, product, quotient and remainder, derivative and
 integral, the roots of that and of a cubic, a repeated root found
 once, no roots for X*2+1, and polynomials written out.
+
+`calc.apl` and its (B) twin integrate, differentiate and find roots
+of functions named from the table and of polynomials, each checked
+against the primitive or the exact value in the comments, and run
+the series for e, pi and sin 1 at two tolerances beside the
+primitives.

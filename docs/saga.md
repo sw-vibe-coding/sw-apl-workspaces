@@ -134,3 +134,9 @@ makes encode produce a matrix, so a count is `×/⍴P`; and a repeated
 root is found only to six or so places, since the polynomial's value
 beside it is lost to cancellation, so PROOTS rounds there and merges
 values within 1E¯5.
+
+CALC (step 5): nothing in this APL can be handed a function, so a
+function is a character of a table or a polynomial, and `AT` tells
+them apart by the type of its left argument. Simpson, central
+differences, Newton, bisection and three series, each checked against
+the primitive. Milestone 4, and the plan's last phase.
