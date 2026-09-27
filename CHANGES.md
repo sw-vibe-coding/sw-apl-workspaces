@@ -14,6 +14,10 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- course: the library as it is, in lessons 1, 15 and 16
+- plan: Phase 6, what came up on the way; the polish saga
+- saga: complete 005-math-calc; math saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - calc: CALC, numerical calculus; Phase 4 and the plan complete
 - saga: complete 004-math-poly
 - docs(changes): refresh CHANGES.md to HEAD
