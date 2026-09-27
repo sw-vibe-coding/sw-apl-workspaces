@@ -14,6 +14,10 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- oracle: POLY and CALC, the pinned report, the shebang cases; two POLY defects fixed
+- saga: complete 003-oracle-poly-calc; oracle saga done
+- saga: complete 002-oracle-math-matrix
+- docs(changes): refresh CHANGES.md to HEAD
 - oracle: MATH and MATRIX against num-integer and nalgebra
 - gitignore: the oracle's build output
 - saga: complete 001-oracle-scaffold
