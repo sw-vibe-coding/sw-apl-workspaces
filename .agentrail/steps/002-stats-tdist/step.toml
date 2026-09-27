@@ -1,6 +1,6 @@
 number = 2
 slug = "stats-tdist"
-status = "pending"
+status = "in-progress"
 description = "Phase 6 step 2 of docs/plan.md. In ws/STATS.apl.ws: T TPROB DF, the two-sided..."
 role = "production"
 context_files = []

@@ -140,3 +140,13 @@ function is a character of a table or a polynomial, and `AT` tells
 them apart by the type of its left argument. Simpson, central
 differences, Newton, bisection and three series, each checked against
 the primitive. Milestone 4, and the plan's last phase.
+
+## polish (2026-09-26)
+
+Phase 6 of `plan.md`. Step 1 refreshed COURSE against the finished
+library. Step 2 gave STATS the p-values it lacked: the incomplete
+beta and gamma functions by the series and continued fractions of
+Numerical Recipes, about forty lines of APL between them, with the
+gamma function from factorial up to 100 and Stirling beyond, since
+sw-apl's factorial stops short of 150. Checked at the tabulated 5
+per cent points, the Cauchy case and the normal limit.

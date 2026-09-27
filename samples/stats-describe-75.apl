@@ -93,6 +93,25 @@ HOWREGRESS
 4 TTEST1 V
 1 2 3 4 5 TTEST2 2 4 5 4 5
 CHISQ 2 2⍴10 20 30 40
+⍝ Their probabilities: none of the three is significant. Then the
+⍝ tabulated points: a t of 2 on 10 degrees of freedom is 0.0734
+⍝ two-sided and 2.228 is the 5 per cent point; a chi-square of 3.841
+⍝ on 1 degree and 5.991 on 2 are the 5 per cent points; on 1 degree
+⍝ a t of 1 is 0.5, the Cauchy; and as the degrees grow TPROB tends to
+⍝ PNORM.
+R←4 TTEST1 V
+R[1] TPROB R[2]
+R←1 2 3 4 5 TTEST2 2 4 5 4 5
+R[1] TPROB R[2]
+R←CHISQ 2 2⍴10 20 30 40
+R[1] CHIPROB R[2]
+2 TPROB 10
+2.228 TPROB 10
+3.841 CHIPROB 1
+5.991 CHIPROB 2
+1 TPROB 1
+1.96 TPROB 1000
+PNORM 1.96
 ⍝ The normal distribution at 0, 1.96, ¯1 and 3, tabulated as 0.5,
 ⍝ 0.9750021, 0.1586553 and 0.9986501; the approximation is within
 ⍝ 7.5E¯8 of each, and prints its own last digits. PNORM 1.96 is the

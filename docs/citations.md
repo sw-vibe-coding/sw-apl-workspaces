@@ -71,3 +71,14 @@ names the function.
   Random Normal Deviates"**, Annals of Mathematical Statistics 29(2),
   1958, 610-611: the transform STATS's `RANDN` uses.
   <https://doi.org/10.1214/aoms/1177706645>
+- **William H. Press, Saul A. Teukolsky, William T. Vetterling and
+  Brian P. Flannery, Numerical Recipes in C**, 2nd edition, Cambridge
+  University Press, 1992, sections 6.2 (the incomplete gamma
+  function: the series `gser` and the continued fraction `gcf`) and
+  6.4 (the incomplete beta function: `betai` and the continued
+  fraction `betacf` by the modified Lentz method). STATS's `∆GAMMAP`,
+  `∆BETAI` and `∆BETACF` follow those methods, written here in APL.
+  <http://numerical.recipes/>
+- **Abramowitz and Stegun**, as above, formula 26.5.27: the t
+  distribution as an incomplete beta function, which is what
+  STATS's `TPROB` evaluates.

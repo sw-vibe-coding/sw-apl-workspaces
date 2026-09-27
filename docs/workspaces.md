@@ -275,6 +275,7 @@ taken as the vector of all its elements.
 | `X TTEST2 Y` | Two samples, variances pooled: the statistic and n1+n2-2 |
 | `CHISQ T` | A contingency table: the statistic and (rows-1)×(columns-1) |
 | `NORMAL Z`, `PNORM Z` | The standard normal distribution function, good to seven places, and the two-sided probability of a Z that large |
+| `T TPROB DF`, `X CHIPROB DF` | The two-sided probability of a t that large, by the regularized incomplete beta function; the upper tail of chi-square, by the regularized incomplete gamma function; both by the series and continued fractions of Numerical Recipes, good to ten places |
 | `RANDU N`, `A RANDIN N` | N uniform on 0 to 1, never an end; on A[1] to A[2] |
 | `RANDN N` | N standard normal, by Box-Muller |
 | `N SAMPLE V`, `SHUFFLE V` | N of V without replacement; all of V in a random order |
@@ -283,11 +284,11 @@ Counts are `×/⍴V`, so a scalar comes back where one is wanted. The
 quantile is the interpolating definition most packages default to
 (Hyndman and Fan's type 7; `citations.md`). An exact fit leaves
 residuals of the order of 1E¯15, the arithmetic's rounding, which
-HOWREGRESS says and the sample shows against a bound. There is no t
-distribution: HOWTEST says to read a t against the normal from thirty
-degrees of freedom and to use a table below that; a short
-approximation good enough to print a p-value was not found. The
-random functions draw on roll, so from a fresh load they give the
+HOWREGRESS says and the sample shows against a bound. A test is
+read in two lines: the statistic and its degrees of freedom from the
+test, then TPROB or CHIPROB on them (HOWTEST). The gamma function
+behind both is factorial, which this APL takes at any number, up to
+100, and Stirling's series beyond. The random functions draw on roll, so from a fresh load they give the
 same values every time (HOWRANDOM), which is what lets the sample pin
 them. Every other value the sample prints is worked by hand in the
 sample's comments.

@@ -113,8 +113,10 @@ against a bound; a scattered set whose covariance, correlation,
 coefficients, residuals and R squared are worked by hand; and two
 regressors as the columns of a matrix, fitted exactly. Then the
 tests, each worked by hand: a one-sample t, a two-sample t, and a
-chi-square on a two-by-two table; the normal distribution at values
-whose probabilities are tabulated; and the random functions, whose
+chi-square on a two-by-two table, each with its probability; TPROB
+and CHIPROB at tabulated points, the Cauchy case and the normal
+limit; the normal distribution at values whose probabilities are
+tabulated; and the random functions, whose
 values are the same on every run because the workspace's random
 link is fixed, two thousand normal deviates summarised.
 

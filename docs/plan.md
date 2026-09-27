@@ -410,8 +410,8 @@ Steps:
    extended with a data set whose fit is known exactly.
 3. `stats-test` -- the tests and NORMAL; RANDN, RANDU, SAMPLE, SHUFFLE
    with pinned transcripts. **Milestone 3.** Reached 2026-09-26. No
-   TDIST: no approximation short enough and good enough was found,
-   so HOWTEST says how to read a t without one.
+   TDIST then; Phase 6 added TPROB and CHIPROB by the incomplete beta
+   and gamma functions.
 
 ### Phase 4: the other mathematics workspaces (saga `math`)
 
@@ -487,7 +487,7 @@ work itself turned up, planned 2026-09-26 at the owner's request.
    CALC, and what each is for in a line), and re-pin course-1,
    course-15-16 and course-all in both modes. No other lesson text
    changes unless it is wrong.
-2. `stats-tdist` -- the p-values STATS could not print. `T TPROB DF`,
+2. `stats-tdist` -- done 2026-09-26. The p-values STATS could not print. `T TPROB DF`,
    the two-sided probability of a t that large, by the regularized
    incomplete beta function I(ν÷(ν+t²); ν÷2, ½) evaluated as a
    continued fraction (Lentz's method, as Numerical Recipes gives it),
