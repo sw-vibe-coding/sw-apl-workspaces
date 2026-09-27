@@ -1,0 +1,1 @@
+check-ws counts characters not bytes; check-width.sh gates every pinned transcript's output at 64 characters, joined to just gates; all pass; docs updated.
