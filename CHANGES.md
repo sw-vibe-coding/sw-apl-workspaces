@@ -14,6 +14,9 @@ narratives, see [`docs/saga.md`](docs/saga.md).
 
 ## 2026-09-26
 
+- gates: width in characters, and over every pinned transcript
+- saga: complete 002-stats-tdist
+- docs(changes): refresh CHANGES.md to HEAD
 - stats: TPROB and CHIPROB, the p-values
 - saga: complete 001-course-refresh
 - docs(changes): refresh CHANGES.md to HEAD
