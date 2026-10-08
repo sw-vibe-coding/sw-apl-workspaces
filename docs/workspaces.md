@@ -370,9 +370,10 @@ Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SCRAMBLE 3`, `SHOW`, `STEP`.
 Each `STEP` undoes one recorded turn and prints the new net; `UNDO`
 continues until the recorded history is exhausted. `SOLVE` ignores the
 history and searches the current sticker state to depth six, then prints
-each discovered move and net. It is a bounded general-state search, not
-a claim of God's-algorithm completeness. Four turns of one face restore
-the cube.
+each discovered move and net. It examines at most 5,000 search nodes,
+reporting `SEARCH BUDGET EXHAUSTED` instead of running indefinitely. It
+is a bounded general-state search, not a claim of God's-algorithm
+completeness. Four turns of one face restore the cube.
 `samples/rubik-75.apl` exercises the sequence in (B) '75.
 
 ### EIGENCUBE
