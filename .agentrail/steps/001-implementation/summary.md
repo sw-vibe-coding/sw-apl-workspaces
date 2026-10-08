@@ -1,0 +1,1 @@
+added recorded move history and visible STEP/SOLVE replay to RUBIK; updated docs and sample; pre-commit and APLSV’75 sample passed
