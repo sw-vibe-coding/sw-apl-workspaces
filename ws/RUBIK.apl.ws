@@ -10,6 +10,8 @@
 ⍝ stickers per face, in row-major order. A turn is a permutation.
 HOME←(9⍴'W'),(9⍴'R'),(9⍴'G'),(9⍴'Y'),(9⍴'O'),(9⍴'B')
 C←HOME
+H←''
+Q←0
 
 ⍝ The six clockwise quarter-turn permutations. P is indexed by the
 ⍝ destination sticker: C←C[P]. Four applications restore HOME.
@@ -28,15 +30,19 @@ PERMS←6 54⍴PU,PR,PF,PD,PL,PB
 'SHOW                 DRAW THE CURRENT CUBE NET'
 'TURN ''U''             TURN ONE FACE CLOCKWISE'
 'SCRAMBLE N           APPLY N RANDOM TURNS'
+'STEP                 UNDO ONE RECORDED TURN AND SHOW THE NET'
+'SOLVE                UNDO ALL RECORDED TURNS, ONE NET AT A TIME'
 'RESET                RETURN TO THE SOLVED CUBE'
 'SOLVED               REPORT WHETHER ALL STICKERS MATCH'
 ''
-'TRY: SHOW  TURN ''R''  SHOW  SOLVED'
+'TRY: SCRAMBLE 3  SHOW  STEP  STEP  SOLVE'
 'FOUR TURNS OF ONE FACE RESTORE THE CUBE.'
 ∇
 
 ∇RESET
 C←HOME
+H←''
+Q←0
 'RESET'
 ∇
 
@@ -48,7 +54,33 @@ R←∧/C=HOME
 F←'URFDLB'⍳M
 P←PERMS[F;]
 C←C[P]
+H←H,M
+Q←+/⍴H
 M
+∇
+
+∇STEP;M;F;P
+→(Q>0)/GO
+'NO MOVES TO UNDO'
+→0
+GO:M←H[Q]
+F←'URFDLB'⍳M
+P←PERMS[F;]
+C←C[P]
+C←C[P]
+C←C[P]
+Q←Q-1
+'UNDO ',M
+SHOW
+∇
+
+∇SOLVE
+→(Q>0)/MORE
+'ALREADY SOLVED'
+→0
+MORE:STEP
+→(Q>0)/MORE
+'SOLVED'
 ∇
 
 ∇SHOW;N;A
@@ -69,6 +101,9 @@ N
 ∇
 
 ∇SCRAMBLE N;I;M
+C←HOME
+H←''
+Q←0
 I←1
 LOOP:→(I>N)/DONE
 M←'URFDLB'[?6]

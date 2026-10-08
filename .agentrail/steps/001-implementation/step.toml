@@ -1,6 +1,6 @@
 number = 1
 slug = "implementation"
-status = "pending"
+status = "in-progress"
 description = "Add move history, STEP, and SOLVE to RUBIK; update sample and docs; run gates..."
 role = "legacy"
 context_files = []

@@ -360,12 +360,15 @@ is an explicit permutation.
 | `SHOW` | Draw the current cube as a U/L-F-R-B/D net using face letters |
 | `TURN M` | Turn face `M`, where `M` is one of `U R F D L B` |
 | `SCRAMBLE N` | Apply `N` random turns and report them |
+| `STEP` | Undo one recorded turn and print the resulting net |
+| `SOLVE` | Undo all recorded turns, printing every intermediate net |
 | `RESET` | Restore the solved cube |
 | `SOLVED` | Return 1 when every sticker is home, otherwise 0 |
 
-Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SHOW`, `TURN 'R'`, `SHOW`.
-Four turns of one face restore the cube. `samples/rubik-75.apl`
-exercises the same sequence in (B) '75.
+Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SCRAMBLE 3`, `SHOW`, `STEP`.
+Each `STEP` undoes one recorded turn and prints the new net; `SOLVE`
+continues until the cube is solved. Four turns of one face restore the
+cube. `samples/rubik-75.apl` exercises the sequence in (B) '75.
 
 ### MATRIX
 
