@@ -1,0 +1,8 @@
+number = 1
+slug = "implementation"
+status = "pending"
+description = "Implement the RUBIK workspace in ws/RUBIK.apl.ws and its sample, update ws/li..."
+role = "legacy"
+context_files = []
+created_at = "2026-10-08T10:50:11"
+commits = []

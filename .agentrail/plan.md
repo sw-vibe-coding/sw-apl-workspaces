@@ -1,0 +1,1 @@
+Add a RUBIK workspace for APLSV’75 and the shared mode, with DESCRIBE, readable letter-based cube-net rendering, face-turn permutations, deterministic scrambling, reset/solved checks, library index and sample coverage. Validate with the workspace gates and commit the saga metadata with the implementation.
