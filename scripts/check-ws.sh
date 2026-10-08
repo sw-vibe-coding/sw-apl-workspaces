@@ -19,7 +19,7 @@ for f in ws/*.apl.ws; do
     for m in A B; do
         [[ "$modes" == *"($m)"* ]] || continue
         [ "$m" = A ] && mode=70 || mode=75
-        out="$(printf ')OFF\n' | ./scripts/sw-apl.sh --mode "$mode" --no-echo -f "$f" 2>&1 || true)"
+        out="$(printf ')OFF\n' | ./scripts/sw-apl.sh --mode "$mode" --no-echo --lib 2=ws,EXTENDED -f "$f" 2>&1 || true)"
         if grep -Eq "$errors" <<<"$out"; then
             echo "  FAIL $f in ($m): an error report while loading"
             grep -E "$errors" <<<"$out" | head -5 | sed 's/^/    /'

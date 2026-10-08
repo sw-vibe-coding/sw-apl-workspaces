@@ -7,13 +7,14 @@
 ⍝!LINK 16807
 )WSID RUBIK
 )COPY 2 MATRIX NORM
-)COPY 2 EIGENCUBE ROT GEOTURN CUBE
+)COPY 2 EIGENCUBE ROT GEOTURN CUBE GRESET GTURN GSTATE
 ⍝ A small, readable Rubik's Cube. Faces are U R F D L B, nine
 ⍝ stickers per face, in row-major order. A turn is a permutation.
 HOME←(9⍴'W'),(9⍴'R'),(9⍴'G'),(9⍴'Y'),(9⍴'O'),(9⍴'B')
 C←HOME
 H←''
 Q←0
+GRESET
 
 ⍝ The six clockwise quarter-turn permutations. P is indexed by the
 ⍝ destination sticker: C←C[P]. Four applications restore HOME.
@@ -45,13 +46,15 @@ PERMS←6 54⍴PU,PR,PF,PD,PL,PB
 
 ∇GEOM
 'EIGENCUBE MODEL: 26 CUBELETS, EXACT INTEGER ROTATIONS'
-CUBE
+'CURRENT CUBELET POSITIONS:'
+GSTATE
 ∇
 
 ∇RESET
 C←HOME
 H←''
 Q←0
+GRESET
 'RESET'
 ∇
 
@@ -63,6 +66,7 @@ R←∧/C=HOME
 F←'URFDLB'⍳M
 P←PERMS[F;]
 C←C[P]
+GTURN M
 H←H,M
 Q←+/⍴H
 M
@@ -160,6 +164,7 @@ BUDGET:'SEARCH BUDGET EXHAUSTED'
 PLAY:D←1
 STEPPLAY:→(D>+/⍴SOL)/DONE
 C←SOL[D] APPLY C
+GTURN SOL[D]
 'MOVE ',SOL[D]
 SHOW
 D←D+1
