@@ -1,0 +1,18 @@
+⍝ RUBIK: a readable character net and face-turn permutations.
+)LOAD 2 RUBIK
+DESCRIBE
+SHOW
+TURN 'R'
+SHOW
+SOLVED
+RESET
+TURN 'F'
+TURN 'F'
+TURN 'F'
+TURN 'F'
+SOLVED
+SCRAMBLE 6
+SHOW
+RESET
+SOLVED
+)OFF

@@ -8,5 +8,6 @@
   {"name": "MATRIX", "file": "MATRIX.apl.ws", "modes": "(A)(B)"},
   {"name": "PLOT", "file": "PLOT.apl.ws", "modes": "(A)(B)"},
   {"name": "POLY", "file": "POLY.apl.ws", "modes": "(A)(B)"},
+  {"name": "RUBIK", "file": "RUBIK.apl.ws", "modes": "(A)(B)"},
   {"name": "STATS", "file": "STATS.apl.ws", "modes": "(A)(B)"}
  ]}

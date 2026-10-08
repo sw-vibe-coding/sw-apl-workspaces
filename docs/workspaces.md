@@ -348,6 +348,25 @@ Samples: `plot.apl` in (A) and its `-75` twin in (B). `docs/tapes/
 plot.tape` records the 2741 terminal drawing with it; `just tape`
 renders it to `images/plot.gif` and `images/plot.webp`.
 
+### RUBIK
+
+Both modes, `ws/RUBIK.apl.ws`. A first live Rubik's Cube demo, drawn
+as a letter net so it works on the 2741 terminal and in the browser.
+The six faces are stored as 54 stickers and each clockwise face turn
+is an explicit permutation.
+
+| Function | What it does |
+|---|---|
+| `SHOW` | Draw the current cube as a U/L-F-R-B/D net using face letters |
+| `TURN M` | Turn face `M`, where `M` is one of `U R F D L B` |
+| `SCRAMBLE N` | Apply `N` random turns and report them |
+| `RESET` | Restore the solved cube |
+| `SOLVED` | Return 1 when every sticker is home, otherwise 0 |
+
+Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SHOW`, `TURN 'R'`, `SHOW`.
+Four turns of one face restore the cube. `samples/rubik-75.apl`
+exercises the same sequence in (B) '75.
+
 ### MATRIX
 
 Both modes, `ws/MATRIX.apl.ws`. Linear algebra, mostly over domino.
