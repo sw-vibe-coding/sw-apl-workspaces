@@ -362,15 +362,17 @@ is an explicit permutation.
 | `SCRAMBLE N` | Apply `N` random turns and report them |
 | `STEP` | Undo one recorded turn and print the resulting net |
 | `UNDO` | Undo all recorded turns, printing every intermediate net |
-| `SOLVE` | Reserved for the general state-based Eigencube solver |
+| `SOLVE` | State-based iterative-deepening search, then visible playback |
 | `RESET` | Restore the solved cube |
 | `SOLVED` | Return 1 when every sticker is home, otherwise 0 |
 
 Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SCRAMBLE 3`, `SHOW`, `STEP`.
 Each `STEP` undoes one recorded turn and prints the new net; `UNDO`
-continues until the recorded history is exhausted. `SOLVE` is reserved
-for the general state-based Eigencube solver; `UNDO` is the current
-history replay operation. Four turns of one face restore the cube.
+continues until the recorded history is exhausted. `SOLVE` ignores the
+history and searches the current sticker state to depth six, then prints
+each discovered move and net. It is a bounded general-state search, not
+a claim of God's-algorithm completeness. Four turns of one face restore
+the cube.
 `samples/rubik-75.apl` exercises the sequence in (B) '75.
 
 ### EIGENCUBE

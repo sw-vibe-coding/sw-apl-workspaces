@@ -23,5 +23,7 @@ TURN 'U'
 RESET
 TURN 'R'
 TURN 'U'
+H←''
+Q←0
 SOLVE
 )OFF
