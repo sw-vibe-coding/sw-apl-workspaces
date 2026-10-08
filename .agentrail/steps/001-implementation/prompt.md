@@ -1,1 +1,1 @@
-Add move history, STEP, and SOLVE to RUBIK; update sample and docs; run gates, commit, and push.
+Rename replay SOLVE to UNDO and implement bounded state-based search with visible playback; update docs/sample, run gates, commit, and push.

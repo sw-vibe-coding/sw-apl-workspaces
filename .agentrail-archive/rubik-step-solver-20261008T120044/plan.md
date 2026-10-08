@@ -1,0 +1,1 @@
+Extend RUBIK with recorded move history and a visible replay solver: STEP undoes one move and prints the resulting net, SOLVE runs all remaining steps. Update sample and documentation, run gates, commit, and push the workspace repository.

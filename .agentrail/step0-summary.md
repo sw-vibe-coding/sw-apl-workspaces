@@ -1,1 +1,1 @@
-initialized the step-by-step RUBIK solver saga
+initialized the state-based RUBIK solver phase

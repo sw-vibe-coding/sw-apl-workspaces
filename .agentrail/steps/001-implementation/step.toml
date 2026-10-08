@@ -1,9 +1,8 @@
 number = 1
 slug = "implementation"
-status = "completed"
-description = "Add move history, STEP, and SOLVE to RUBIK; update sample and docs; run gates..."
+status = "pending"
+description = "Rename replay SOLVE to UNDO and implement bounded state-based search with vis..."
 role = "legacy"
 context_files = []
-created_at = "2026-10-08T11:55:07"
-completed_at = "2026-10-08T11:55:35"
-commits = ["5d804aa929fec5cb33e844cad1dfd141c82ee8a2"]
+created_at = "2026-10-08T12:00:45"
+commits = []
