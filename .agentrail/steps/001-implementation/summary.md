@@ -1,0 +1,1 @@
+Added EIGENCUBE dependency composition and a history-independent iterative-deepening RUBIK solver with visible playback through depth six; validated arbitrary history-cleared states, documentation, and gates.

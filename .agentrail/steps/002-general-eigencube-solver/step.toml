@@ -1,0 +1,8 @@
+number = 2
+slug = "general-eigencube-solver"
+status = "pending"
+description = "Replace the depth-six sticker search with a full Eigencube cubie-state solver..."
+role = "legacy"
+context_files = []
+created_at = "2026-10-08T13:10:41"
+commits = []

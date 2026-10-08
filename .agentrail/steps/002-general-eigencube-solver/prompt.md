@@ -1,0 +1,1 @@
+Replace the depth-six sticker search with a full Eigencube cubie-state solver: maintain cubelet positions/orientations, port staged A* goals and heuristics from eigencube.py, visibly play moves, test arbitrary scrambled states, run gates, commit, and push.
