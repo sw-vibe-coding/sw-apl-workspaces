@@ -1,1 +1,1 @@
-Implement the RUBIK workspace in ws/RUBIK.apl.ws and its sample, update ws/library.json and documentation as appropriate, then run all workspace gates and commit source plus .agentrail metadata.
+Add move history, STEP, and SOLVE to RUBIK; update sample and docs; run gates, commit, and push.

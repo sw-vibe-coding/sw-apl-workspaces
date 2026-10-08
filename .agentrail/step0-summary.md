@@ -1,1 +1,1 @@
-initialized the RUBIK workspace implementation saga
+initialized the step-by-step RUBIK solver saga

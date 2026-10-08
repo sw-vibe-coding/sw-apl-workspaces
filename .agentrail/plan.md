@@ -1,1 +1,1 @@
-Add a RUBIK workspace for APLSV’75 and the shared mode, with DESCRIBE, readable letter-based cube-net rendering, face-turn permutations, deterministic scrambling, reset/solved checks, library index and sample coverage. Validate with the workspace gates and commit the saga metadata with the implementation.
+Extend RUBIK with recorded move history and a visible replay solver: STEP undoes one move and prints the resulting net, SOLVE runs all remaining steps. Update sample and documentation, run gates, commit, and push the workspace repository.
