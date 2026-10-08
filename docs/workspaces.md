@@ -361,14 +361,26 @@ is an explicit permutation.
 | `TURN M` | Turn face `M`, where `M` is one of `U R F D L B` |
 | `SCRAMBLE N` | Apply `N` random turns and report them |
 | `STEP` | Undo one recorded turn and print the resulting net |
-| `SOLVE` | Undo all recorded turns, printing every intermediate net |
+| `UNDO` | Undo all recorded turns, printing every intermediate net |
+| `SOLVE` | Reserved for the general state-based Eigencube solver |
 | `RESET` | Restore the solved cube |
 | `SOLVED` | Return 1 when every sticker is home, otherwise 0 |
 
 Try `)LOAD 2 RUBIK`, then `DESCRIBE`, `SCRAMBLE 3`, `SHOW`, `STEP`.
-Each `STEP` undoes one recorded turn and prints the new net; `SOLVE`
-continues until the cube is solved. Four turns of one face restore the
-cube. `samples/rubik-75.apl` exercises the sequence in (B) '75.
+Each `STEP` undoes one recorded turn and prints the new net; `UNDO`
+continues until the recorded history is exhausted. `SOLVE` is reserved
+for the general state-based Eigencube solver; `UNDO` is the current
+history replay operation. Four turns of one face restore the cube.
+`samples/rubik-75.apl` exercises the sequence in (B) '75.
+
+### EIGENCUBE
+
+Both modes, `ws/EIGENCUBE.apl.ws`. A small exact-integer geometry kernel
+for the Eigencube demonstration. `CUBE` is the 26 non-centre cubelet
+coordinates; `ROT` returns a quarter-turn matrix and `GEOTURN` applies
+one to a matrix of row-vectors. `RUBIK` imports these objects with
+`)COPY`, so loading RUBIK also makes `GEOM` available without a second
+user command.
 
 ### MATRIX
 

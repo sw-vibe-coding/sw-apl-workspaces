@@ -4,6 +4,7 @@
   {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"},
   {"name": "DRILL", "file": "DRILL.a-70.apl.ws", "modes": "(A)"},
   {"name": "DRILL", "file": "DRILL.b-75.apl.ws", "modes": "(B)"},
+  {"name": "EIGENCUBE", "file": "EIGENCUBE.apl.ws", "modes": "(A)(B)"},
   {"name": "MATH", "file": "MATH.apl.ws", "modes": "(A)(B)"},
   {"name": "MATRIX", "file": "MATRIX.apl.ws", "modes": "(A)(B)"},
   {"name": "PLOT", "file": "PLOT.apl.ws", "modes": "(A)(B)"},

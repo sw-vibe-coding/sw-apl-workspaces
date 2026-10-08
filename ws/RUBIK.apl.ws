@@ -6,6 +6,8 @@
 ⍝!WIDTH 64
 ⍝!LINK 16807
 )WSID RUBIK
+)COPY 2 MATRIX NORM
+)COPY 2 EIGENCUBE ROT GEOTURN CUBE
 ⍝ A small, readable Rubik's Cube. Faces are U R F D L B, nine
 ⍝ stickers per face, in row-major order. A turn is a permutation.
 HOME←(9⍴'W'),(9⍴'R'),(9⍴'G'),(9⍴'Y'),(9⍴'O'),(9⍴'B')
@@ -31,12 +33,19 @@ PERMS←6 54⍴PU,PR,PF,PD,PL,PB
 'TURN ''U''             TURN ONE FACE CLOCKWISE'
 'SCRAMBLE N           APPLY N RANDOM TURNS'
 'STEP                 UNDO ONE RECORDED TURN AND SHOW THE NET'
-'SOLVE                UNDO ALL RECORDED TURNS, ONE NET AT A TIME'
+'UNDO                 UNDO ALL RECORDED TURNS, ONE NET AT A TIME'
+'SOLVE                RESERVED FOR THE GENERAL EIGENCUBE SOLVER'
+'GEOM                 SHOW THE EIGENCUBE COORDINATE MODEL'
 'RESET                RETURN TO THE SOLVED CUBE'
 'SOLVED               REPORT WHETHER ALL STICKERS MATCH'
 ''
-'TRY: SCRAMBLE 3  SHOW  STEP  STEP  SOLVE'
+'TRY: SCRAMBLE 3  SHOW  STEP  STEP  UNDO'
 'FOUR TURNS OF ONE FACE RESTORE THE CUBE.'
+∇
+
+∇GEOM
+'EIGENCUBE MODEL: 26 CUBELETS, EXACT INTEGER ROTATIONS'
+CUBE
 ∇
 
 ∇RESET
@@ -74,13 +83,32 @@ Q←Q-1
 SHOW
 ∇
 
-∇SOLVE
+∇UNDO
 →(Q>0)/MORE
 'ALREADY SOLVED'
 →0
 MORE:STEP
 →(Q>0)/MORE
-'SOLVED'
+'UNDONE'
+∇
+
+⍝ APPLY accepts uppercase clockwise or lowercase counterclockwise.
+⍝ It is deliberately independent of H: SOLVE can start from any C.
+∇R←M APPLY S;F;P;I
+I←'URFDLBurfdlb'⍳M
+F←1+6|I-1
+P←PERMS[F;]
+→(I≤6)/CW
+R←S[P]
+R←R[P]
+R←R[P]
+→0
+CW:R←S[P]
+∇
+
+∇SOLVE
+'GENERAL SOLVE IS THE NEXT EIGENCUBE PORT'
+'USE UNDO FOR RECORDED-MOVE REPLAY'
 ∇
 
 ∇SHOW;N;A

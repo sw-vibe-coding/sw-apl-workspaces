@@ -35,7 +35,8 @@ has a `DESCRIBE` that says what it holds and what to type next.
 | MATH | both | Primes, factors, gcd, totient, Fibonacci, Pascal, permutations and combinations, base conversion, Roman numerals |
 | PLOT | both | Character plots that fit 64 columns: `PLOT`, `GRAPH`, `SCATTER`, `BAR` |
 | MATRIX | both | Linear algebra over domino: determinant, inverse, solve |
-| RUBIK | both | A readable letter-net Rubik's Cube: `SHOW`, `TURN`, `SCRAMBLE`, `STEP`, `SOLVE`, `RESET`, `SOLVED` |
+| EIGENCUBE | both | Exact integer 3-D cubelet coordinates and quarter-turn geometry |
+| RUBIK | both | A readable letter-net Rubik's Cube: `SHOW`, `TURN`, `SCRAMBLE`, `STEP`, `UNDO`, `SOLVE`, `RESET`, `SOLVED` |
 | POLY | both | Polynomials as coefficient vectors: evaluate, add, multiply, divide, differentiate, integrate, real roots, write out |
 | CALC | both | Simpson integration, derivatives, Newton and bisection, series for e, pi and sine |
 
