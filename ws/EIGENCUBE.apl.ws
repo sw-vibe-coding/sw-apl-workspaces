@@ -51,11 +51,12 @@ GORI←26 9⍴(26⍴1)∘.×1 0 0 0 1 0 0 0 1
 ∇
 
 ∇GTURN M;I;A;X;SGN;N;R;J;K;L;P
-I←'URFDLB'⍳M
+I←'URFDLBurfdlb'⍳M
+N←1+3×I>6
+I←1+6|I-1
 A←'ZYXZYX'[I]
 X←'XYZ'⍳A
 SGN←1-2×I>3
-N←1+3×I>3
 R←ROT A
 J←(GPOS[;X]=SGN)/⍳26
 K←1
