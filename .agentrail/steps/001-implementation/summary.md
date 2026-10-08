@@ -1,0 +1,1 @@
+implemented the shared RUBIK workspace with readable letter-net rendering, explicit face-turn permutations, scramble/reset/solved commands, library index, docs, and APLSV’75 sample coverage
