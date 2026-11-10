@@ -1,0 +1,1 @@
+POLY scans rewritten with APL 360 primitives, transcripts unchanged; COURSE lesson 5 says scan is (B); four COURSE transcripts rebased for the text. Pre-existing course-1, course-15-16 and oracle-report failures left for the Rubik step.

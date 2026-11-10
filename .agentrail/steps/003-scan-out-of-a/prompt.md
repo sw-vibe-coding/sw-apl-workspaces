@@ -1,0 +1,1 @@
+Owner direction 2026-11-09: sw-apl takes scan out of (A). Rewrite POLY scans with APL 360 primitives and say in COURSE that scan is (B).

@@ -12,8 +12,35 @@ counts, deferred follow-ups), see
 narratives, see [`docs/saga.md`](docs/saga.md).
 
 
+## 2026-11-10
+
+- fix: no scan where (A) runs a workspace
+
+## 2026-10-08
+
+- fix: accept inverse geometric moves
+- feat: maintain Eigencube geometric state
+- fix: bound Rubik state search
+- saga: record bounded solver milestone
+- feat: add bounded state-based Rubik solver
+- feat: compose RUBIK from Eigencube geometry
+- saga: start RUBIK general solver phase
+- saga: complete RUBIK step solver
+- workspace: add visible RUBIK step solver
+- saga: start RUBIK step solver phase
+- saga: complete RUBIK workspace implementation
+- workspace: add RUBIK letter-net demo
+- saga: initialize RUBIK workspace implementation
+
+## 2026-09-27
+
+- docs: performance.md, the analysis of APL beside Rust
+
 ## 2026-09-26
 
+- saga: archive bench
+- saga: complete 001-bench-compare; bench saga done
+- docs(changes): refresh CHANGES.md to HEAD
 - bench: the same subjects timed in APL and in Rust
 - plan: Phase 8, speed beside Rust; the bench saga
 - saga: archive oracle
