@@ -579,6 +579,13 @@ Steps:
    `docs/testing.md`'s oracle section. **Milestone 5:** every
    numerical workspace checked against an independent reference.
 
+## Owner direction (2026-11-09): no scan in (A)
+
+Scan is in neither APL\360 manual sw-apl's (A) '70 follows, so sw-apl
+takes it out of (A) and keeps it in (B). POLY, which runs in both, now
+writes its running totals and running ORs with what APL\360 has. COURSE
+says scan is (B)'s, as lesson 16 does for execute and format.
+
 ## Decisions
 
 - **Names**: COURSE, DRILL, STATS, then MATH, PLOT, MATRIX, POLY,
