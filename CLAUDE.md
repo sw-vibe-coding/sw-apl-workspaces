@@ -298,11 +298,11 @@ from elsewhere goes in `work/`, which is ignored, and nowhere else.
 
 sw-apl has two modes, (A) '70 (APL\360) and (B) '75 (the IBM 5100
 family's APL). A workspace here runs in both wherever both can run
-it (`NAME.apl.ws`, modes line `(A)(B)`); one that needs execute,
-format or a quad name is (B) only and named `NAME.b-75.apl.ws`
+it (`NAME.ab.apl.ws`, modes line `(A)(B)`); one that needs execute,
+format or a quad name is (B) only and named `NAME.b.apl.ws`
 with modes line `(B)`, so an (A) session never lists it. A workspace
 that is the same in both but richer in (B) is a pair,
-`NAME.a-70.apl.ws` beside `NAME.b-75.apl.ws` (sw-apl's BIRDS is the
+`NAME.a.apl.ws` beside `NAME.b.apl.ws` (sw-apl's BIRDS is the
 precedent). The name and the modes line must agree; a gate checks.
 
 `docs/plan.md` is the master plan. Every owner instruction lands
@@ -323,7 +323,7 @@ just gates                # markdown, provenance, modes, random link
 just check                # every workspace, every mode it claims
 just reg                  # reg-rs transcript regressions
 just samples [pattern]    # print sample transcripts
-just run ws/NAME.apl.ws 75   # one workspace, one mode
+just run ws/NAME.ab.apl.ws 75   # one workspace, one mode
 scripts/reg-seed.sh       # seed a test for a new sample
 just oracle               # the Rust oracle in oracle/: cargo test
 just oracle-gates         # its fmt, clippy -D warnings, sw-checklist

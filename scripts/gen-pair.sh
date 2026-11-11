@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # A workspace that is the same in both modes but richer in (B) is a
-# pair, NAME.a-70.apl.ws beside NAME.b-75.apl.ws, both called NAME.
+# pair, NAME.a.apl.ws beside NAME.b.apl.ws, both called NAME.
 # The (B) file is the source; this derives the (A) file from it, so
 # the functions the two share cannot drift apart:
 #
@@ -9,7 +9,7 @@
 #   - a function whose first body line begins "⍝ (B) ONLY" goes, and
 #     so does any line that is only a call of such a function.
 #
-# Usage: scripts/gen-pair.sh NAME          write ws/NAME.a-70.apl.ws
+# Usage: scripts/gen-pair.sh NAME          write ws/NAME.a.apl.ws
 #        scripts/gen-pair.sh --check       every pair is current
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
@@ -22,7 +22,7 @@ names_of() {
     ' "$1"
 }
 one() {
-    local name="$1" src="ws/$1.b-75.apl.ws" dst="ws/$1.a-70.apl.ws"
+    local name="$1" src="ws/$1.b.apl.ws" dst="ws/$1.a.apl.ws"
     [ -f "$src" ] || { echo "gen-pair.sh: no $src" >&2; exit 2; }
     # The names go in on one line, bar-separated: this awk will not
     # take a newline inside -v.
@@ -47,9 +47,9 @@ one() {
 if [ "${1:-}" = "--check" ]; then
     status=0
     shopt -s nullglob
-    for src in ws/*.b-75.apl.ws; do
-        name="$(basename "$src" .b-75.apl.ws)"
-        dst="ws/$name.a-70.apl.ws"
+    for src in ws/*.b.apl.ws; do
+        name="$(basename "$src" .b.apl.ws)"
+        dst="ws/$name.a.apl.ws"
         [ -f "$dst" ] || continue
         if diff -q <(one "$name") "$dst" >/dev/null; then
             echo "  ok   $dst is derived from $src"
@@ -60,5 +60,5 @@ if [ "${1:-}" = "--check" ]; then
     done
     exit "$status"
 fi
-one "$1" > "ws/$1.a-70.apl.ws"
-echo "Wrote ws/$1.a-70.apl.ws"
+one "$1" > "ws/$1.a.apl.ws"
+echo "Wrote ws/$1.a.apl.ws"

@@ -11,12 +11,13 @@ so that it can grow without it.
 sw-apl has two modes, (A) '70 (modelled on APL\360) and (B) '75
 (modelled on the APL of the IBM 5100 family). A workspace here runs
 in both wherever both can run it, and its file name says which:
+`NAME.<modes>.apl.ws`, the letters of the modes it runs in, in order.
 
 | Runs in | File |
 |---|---|
-| (A) and (B) | `NAME.apl.ws` |
-| (A) only | `NAME.a-70.apl.ws` |
-| (B) only | `NAME.b-75.apl.ws` |
+| (A) and (B) | `NAME.ab.apl.ws` |
+| (A) only | `NAME.a.apl.ws` |
+| (B) only | `NAME.b.apl.ws` |
 
 An (A) session never lists or loads a (B)-only workspace, and the
 other way round; the modes line inside the file is the authority and

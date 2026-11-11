@@ -27,7 +27,7 @@ check:
 precommit: gates check
 
 # Run one workspace file through sw-apl in a mode (70 or 75) and
-# print the transcript: `just run ws/COURSE.apl.ws 75`.
+# print the transcript: `just run ws/COURSE.ab.apl.ws 75`.
 run file mode="70":
     ./scripts/sw-apl.sh --mode {{mode}} --lib 2=ws,EXTENDED -f {{file}}
 
@@ -50,7 +50,7 @@ reg:
 index:
     ./scripts/gen-index.sh
 
-# Derive NAME.a-70.apl.ws from NAME.b-75.apl.ws for a workspace that
+# Derive NAME.a.apl.ws from NAME.b.apl.ws for a workspace that
 # is a pair: `just pair DRILL`. Gated to be current.
 pair name:
     ./scripts/gen-pair.sh {{name}}

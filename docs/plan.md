@@ -586,6 +586,20 @@ takes it out of (A) and keeps it in (B). POLY, which runs in both, now
 writes its running totals and running ORs with what APL\360 has. COURSE
 says scan is (B)'s, as lesson 16 does for execute and format.
 
+## Owner direction (2026-11-10): names for four modes
+
+"Consider a naming scheme for the workspaces to identify if a
+workspace can run on a, b, c, and/or d. c is apl80." sw-apl plans
+(C) '80, APL80 on the TRS-80, and later (D). A file is now
+`NAME.<modes>.apl.ws`, the letters of the modes it runs in, in order:
+`CALC.ab.apl.ws` for both, `DRILL.a.apl.ws` and `DRILL.b.apl.ws` for
+the pair. The letters are always there. `NAME.apl.ws`, `.a-70` and
+`.b-75` could not say three modes or four. The modes line stays the
+authority; `check-provenance.sh` derives the line a name needs from
+its letters, and `gen-pair.sh` reads `.b` and writes `.a`. No
+workspace changed; sw-apl's saga `c80` step `c80-names` made the
+rename in both repositories.
+
 ## Decisions
 
 - **Names**: COURSE, DRILL, STATS, then MATH, PLOT, MATRIX, POLY,

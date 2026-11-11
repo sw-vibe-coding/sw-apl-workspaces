@@ -57,9 +57,9 @@ keeps, beside the workspaces in `ws/`, an index,
 ```json
 {"name": "EXTENDED",
  "workspaces": [
-  {"name": "COURSE", "file": "COURSE.apl.ws", "modes": "(A)(B)"},
-  {"name": "DRILL", "file": "DRILL.a-70.apl.ws", "modes": "(A)"},
-  {"name": "DRILL", "file": "DRILL.b-75.apl.ws", "modes": "(B)"}
+  {"name": "COURSE", "file": "COURSE.ab.apl.ws", "modes": "(A)(B)"},
+  {"name": "DRILL", "file": "DRILL.a.apl.ws", "modes": "(A)"},
+  {"name": "DRILL", "file": "DRILL.b.apl.ws", "modes": "(B)"}
  ]}
 ```
 

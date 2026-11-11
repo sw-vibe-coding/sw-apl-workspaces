@@ -8,13 +8,15 @@ workspace here does with it.
 ## The files
 
 Every workspace is one plain UTF-8 text file under `ws/`, named for
-the modes it runs in:
+the modes it runs in: `NAME.<modes>.apl.ws`, the letters of its
+modes in order. Two workspaces may share a name when their letters
+do not overlap, as a pair does.
 
 | Runs in | File | Modes line |
 |---|---|---|
-| (A) and (B) | `NAME.apl.ws` | `⍝!MODES (A)(B)` |
-| (A) only | `NAME.a-70.apl.ws` | `⍝!MODES (A)` |
-| (B) only | `NAME.b-75.apl.ws` | `⍝!MODES (B)` |
+| (A) and (B) | `NAME.ab.apl.ws` | `⍝!MODES (A)(B)` |
+| (A) only | `NAME.a.apl.ws` | `⍝!MODES (A)` |
+| (B) only | `NAME.b.apl.ws` | `⍝!MODES (B)` |
 
 sw-apl lists and loads a workspace only in the modes its line names,
 so an (A) session never sees a (B)-only workspace. The line inside is
@@ -67,9 +69,9 @@ with mixed output, and reaches a primitive chosen at run time by a
 table -- a character vector of glyphs and a branch to the line for
 each, as sw-apl's (A) BIRDS does -- rather than by execute.
 
-**When (B) is needed**, the workspace is `NAME.b-75.apl.ws` and says
+**When (B) is needed**, the workspace is `NAME.b.apl.ws` and says
 `(B)`. Where the same workspace exists in both but is richer in (B),
-it is a pair, `NAME.a-70.apl.ws` beside `NAME.b-75.apl.ws`, both
+it is a pair, `NAME.a.apl.ws` beside `NAME.b.apl.ws`, both
 called `NAME`, and the functions the two share are textually
 identical. A (B)-only file may set `⎕LX←'DESCRIBE'`; a both-mode file
 never sets `⎕LX`, which would make it (B) only.
@@ -119,7 +121,7 @@ never sets `⎕LX`, which would make it (B) only.
 
 ### COURSE
 
-Both modes, `ws/COURSE.apl.ws`. APL in sixteen lessons, with a quiz
+Both modes, `ws/COURSE.ab.apl.ws`. APL in sixteen lessons, with a quiz
 after each; `CONTENTS` lists them.
 
 | Function | What it does |
@@ -173,7 +175,7 @@ course through with every quiz answered.
 
 ### DRILL
 
-A pair: `ws/DRILL.a-70.apl.ws` for (A) and `ws/DRILL.b-75.apl.ws` for
+A pair: `ws/DRILL.a.apl.ws` for (A) and `ws/DRILL.b.apl.ws` for
 (B), both called DRILL. Exercises in APL made at random and marked,
 in the spirit of APLCOURSE's TEACH and EASYDRILL and written fresh.
 The (B) file is the source: it has everything, and `WRITE`, which
@@ -250,7 +252,7 @@ from every table, evaluate to the value the tables gave.
 
 ### STATS
 
-Both modes, `ws/STATS.apl.ws`. Statistics on numeric vectors, written
+Both modes, `ws/STATS.ab.apl.ws`. Statistics on numeric vectors, written
 from the definitions; a matrix given to a one-variable function is
 taken as the vector of all its elements.
 
@@ -297,7 +299,7 @@ Samples: `stats-describe.apl` in (A) and its `-75` twin in (B).
 
 ### MATH
 
-Both modes, `ws/MATH.apl.ws`. Number theory and combinatorics on
+Both modes, `ws/MATH.ab.apl.ws`. Number theory and combinatorics on
 whole numbers.
 
 | Function | What it does |
@@ -323,7 +325,7 @@ Samples: `math.apl` in (A) and its `-75` twin in (B).
 
 ### PLOT
 
-Both modes, `ws/PLOT.apl.ws`. Pictures in characters, 64 columns
+Both modes, `ws/PLOT.ab.apl.ws`. Pictures in characters, 64 columns
 wide, in the spirit of what PLOTFORMAT was for and written fresh.
 
 | Function | What it does |
@@ -350,7 +352,7 @@ renders it to `images/plot.gif` and `images/plot.webp`.
 
 ### RUBIK
 
-Both modes, `ws/RUBIK.apl.ws`. A first live Rubik's Cube demo, drawn
+Both modes, `ws/RUBIK.ab.apl.ws`. A first live Rubik's Cube demo, drawn
 as a letter net so it works on the 2741 terminal and in the browser.
 The six faces are stored as 54 stickers and each clockwise face turn
 is an explicit permutation.
@@ -378,7 +380,7 @@ completeness. Four turns of one face restore the cube.
 
 ### EIGENCUBE
 
-Both modes, `ws/EIGENCUBE.apl.ws`. A small exact-integer geometry kernel
+Both modes, `ws/EIGENCUBE.ab.apl.ws`. A small exact-integer geometry kernel
 for the Eigencube demonstration. `CUBE` is the 26 non-centre cubelet
 coordinates; `ROT` returns a quarter-turn matrix and `GEOTURN` applies
 one to a matrix of row-vectors. `RUBIK` imports these objects with
@@ -387,7 +389,7 @@ user command.
 
 ### MATRIX
 
-Both modes, `ws/MATRIX.apl.ws`. Linear algebra, mostly over domino.
+Both modes, `ws/MATRIX.ab.apl.ws`. Linear algebra, mostly over domino.
 
 | Function | What it does |
 |---|---|
@@ -412,7 +414,7 @@ Samples: `matrix.apl` in (A) and its `-75` twin in (B).
 
 ### POLY
 
-Both modes, `ws/POLY.apl.ws`. Polynomials as vectors of
+Both modes, `ws/POLY.ab.apl.ws`. Polynomials as vectors of
 coefficients, highest power first, because that is the order decode
 wants: `X⊥P` is Horner's rule. Results come back without leading
 zeros, and a zero polynomial is `,0`.
@@ -440,7 +442,7 @@ Samples: `poly.apl` in (A) and its `-75` twin in (B).
 
 ### CALC
 
-Both modes, `ws/CALC.apl.ws`. Numerical calculus. This APL cannot
+Both modes, `ws/CALC.ab.apl.ws`. Numerical calculus. This APL cannot
 hand one function to another, so a function is named: one character
 of the table `FNS` (`*` exponential, `⍟` logarithm, `÷` reciprocal,
 `|` magnitude, `Q` square root, `S` sine, `C` cosine, `T` tangent),

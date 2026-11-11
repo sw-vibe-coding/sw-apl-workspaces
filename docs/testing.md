@@ -14,7 +14,7 @@ commit (see `.claude/commands/mw-cp.md`):
 | `sw-markdown-checker` | README, `samples/README.md` and every other markdown outside `docs/` is ASCII-only |
 | `scripts/check-provenance.sh` | Every tracked workspace carries the SOURCE line; its name agrees with its modes line; its random link is 16807; nothing untracked sits under `ws/` |
 | `scripts/gen-index.sh --check` | `ws/library.json` matches the files |
-| `scripts/gen-pair.sh --check` | Every `NAME.a-70.apl.ws` that has a `NAME.b-75.apl.ws` beside it is what the generator derives from the (B) file |
+| `scripts/gen-pair.sh --check` | Every `NAME.a.apl.ws` that has a `NAME.b.apl.ws` beside it is what the generator derives from the (B) file |
 | `scripts/check-ws.sh` | Every workspace loads in every mode it claims without an error report, and prints nothing wider than 64 characters while loading |
 | `scripts/check-width.sh` | Every output line of every pinned sample transcript (`tests/reg-rs/ws-sample-*.out`) is at most 64 characters; an echoed input line is the sample's own and is not counted. Both width checks count characters with perl, since awk counts bytes here and a glyph is three |
 
