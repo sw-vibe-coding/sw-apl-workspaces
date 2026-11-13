@@ -625,6 +625,28 @@ rename in both repositories.
   The sample stays here as a record until sw-apl fixes it, marked in
   `samples/README.md`.
 
+## Owner direction (2026-11-13): (D) '83, IBM PC APL
+
+sw-apl plans a fourth mode, (D) '83, modeled on IBM PC APL
+(sw-apl's `docs/ibm-pc-apl-plan.md`). The owner: "be sure to plan
+../sw-apl-workspaces for mode=d case, probably cannot reuse a, b, or c
+workspaces; plan to copy workspaces to a mode=d compatible format for
+saving/loading."
+
+- (D)'s workspaces are `NAME.d.apl.ws`, `⍝!MODES (D)`. No existing
+  file gains a `d`, so nothing (A), (B) or (C) loads moves.
+- A script copies each (B) workspace to `NAME.d.apl.ws`, rewriting
+  the modes line, keeping `⍝!SOURCE` and the settings, and adding
+  `⍝!DERIVED NAME.b.apl.ws`. A copy is committed only once its own
+  tests pass in (D); a change (D) needs is made in the copy alone.
+- `scripts/check-provenance.sh` learns the letter d.
+- New for (D): `GRAPHICS` -- CUBE (a turning wireframe cube, its
+  edges red, cyan and white), PLOT, LISSAJOUS, SIERPINSKI,
+  MANDELBROT, LIFE, drawn through AP205 on the color monitor -- and
+  LESSON workspaces for (D) when it is live.
+- Done in sw-apl's step `d83-workspaces`, after `d83-mode` gives the
+  letter a meaning.
+
 ## Phase 8: speed, APL beside Rust (saga `bench`)
 
 Owner suggestion 2026-09-26: with the oracle's in-process session and
