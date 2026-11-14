@@ -18,5 +18,6 @@ rm -rf "$lib0"
 mkdir -p "$lib0/work"
 mode=""
 head -1 "$file" | grep -q '^⍝!MODES (B)$' && mode="--mode 75"
+head -1 "$file" | grep -q '^⍝!MODES (C)$' && mode="--mode 80"
 # shellcheck disable=SC2086  # the mode is zero or two words
 exec ./scripts/sw-apl.sh $mode --library "$lib0" --lib 2=ws,EXTENDED -f "$file"

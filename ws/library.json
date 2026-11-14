@@ -1,14 +1,18 @@
 {"name": "EXTENDED",
  "workspaces": [
   {"name": "CALC", "file": "CALC.ab.apl.ws", "modes": "(A)(B)"},
+  {"name": "CALC", "file": "CALC.c.apl.ws", "modes": "(C)"},
   {"name": "COURSE", "file": "COURSE.ab.apl.ws", "modes": "(A)(B)"},
   {"name": "DRILL", "file": "DRILL.a.apl.ws", "modes": "(A)"},
   {"name": "DRILL", "file": "DRILL.b.apl.ws", "modes": "(B)"},
+  {"name": "DRILL", "file": "DRILL.c.apl.ws", "modes": "(C)"},
   {"name": "EIGENCUBE", "file": "EIGENCUBE.ab.apl.ws", "modes": "(A)(B)"},
   {"name": "MATH", "file": "MATH.ab.apl.ws", "modes": "(A)(B)"},
   {"name": "MATRIX", "file": "MATRIX.ab.apl.ws", "modes": "(A)(B)"},
   {"name": "PLOT", "file": "PLOT.ab.apl.ws", "modes": "(A)(B)"},
+  {"name": "PLOT", "file": "PLOT.c.apl.ws", "modes": "(C)"},
   {"name": "POLY", "file": "POLY.ab.apl.ws", "modes": "(A)(B)"},
+  {"name": "POLY", "file": "POLY.c.apl.ws", "modes": "(C)"},
   {"name": "RUBIK", "file": "RUBIK.ab.apl.ws", "modes": "(A)(B)"},
   {"name": "STATS", "file": "STATS.ab.apl.ws", "modes": "(A)(B)"}
  ]}

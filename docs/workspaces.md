@@ -17,6 +17,7 @@ do not overlap, as a pair does.
 | (A) and (B) | `NAME.ab.apl.ws` | `⍝!MODES (A)(B)` |
 | (A) only | `NAME.a.apl.ws` | `⍝!MODES (A)` |
 | (B) only | `NAME.b.apl.ws` | `⍝!MODES (B)` |
+| (C) only | `NAME.c.apl.ws` | `⍝!MODES (C)` |
 
 sw-apl lists and loads a workspace only in the modes its line names,
 so an (A) session never sees a (B)-only workspace. The line inside is
@@ -464,3 +465,16 @@ the sum and the terms taken; pi is Nilakantha's series, which
 converges where Leibniz's crawls.
 
 Samples: `calc.apl` in (A) and its `-75` twin in (B).
+
+### In (C) '80
+
+CALC, POLY, PLOT and DRILL (from the (A) DRILL) have a `.c` file of
+their own, typed in APL80's characters, made by sw-apl's
+`scripts/port-c80.sh` and finished by hand (sw-apl's `docs/mode-c.md`,
+"The workspaces", says what changed). They do what the (A) and (B)
+files do, at (C)'s six digits and 64 columns, with two differences:
+PLOT's axis is drawn with `:`, which APL80 can type as data, and
+DRILL's INDEX topic drills index-of and membership but not bracket
+indexing, which APL80 cannot write on a literal vector. RUBIK, MATH,
+EIGENCUBE, MATRIX, STATS and COURSE have no (C) file. Each port has a
+`-80` sample.
