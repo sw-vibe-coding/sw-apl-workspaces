@@ -12,8 +12,15 @@ counts, deferred follow-ups), see
 narratives, see [`docs/saga.md`](docs/saga.md).
 
 
+## 2026-11-13
+
+- feat(ws): CALC, POLY, PLOT and DRILL for (C) '80, each a .c file with -80 samples
+- docs(plan): (D) '83 workspaces, NAME.d.apl.ws copies made by script
+
 ## 2026-11-10
 
+- refactor: name each workspace for its modes by letter
+- docs(changes): refresh CHANGES.md to HEAD; close scan-out-of-a
 - fix: no scan where (A) runs a workspace
 
 ## 2026-10-08
